@@ -1,0 +1,4 @@
+identifier_name:
+    allowed_symbols: "_"
+    min_length: # only min_length
+        warning: 2 # only warning

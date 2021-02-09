@@ -3,17 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		10DACFB225D1946E00DED4D0 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACFB025D1946E00DED4D0 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10DAD0FE25D25D3C00DED4D0 /* ConstantVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD0FD25D25D3C00DED4D0 /* ConstantVal.swift */; };
+		10DAD10125D2682E00DED4D0 /* DescriptionViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD10025D2682E00DED4D0 /* DescriptionViewUI.swift */; };
+		10DAD10325D2684B00DED4D0 /* MapViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD10225D2684B00DED4D0 /* MapViewUI.swift */; };
+		10DAD10525D2686600DED4D0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD10425D2686600DED4D0 /* ActivityIndicator.swift */; };
+		10DAD10725D2688300DED4D0 /* SubHeadLineUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD10625D2688300DED4D0 /* SubHeadLineUI.swift */; };
+		10DAD10925D26A7A00DED4D0 /* TabFavoriteViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD10825D26A7A00DED4D0 /* TabFavoriteViewUI.swift */; };
+		10DAD10B25D26A9A00DED4D0 /* LoadingViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD10A25D26A9A00DED4D0 /* LoadingViewUI.swift */; };
+		10DAD10D25D26ADA00DED4D0 /* HeadLineViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD10C25D26ADA00DED4D0 /* HeadLineViewUI.swift */; };
+		10DAD10F25D26B1100DED4D0 /* ImageViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD10E25D26B1100DED4D0 /* ImageViewUI.swift */; };
+		10DAD11225D26D8C00DED4D0 /* CustomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD11125D26D8C00DED4D0 /* CustomeError.swift */; };
+		10DAD11525D2719C00DED4D0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 10DAD11425D2719C00DED4D0 /* SDWebImageSwiftUI */; };
+		10DAD11725D2722F00DED4D0 /* GenerateAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD11625D2722F00DED4D0 /* GenerateAttribute.swift */; };
+		10DAD11A25D272ED00DED4D0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DAD11925D272ED00DED4D0 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10DACFAD25D1946E00DED4D0 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACFB025D1946E00DED4D0 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		10DACFB125D1946E00DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10DAD0FD25D25D3C00DED4D0 /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
+		10DAD10025D2682E00DED4D0 /* DescriptionViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewUI.swift; sourceTree = "<group>"; };
+		10DAD10225D2684B00DED4D0 /* MapViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewUI.swift; sourceTree = "<group>"; };
+		10DAD10425D2686600DED4D0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		10DAD10625D2688300DED4D0 /* SubHeadLineUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubHeadLineUI.swift; sourceTree = "<group>"; };
+		10DAD10825D26A7A00DED4D0 /* TabFavoriteViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFavoriteViewUI.swift; sourceTree = "<group>"; };
+		10DAD10A25D26A9A00DED4D0 /* LoadingViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewUI.swift; sourceTree = "<group>"; };
+		10DAD10C25D26ADA00DED4D0 /* HeadLineViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineViewUI.swift; sourceTree = "<group>"; };
+		10DAD10E25D26B1100DED4D0 /* ImageViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewUI.swift; sourceTree = "<group>"; };
+		10DAD11125D26D8C00DED4D0 /* CustomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeError.swift; sourceTree = "<group>"; };
+		10DAD11625D2722F00DED4D0 /* GenerateAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateAttribute.swift; sourceTree = "<group>"; };
+		10DAD11925D272ED00DED4D0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DAD11525D2719C00DED4D0 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,10 +72,46 @@
 		10DACFAF25D1946E00DED4D0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				10DAD11825D272D800DED4D0 /* Network */,
+				10DAD11025D26D7400DED4D0 /* Extension */,
+				10DAD0FF25D25D7C00DED4D0 /* View */,
 				10DACFB025D1946E00DED4D0 /* Common.h */,
 				10DACFB125D1946E00DED4D0 /* Info.plist */,
+				10DAD0FD25D25D3C00DED4D0 /* ConstantVal.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		10DAD0FF25D25D7C00DED4D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10DAD10025D2682E00DED4D0 /* DescriptionViewUI.swift */,
+				10DAD10225D2684B00DED4D0 /* MapViewUI.swift */,
+				10DAD10425D2686600DED4D0 /* ActivityIndicator.swift */,
+				10DAD10625D2688300DED4D0 /* SubHeadLineUI.swift */,
+				10DAD10825D26A7A00DED4D0 /* TabFavoriteViewUI.swift */,
+				10DAD10A25D26A9A00DED4D0 /* LoadingViewUI.swift */,
+				10DAD10C25D26ADA00DED4D0 /* HeadLineViewUI.swift */,
+				10DAD10E25D26B1100DED4D0 /* ImageViewUI.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10DAD11025D26D7400DED4D0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				10DAD11125D26D8C00DED4D0 /* CustomeError.swift */,
+				10DAD11625D2722F00DED4D0 /* GenerateAttribute.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		10DAD11825D272D800DED4D0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				10DAD11925D272ED00DED4D0 /* API.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +142,9 @@
 			dependencies = (
 			);
 			name = Common;
+			packageProductDependencies = (
+				10DAD11425D2719C00DED4D0 /* SDWebImageSwiftUI */,
+			);
 			productName = Common;
 			productReference = 10DACFAD25D1946E00DED4D0 /* Common.framework */;
 			productType = "com.apple.product-type.framework";
@@ -95,6 +160,7 @@
 				TargetAttributes = {
 					10DACFAC25D1946E00DED4D0 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -107,6 +173,9 @@
 				Base,
 			);
 			mainGroup = 10DACFA325D1946E00DED4D0;
+			packageReferences = (
+				10DAD11325D2719C00DED4D0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 10DACFAE25D1946E00DED4D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +200,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DAD10925D26A7A00DED4D0 /* TabFavoriteViewUI.swift in Sources */,
+				10DAD10525D2686600DED4D0 /* ActivityIndicator.swift in Sources */,
+				10DAD10D25D26ADA00DED4D0 /* HeadLineViewUI.swift in Sources */,
+				10DAD10B25D26A9A00DED4D0 /* LoadingViewUI.swift in Sources */,
+				10DAD10725D2688300DED4D0 /* SubHeadLineUI.swift in Sources */,
+				10DAD10F25D26B1100DED4D0 /* ImageViewUI.swift in Sources */,
+				10DAD10325D2684B00DED4D0 /* MapViewUI.swift in Sources */,
+				10DAD11225D26D8C00DED4D0 /* CustomeError.swift in Sources */,
+				10DAD11725D2722F00DED4D0 /* GenerateAttribute.swift in Sources */,
+				10DAD0FE25D25D3C00DED4D0 /* ConstantVal.swift in Sources */,
+				10DAD11A25D272ED00DED4D0 /* API.swift in Sources */,
+				10DAD10125D2682E00DED4D0 /* DescriptionViewUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +341,7 @@
 		10DACFB625D1946E00DED4D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -275,6 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.algokelvin.Common;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +366,7 @@
 		10DACFB725D1946E00DED4D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -325,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10DAD11325D2719C00DED4D0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10DAD11425D2719C00DED4D0 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10DAD11325D2719C00DED4D0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10DACFA425D1946E00DED4D0 /* Project object */;
 }

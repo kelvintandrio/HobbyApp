@@ -13,10 +13,10 @@
 		1031E80F25CAFEAC00F3C1DF /* HobbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E80E25CAFEAC00F3C1DF /* HobbyTests.swift */; };
 		1031E81A25CB008600F3C1DF /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1031E81925CB008600F3C1DF /* .travis.yml */; };
 		1031E82025CB0BBB00F3C1DF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1031E81F25CB0BBB00F3C1DF /* .swiftlint.yml */; };
-		1031E82325CB110400F3C1DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82225CB110400F3C1DF /* Alamofire */; };
-		1031E82625CB125A00F3C1DF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82525CB125A00F3C1DF /* SDWebImageSwiftUI */; };
-		1031E82925CB134500F3C1DF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82825CB134500F3C1DF /* Realm */; };
-		1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82A25CB134500F3C1DF /* RealmSwift */; };
+		1031E82325CB110400F3C1DF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82225CB110400F3C1DF /* SwiftPackageProductDependency */; };
+		1031E82625CB125A00F3C1DF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82525CB125A00F3C1DF /* SwiftPackageProductDependency */; };
+		1031E82925CB134500F3C1DF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82825CB134500F3C1DF /* SwiftPackageProductDependency */; };
+		1031E82B25CB134500F3C1DF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82A25CB134500F3C1DF /* SwiftPackageProductDependency */; };
 		1031E83725CB16DC00F3C1DF /* SportsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E82E25CB16DC00F3C1DF /* SportsDataSource.swift */; };
 		1031E83825CB16DC00F3C1DF /* TravelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */; };
 		1031E83925CB16DC00F3C1DF /* TravelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83125CB16DC00F3C1DF /* TravelRepository.swift */; };
@@ -120,6 +120,7 @@
 		1031E91425CB2E4C00F3C1DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E91125CB2E4C00F3C1DF /* AppDelegate.swift */; };
 		1031E91525CB2E4C00F3C1DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E91225CB2E4C00F3C1DF /* ContentView.swift */; };
 		1031E91625CB2E4C00F3C1DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E91325CB2E4C00F3C1DF /* SceneDelegate.swift */; };
+		966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87FFF28155280A610B0171EA /* Pods_Hobby.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +247,9 @@
 		1031E91125CB2E4C00F3C1DF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1031E91225CB2E4C00F3C1DF /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1031E91325CB2E4C00F3C1DF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		180348F9F5A498FBFA8EAED4 /* Pods-Hobby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hobby.release.xcconfig"; path = "Target Support Files/Pods-Hobby/Pods-Hobby.release.xcconfig"; sourceTree = "<group>"; };
+		39BFE337A746009CFD0A267C /* Pods-Hobby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hobby.debug.xcconfig"; path = "Target Support Files/Pods-Hobby/Pods-Hobby.debug.xcconfig"; sourceTree = "<group>"; };
+		87FFF28155280A610B0171EA /* Pods_Hobby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hobby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,10 +257,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */,
-				1031E82925CB134500F3C1DF /* Realm in Frameworks */,
-				1031E82625CB125A00F3C1DF /* SDWebImageSwiftUI in Frameworks */,
-				1031E82325CB110400F3C1DF /* Alamofire in Frameworks */,
+				1031E82B25CB134500F3C1DF /* BuildFile in Frameworks */,
+				1031E82925CB134500F3C1DF /* BuildFile in Frameworks */,
+				1031E82625CB125A00F3C1DF /* BuildFile in Frameworks */,
+				1031E82325CB110400F3C1DF /* BuildFile in Frameworks */,
+				966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +275,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063D759280E9AED678968C0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39BFE337A746009CFD0A267C /* Pods-Hobby.debug.xcconfig */,
+				180348F9F5A498FBFA8EAED4 /* Pods-Hobby.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1031E7EB25CAFEAB00F3C1DF = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +293,8 @@
 				1031E7F625CAFEAB00F3C1DF /* Hobby */,
 				1031E80D25CAFEAC00F3C1DF /* HobbyTests */,
 				1031E7F525CAFEAB00F3C1DF /* Products */,
+				063D759280E9AED678968C0E /* Pods */,
+				578B8938E749B630CE36A38F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -637,6 +654,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		578B8938E749B630CE36A38F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87FFF28155280A610B0171EA /* Pods_Hobby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -644,6 +669,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1031E81325CAFEAC00F3C1DF /* Build configuration list for PBXNativeTarget "Hobby" */;
 			buildPhases = (
+				27C81BC19F47D8CEC3106806 /* [CP] Check Pods Manifest.lock */,
 				1031E7F025CAFEAB00F3C1DF /* Sources */,
 				1031E7F125CAFEAB00F3C1DF /* Frameworks */,
 				1031E7F225CAFEAB00F3C1DF /* Resources */,
@@ -655,10 +681,10 @@
 			);
 			name = Hobby;
 			packageProductDependencies = (
-				1031E82225CB110400F3C1DF /* Alamofire */,
-				1031E82525CB125A00F3C1DF /* SDWebImageSwiftUI */,
-				1031E82825CB134500F3C1DF /* Realm */,
-				1031E82A25CB134500F3C1DF /* RealmSwift */,
+				1031E82225CB110400F3C1DF /* SwiftPackageProductDependency */,
+				1031E82525CB125A00F3C1DF /* SwiftPackageProductDependency */,
+				1031E82825CB134500F3C1DF /* SwiftPackageProductDependency */,
+				1031E82A25CB134500F3C1DF /* SwiftPackageProductDependency */,
 			);
 			productName = Hobby;
 			productReference = 1031E7F425CAFEAB00F3C1DF /* Hobby.app */;
@@ -711,9 +737,9 @@
 			);
 			mainGroup = 1031E7EB25CAFEAB00F3C1DF;
 			packageReferences = (
-				1031E82125CB110400F3C1DF /* XCRemoteSwiftPackageReference "Alamofire" */,
-				1031E82425CB125A00F3C1DF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				1031E82125CB110400F3C1DF /* RemoteSwiftPackageReference */,
+				1031E82425CB125A00F3C1DF /* RemoteSwiftPackageReference */,
+				1031E82725CB134500F3C1DF /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 1031E7F525CAFEAB00F3C1DF /* Products */;
 			projectDirPath = "";
@@ -764,6 +790,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then \n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
+		27C81BC19F47D8CEC3106806 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hobby-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1024,6 +1072,7 @@
 		};
 		1031E81425CAFEAC00F3C1DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39BFE337A746009CFD0A267C /* Pods-Hobby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1043,6 +1092,7 @@
 		};
 		1031E81525CAFEAC00F3C1DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 180348F9F5A498FBFA8EAED4 /* Pods-Hobby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1135,7 +1185,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1031E82125CB110400F3C1DF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		1031E82125CB110400F3C1DF /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
@@ -1143,7 +1193,7 @@
 				minimumVersion = 5.4.1;
 			};
 		};
-		1031E82425CB125A00F3C1DF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		1031E82425CB125A00F3C1DF /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
@@ -1151,7 +1201,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		1031E82725CB134500F3C1DF /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -1162,24 +1212,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1031E82225CB110400F3C1DF /* Alamofire */ = {
+		1031E82225CB110400F3C1DF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1031E82125CB110400F3C1DF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 1031E82125CB110400F3C1DF /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
-		1031E82525CB125A00F3C1DF /* SDWebImageSwiftUI */ = {
+		1031E82525CB125A00F3C1DF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1031E82425CB125A00F3C1DF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = 1031E82425CB125A00F3C1DF /* RemoteSwiftPackageReference */;
 			productName = SDWebImageSwiftUI;
 		};
-		1031E82825CB134500F3C1DF /* Realm */ = {
+		1031E82825CB134500F3C1DF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 1031E82725CB134500F3C1DF /* RemoteSwiftPackageReference */;
 			productName = Realm;
 		};
-		1031E82A25CB134500F3C1DF /* RealmSwift */ = {
+		1031E82A25CB134500F3C1DF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 1031E82725CB134500F3C1DF /* RemoteSwiftPackageReference */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

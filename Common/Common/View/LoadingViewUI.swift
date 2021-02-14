@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct LoadingViewUI: View {
-    var body: some View {
+public struct LoadingViewUI: View {
+    public var body: some View {
         VStack {
             Text("Loading...")
             ActivityIndicator()

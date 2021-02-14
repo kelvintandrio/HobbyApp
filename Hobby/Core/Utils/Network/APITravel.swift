@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Common
 
 enum TravelEndpoints {
     enum Gets: Endpoint {

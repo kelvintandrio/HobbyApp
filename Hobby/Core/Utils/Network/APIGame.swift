@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Common
 
 enum GameEndpoints {
     enum Gets: Endpoint {

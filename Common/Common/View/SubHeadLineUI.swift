@@ -8,12 +8,18 @@
 
 import SwiftUI
 
-struct SubHeadLineUI: View {
-    @State var image: String = ""
-    @State var title: String = ""
-    @State var subtitle: String = ""
+public struct SubHeadLineUI: View {
+    var image: String = ""
+    var title: String = ""
+    var subtitle: String = ""
 
-    var body: some View {
+    public init(image: String, title: String, subtitle: String) {
+        self.image = image
+        self.title = title
+        self.subtitle = subtitle
+    }
+
+    public var body: some View {
         VStack {
             ImageViewUI(image: image)
             HeadLineViewUI(title: title, subtitle: subtitle)

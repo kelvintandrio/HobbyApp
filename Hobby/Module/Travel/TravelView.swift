@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Common
 
 struct TravelView: View {
     @ObservedObject var presenterTravel: TravelPresenter

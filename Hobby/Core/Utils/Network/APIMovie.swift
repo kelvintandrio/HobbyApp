@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Common
 
 enum MovieEndpoints {
     enum Gets: Endpoint {

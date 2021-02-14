@@ -8,12 +8,16 @@
 
 import SwiftUI
 
-struct HeadLineViewUI: View {
+public struct HeadLineViewUI: View {
 
-    @State var title: String = ""
-    @State var subtitle: String = ""
+    var title: String = ""
+    var subtitle: String = ""
 
-    var body: some View {
+    public init(title: String, subtitle: String) {
+        self.title = title
+        self.subtitle = subtitle
+    }
+    public var body: some View {
         VStack(alignment: .center) {
             Text(title)
                 .font(.title)

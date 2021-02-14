@@ -8,10 +8,14 @@
 
 import SwiftUI
 
-struct DescriptionViewUI: View {
-    @State var description: String = ""
+public struct DescriptionViewUI: View {
+    var description: String = ""
 
-    var body: some View {
+    public init(description: String) {
+        self.description = description
+    }
+
+    public var body: some View {
         Text(description)
             .padding()
             .overlay(

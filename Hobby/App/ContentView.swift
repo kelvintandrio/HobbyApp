@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Common
 
 struct ContentView: View {
 

@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Common
 
 struct GameDetailView: View {
     @ObservedObject var presenter: GameDetailPresenter
@@ -27,8 +27,6 @@ struct GameDetailView: View {
                             subtitle: self.presenter.category.released
                         ).padding(.top)
 
-//                        DescriptionViewUI(description: self.presenter.detailGame)
-//                            .padding()
                         Text(self.presenter.detailGame)
                             .padding()
 

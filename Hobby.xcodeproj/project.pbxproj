@@ -13,7 +13,6 @@
 		1031E80F25CAFEAC00F3C1DF /* HobbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E80E25CAFEAC00F3C1DF /* HobbyTests.swift */; };
 		1031E82025CB0BBB00F3C1DF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1031E81F25CB0BBB00F3C1DF /* .swiftlint.yml */; };
 		1031E82325CB110400F3C1DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82225CB110400F3C1DF /* Alamofire */; };
-		1031E82625CB125A00F3C1DF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82525CB125A00F3C1DF /* SDWebImageSwiftUI */; };
 		1031E82925CB134500F3C1DF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82825CB134500F3C1DF /* Realm */; };
 		1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82A25CB134500F3C1DF /* RealmSwift */; };
 		1031E83725CB16DC00F3C1DF /* SportsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E82E25CB16DC00F3C1DF /* SportsDataSource.swift */; };
@@ -47,14 +46,6 @@
 		1031E87E25CB1DC900F3C1DF /* ConstantVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86925CB1DC900F3C1DF /* ConstantVal.swift */; };
 		1031E87F25CB1DC900F3C1DF /* DataLocaleMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86B25CB1DC900F3C1DF /* DataLocaleMapper.swift */; };
 		1031E88025CB1DC900F3C1DF /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86C25CB1DC900F3C1DF /* DataMapper.swift */; };
-		1031E88125CB1DC900F3C1DF /* DescriptionViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86E25CB1DC900F3C1DF /* DescriptionViewUI.swift */; };
-		1031E88225CB1DC900F3C1DF /* MapViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86F25CB1DC900F3C1DF /* MapViewUI.swift */; };
-		1031E88325CB1DC900F3C1DF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E87025CB1DC900F3C1DF /* ActivityIndicator.swift */; };
-		1031E88425CB1DC900F3C1DF /* SubHeadLineUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E87125CB1DC900F3C1DF /* SubHeadLineUI.swift */; };
-		1031E88525CB1DC900F3C1DF /* TabFavoriteViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E87225CB1DC900F3C1DF /* TabFavoriteViewUI.swift */; };
-		1031E88625CB1DC900F3C1DF /* LoadingViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E87325CB1DC900F3C1DF /* LoadingViewUI.swift */; };
-		1031E88725CB1DC900F3C1DF /* ImageViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E87425CB1DC900F3C1DF /* ImageViewUI.swift */; };
-		1031E88825CB1DC900F3C1DF /* HeadLineViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E87525CB1DC900F3C1DF /* HeadLineViewUI.swift */; };
 		1031E88B25CB1E2D00F3C1DF /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88A25CB1E2D00F3C1DF /* Injection.swift */; };
 		1031E8AC25CB1E4A00F3C1DF /* MovieProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88E25CB1E4900F3C1DF /* MovieProtocol.swift */; };
 		1031E8AD25CB1E4A00F3C1DF /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */; };
@@ -174,14 +165,6 @@
 		1031E86925CB1DC900F3C1DF /* ConstantVal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
 		1031E86B25CB1DC900F3C1DF /* DataLocaleMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLocaleMapper.swift; sourceTree = "<group>"; };
 		1031E86C25CB1DC900F3C1DF /* DataMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
-		1031E86E25CB1DC900F3C1DF /* DescriptionViewUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewUI.swift; sourceTree = "<group>"; };
-		1031E86F25CB1DC900F3C1DF /* MapViewUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewUI.swift; sourceTree = "<group>"; };
-		1031E87025CB1DC900F3C1DF /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		1031E87125CB1DC900F3C1DF /* SubHeadLineUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubHeadLineUI.swift; sourceTree = "<group>"; };
-		1031E87225CB1DC900F3C1DF /* TabFavoriteViewUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabFavoriteViewUI.swift; sourceTree = "<group>"; };
-		1031E87325CB1DC900F3C1DF /* LoadingViewUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewUI.swift; sourceTree = "<group>"; };
-		1031E87425CB1DC900F3C1DF /* ImageViewUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewUI.swift; sourceTree = "<group>"; };
-		1031E87525CB1DC900F3C1DF /* HeadLineViewUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadLineViewUI.swift; sourceTree = "<group>"; };
 		1031E88A25CB1E2D00F3C1DF /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		1031E88E25CB1E4900F3C1DF /* MovieProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieProtocol.swift; sourceTree = "<group>"; };
 		1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
@@ -259,7 +242,6 @@
 			files = (
 				1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */,
 				1031E82925CB134500F3C1DF /* Realm in Frameworks */,
-				1031E82625CB125A00F3C1DF /* SDWebImageSwiftUI in Frameworks */,
 				1031E82325CB110400F3C1DF /* Alamofire in Frameworks */,
 				966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */,
 			);
@@ -431,7 +413,6 @@
 				1031E85F25CB1DC900F3C1DF /* Extension */,
 				1031E86325CB1DC900F3C1DF /* Network */,
 				1031E86A25CB1DC900F3C1DF /* Mapper */,
-				1031E86D25CB1DC900F3C1DF /* View */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -464,21 +445,6 @@
 				1031E86C25CB1DC900F3C1DF /* DataMapper.swift */,
 			);
 			path = Mapper;
-			sourceTree = "<group>";
-		};
-		1031E86D25CB1DC900F3C1DF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1031E86E25CB1DC900F3C1DF /* DescriptionViewUI.swift */,
-				1031E86F25CB1DC900F3C1DF /* MapViewUI.swift */,
-				1031E87025CB1DC900F3C1DF /* ActivityIndicator.swift */,
-				1031E87125CB1DC900F3C1DF /* SubHeadLineUI.swift */,
-				1031E87225CB1DC900F3C1DF /* TabFavoriteViewUI.swift */,
-				1031E87325CB1DC900F3C1DF /* LoadingViewUI.swift */,
-				1031E87425CB1DC900F3C1DF /* ImageViewUI.swift */,
-				1031E87525CB1DC900F3C1DF /* HeadLineViewUI.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		1031E88925CB1E2D00F3C1DF /* DI */ = {
@@ -681,7 +647,6 @@
 			name = Hobby;
 			packageProductDependencies = (
 				1031E82225CB110400F3C1DF /* Alamofire */,
-				1031E82525CB125A00F3C1DF /* SDWebImageSwiftUI */,
 				1031E82825CB134500F3C1DF /* Realm */,
 				1031E82A25CB134500F3C1DF /* RealmSwift */,
 			);
@@ -819,11 +784,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1031E88225CB1DC900F3C1DF /* MapViewUI.swift in Sources */,
 				1031E8FD25CB1E6100F3C1DF /* GameRouter.swift in Sources */,
-				1031E88525CB1DC900F3C1DF /* TabFavoriteViewUI.swift in Sources */,
-				1031E88625CB1DC900F3C1DF /* LoadingViewUI.swift in Sources */,
-				1031E88325CB1DC900F3C1DF /* ActivityIndicator.swift in Sources */,
 				1031E8AC25CB1E4A00F3C1DF /* MovieProtocol.swift in Sources */,
 				1031E8C225CB1E4A00F3C1DF /* TravelFavoriteInteractor.swift in Sources */,
 				1031E8EF25CB1E6100F3C1DF /* MoviePresenter.swift in Sources */,
@@ -850,7 +811,6 @@
 				1031E90125CB1E6100F3C1DF /* SportsDetailPresenter.swift in Sources */,
 				1031E88B25CB1E2D00F3C1DF /* Injection.swift in Sources */,
 				1031E8FF25CB1E6100F3C1DF /* SportFavoriteView.swift in Sources */,
-				1031E88425CB1DC900F3C1DF /* SubHeadLineUI.swift in Sources */,
 				1031E8FE25CB1E6100F3C1DF /* SportView.swift in Sources */,
 				1031E87925CB1DC900F3C1DF /* APIMovie.swift in Sources */,
 				1031E90A25CB1E6100F3C1DF /* TravelRouter.swift in Sources */,
@@ -886,12 +846,10 @@
 				1031E90B25CB1E6100F3C1DF /* TravelDetailView.swift in Sources */,
 				1031E90225CB1E6100F3C1DF /* SportsFavoritePresenter.swift in Sources */,
 				1031E90F25CB1E6100F3C1DF /* TravelFavoriteView.swift in Sources */,
-				1031E88725CB1DC900F3C1DF /* ImageViewUI.swift in Sources */,
 				1031E87F25CB1DC900F3C1DF /* DataLocaleMapper.swift in Sources */,
 				1031E84A25CB1B2300F3C1DF /* GameLocaleDataSource.swift in Sources */,
 				1031E8F225CB1E6100F3C1DF /* MovieRowsView.swift in Sources */,
 				1031E90625CB1E6100F3C1DF /* ProfilePresenter.swift in Sources */,
-				1031E88825CB1DC900F3C1DF /* HeadLineViewUI.swift in Sources */,
 				1031E8B925CB1E4A00F3C1DF /* SportsFavoriteInteractor.swift in Sources */,
 				1031E8F525CB1E6100F3C1DF /* MovieFavoritePresenter.swift in Sources */,
 				1031E8BE25CB1E4A00F3C1DF /* ProfileProtocol.swift in Sources */,
@@ -909,7 +867,6 @@
 				1031E8AF25CB1E4A00F3C1DF /* MovieDetailProtocol.swift in Sources */,
 				1031E90E25CB1E6100F3C1DF /* TravelFavoritePresenter.swift in Sources */,
 				1031E84D25CB1B2300F3C1DF /* GameLocaleRepository.swift in Sources */,
-				1031E88125CB1DC900F3C1DF /* DescriptionViewUI.swift in Sources */,
 				1031E90925CB1E6100F3C1DF /* TravelRowsView.swift in Sources */,
 				1031E90425CB1E6100F3C1DF /* SportDetailView.swift in Sources */,
 				1031E91525CB2E4C00F3C1DF /* ContentView.swift in Sources */,
@@ -1217,11 +1174,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1031E82125CB110400F3C1DF /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		1031E82525CB125A00F3C1DF /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1031E82425CB125A00F3C1DF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
 		};
 		1031E82825CB134500F3C1DF /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

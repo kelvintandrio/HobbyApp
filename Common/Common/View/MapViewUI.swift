@@ -9,14 +9,19 @@
 import SwiftUI
 import MapKit
 
-struct MapViewUI: UIViewRepresentable {
-    @State var latitude: Double = 0.0
-    @State var longitude: Double = 0.0
+public struct MapViewUI: UIViewRepresentable {
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
+    
+    public init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
 
-    func makeUIView(context: Context) -> MKMapView {
+    public func makeUIView(context: Context) -> MKMapView {
          MKMapView(frame: .zero)
     }
-    func updateUIView(_ view: MKMapView, context: Context) {
+    public func updateUIView(_ view: MKMapView, context: Context) {
             let coordinate = CLLocationCoordinate2D(
                 latitude: latitude, longitude: longitude)
             let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)

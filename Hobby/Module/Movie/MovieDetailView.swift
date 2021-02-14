@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Common
 
 struct MovieDetailView: View {
 

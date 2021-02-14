@@ -9,11 +9,15 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct ImageViewUI: View {
+public struct ImageViewUI: View {
 
-    @State var image: String = ""
+    var image: String = ""
 
-    var body: some View {
+    public init(image: String) {
+        self.image = image
+    }
+
+    public var body: some View {
         WebImage(url: URL(string: image))
             .resizable()
             .indicator(.activity)

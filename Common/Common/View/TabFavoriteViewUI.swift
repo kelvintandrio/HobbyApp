@@ -8,11 +8,16 @@
 
 import SwiftUI
 
-struct TabFavoriteViewUI: View {
-    @State var title: String = ""
-    @State var image: String = ""
+public struct TabFavoriteViewUI: View {
+    var title: String = ""
+    var image: String = ""
 
-    var body: some View {
+    public init(title: String, image: String) {
+        self.title = title
+        self.image = image
+    }
+
+    public var body: some View {
         VStack {
             HStack {
                 Image(image)

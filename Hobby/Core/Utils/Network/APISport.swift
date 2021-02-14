@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Common
 
 enum SportEndpoints {
     enum Gets: Endpoint {

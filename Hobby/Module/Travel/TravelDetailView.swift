@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Common
 
 struct TravelDetailView: View {
     @ObservedObject var presenter: TravelDetailPresenter

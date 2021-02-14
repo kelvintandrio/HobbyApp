@@ -14,3 +14,13 @@ target 'Common' do
 project '../FinalSubmission/Common/Common'
  
 end
+
+target 'Core' do
+project '../FinalSubmission/Core/Core'
+ 
+end
+
+target 'Category' do
+project '../FinalSubmission/Category/Category'
+ 
+end

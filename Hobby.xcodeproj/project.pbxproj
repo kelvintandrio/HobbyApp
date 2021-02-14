@@ -112,6 +112,8 @@
 		1031E91625CB2E4C00F3C1DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E91325CB2E4C00F3C1DF /* SceneDelegate.swift */; };
 		10F73F8C25D96FBD00C4A77A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 10F73F8B25D96FBD00C4A77A /* .gitignore */; };
 		10F73F8E25D984FB00C4A77A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 10F73F8D25D984FB00C4A77A /* SDWebImageSwiftUI */; };
+		10F73F9025D98A4A00C4A77A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73F8F25D98A4A00C4A77A /* Common.framework */; };
+		10F73F9125D98A4A00C4A77A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73F8F25D98A4A00C4A77A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87FFF28155280A610B0171EA /* Pods_Hobby.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,20 @@
 			remoteInfo = Hobby;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		10F73F9225D98A4A00C4A77A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10F73F9125D98A4A00C4A77A /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1031E7F425CAFEAB00F3C1DF /* Hobby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hobby.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +247,7 @@
 		1031E91225CB2E4C00F3C1DF /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1031E91325CB2E4C00F3C1DF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		10F73F8B25D96FBD00C4A77A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		10F73F8F25D98A4A00C4A77A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		180348F9F5A498FBFA8EAED4 /* Pods-Hobby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hobby.release.xcconfig"; path = "Target Support Files/Pods-Hobby/Pods-Hobby.release.xcconfig"; sourceTree = "<group>"; };
 		39BFE337A746009CFD0A267C /* Pods-Hobby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hobby.debug.xcconfig"; path = "Target Support Files/Pods-Hobby/Pods-Hobby.debug.xcconfig"; sourceTree = "<group>"; };
 		87FFF28155280A610B0171EA /* Pods_Hobby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hobby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +261,7 @@
 				10F73F8E25D984FB00C4A77A /* SDWebImageSwiftUI in Frameworks */,
 				1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */,
 				1031E82925CB134500F3C1DF /* Realm in Frameworks */,
+				10F73F9025D98A4A00C4A77A /* Common.framework in Frameworks */,
 				1031E82325CB110400F3C1DF /* Alamofire in Frameworks */,
 				966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */,
 			);
@@ -624,6 +642,7 @@
 		578B8938E749B630CE36A38F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10F73F8F25D98A4A00C4A77A /* Common.framework */,
 				87FFF28155280A610B0171EA /* Pods_Hobby.framework */,
 			);
 			name = Frameworks;
@@ -641,6 +660,7 @@
 				1031E7F125CAFEAB00F3C1DF /* Frameworks */,
 				1031E7F225CAFEAB00F3C1DF /* Resources */,
 				1031E81E25CB0B8000F3C1DF /* ShellScript */,
+				10F73F9225D98A4A00C4A77A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

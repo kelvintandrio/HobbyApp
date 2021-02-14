@@ -9,6 +9,7 @@
 import SwiftUI
 
 public struct LoadingViewUI: View {
+    public init() {}
     public var body: some View {
         VStack {
             Text("Loading...")

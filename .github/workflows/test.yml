@@ -12,8 +12,8 @@ jobs:
     timeout-minutes: 30
     env:
       XC_VERSION: ${{ '13.2' }}
-      XC_WORKSPACE: ${{ 'CapStoneApps.xcworkspace' }}
-      XC_SCHEME: ${{ 'CapStoneApps' }}
+      XC_WORKSPACE: ${{ 'Hobby.xcworkspace' }}
+      XC_SCHEME: ${{ 'Hobby' }}
     steps:
     - uses: actions/checkout@v2
     - name: "#️⃣ Generate Build Number"

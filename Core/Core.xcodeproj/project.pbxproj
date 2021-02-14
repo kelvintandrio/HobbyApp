@@ -11,6 +11,8 @@
 		10DACF6F25D18F4400DED4D0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF6525D18F4300DED4D0 /* Core.framework */; };
 		10DACF7425D18F4400DED4D0 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF7325D18F4400DED4D0 /* CoreTests.swift */; };
 		10DACF7625D18F4400DED4D0 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF6825D18F4300DED4D0 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10F73F9725D99A3900C4A77A /* GameRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */; };
+		10F73F9925D99A6F00C4A77A /* GameDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9825D99A6F00C4A77A /* GameDataSourceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 		10DACF6E25D18F4400DED4D0 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF7325D18F4400DED4D0 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		10DACF7525D18F4400DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepositoryProtocol.swift; sourceTree = "<group>"; };
+		10F73F9825D99A6F00C4A77A /* GameDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7833F4E6272BA1BBBDA70633 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9431E53BC733B15775C6F685 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		AB24EE8D67BE49CAF0EDCD20 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		10DACF6725D18F4300DED4D0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				10F73F9325D998FF00C4A77A /* Data */,
 				10DACF6825D18F4300DED4D0 /* Core.h */,
 				10DACF6925D18F4300DED4D0 /* Info.plist */,
 			);
@@ -91,6 +96,31 @@
 				10DACF7525D18F4400DED4D0 /* Info.plist */,
 			);
 			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		10F73F9325D998FF00C4A77A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				10F73F9425D9994500C4A77A /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		10F73F9425D9994500C4A77A /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				10F73F9525D99A0E00C4A77A /* Response */,
+				10F73F9825D99A6F00C4A77A /* GameDataSourceProtocol.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		10F73F9525D99A0E00C4A77A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		6995AE250C42F94AE7A0AC3F /* Frameworks */ = {
@@ -174,6 +204,7 @@
 				TargetAttributes = {
 					10DACF6425D18F4300DED4D0 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					10DACF6D25D18F4400DED4D0 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -246,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F73F9925D99A6F00C4A77A /* GameDataSourceProtocol.swift in Sources */,
+				10F73F9725D99A3900C4A77A /* GameRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB24EE8D67BE49CAF0EDCD20 /* Pods-Core.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -407,6 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.algokelvin.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9431E53BC733B15775C6F685 /* Pods-Core.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -439,6 +475,7 @@
 		10DACF7D25D18F4400DED4D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,6 +493,7 @@
 		10DACF7E25D18F4400DED4D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

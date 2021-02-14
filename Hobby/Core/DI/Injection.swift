@@ -8,7 +8,8 @@
 
 import Foundation
 import RealmSwift
-import Cate
+import Category
+import Core
 
 final class Injection: NSObject {
     func provideProfile() -> ProfileProtocol {

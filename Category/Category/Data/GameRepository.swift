@@ -14,7 +14,7 @@ import Common
 public final class GameRepository: NSObject {
     typealias GameInstance = (GameDataSource) -> GameRepository
 
-    fileprivate let remote: GameDataSource
+    let remote: GameDataSource
 
     public init(remote: GameDataSource) {
         self.remote = remote

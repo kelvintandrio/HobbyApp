@@ -7,7 +7,9 @@
 //
 
 import Combine
+import Core
+import Common
 
 protocol GameProtocol {
-    func getGame() -> AnyPublisher<[GameModel], URLError>
+    func getGame() -> AnyPublisher<[Core.GameModel], Common.URLError>
 }

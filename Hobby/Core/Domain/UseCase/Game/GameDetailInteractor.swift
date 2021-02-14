@@ -7,6 +7,8 @@
 //
 
 import Combine
+import Core
+import Common
 
 class GameDetailInteractor: GameDetailProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
@@ -41,7 +43,7 @@ class GameDetailInteractor: GameDetailProtocol {
         return gameLocaleRepository.checkLocaleGame(from: game)
     }
 
-    func getGameDescription(id: String) -> AnyPublisher<String, URLError> {
+    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError> {
         return repository.getGameDescription(id: id)
     }
 }

@@ -8,6 +8,8 @@
 
 import Combine
 import Category
+import Core
+import Common
 
 class GameInteractor: GameProtocol {
     private let gameRepository: GameRepositoryProtocol
@@ -16,7 +18,7 @@ class GameInteractor: GameProtocol {
       self.gameRepository = repository
     }
 
-    func getGame() -> AnyPublisher<[GameModel], URLError> {
+    func getGame() -> AnyPublisher<[Core.GameModel], Common.URLError> {
         return gameRepository.getGame()
     }
 }

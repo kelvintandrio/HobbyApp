@@ -2,20 +2,22 @@ name: Swift
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches: 
-      - main
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: macos-latest
     timeout-minutes: 30
-
+    env:
+      XC_VERSION: ${{ '13.2' }}
+      XC_WORKSPACE: ${{ 'CapStoneApps.xcworkspace' }}
+      XC_SCHEME: ${{ 'CapStoneApps' }}
     steps:
     - uses: actions/checkout@v2
-    - name: Build
+    - name: "#️⃣ Generate Build Number"
+      id: buildnumber
       run: "sudo xcode-select -switch /Applications/Xcode_11.3.1.app"
     - name: Run tests
       run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'

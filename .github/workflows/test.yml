@@ -1,0 +1,23 @@
+name: Swift
+
+on:
+  push:
+    branches:
+      - main
+        - app
+  pull_request:
+    branches: 
+      - main
+        - app
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 30
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: "sudo xcode-select -switch /Applications/Xcode_11.3.1.app"
+    - name: Run tests
+      run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'

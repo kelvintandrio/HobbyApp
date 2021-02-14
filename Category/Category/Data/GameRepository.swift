@@ -8,11 +8,7 @@
 
 import Foundation
 import Combine
-
-protocol GameRepositoryProtocol {
-    func getGame() -> AnyPublisher<[GameModel], URLError>
-    func getGameDescription(id: String) -> AnyPublisher<String, URLError>
-}
+import Core
 
 final class GameRepository: NSObject {
     typealias GameInstance = (GameDataSource) -> GameRepository

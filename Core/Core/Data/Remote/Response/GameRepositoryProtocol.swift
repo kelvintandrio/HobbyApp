@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-protocol GameRepositoryProtocol {
+public protocol GameRepositoryProtocol {
     func getGame() -> AnyPublisher<[GameModel], URLError>
     func getGameDescription(id: String) -> AnyPublisher<String, URLError>
 }

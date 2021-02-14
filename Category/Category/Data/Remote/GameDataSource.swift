@@ -9,11 +9,7 @@
 import Foundation
 import Alamofire
 import Combine
-
-protocol GameDataSourceProtocol: class {
-    func getGame() -> AnyPublisher<[Games], URLError>
-    func getGameDescription(id: String) -> AnyPublisher<String, URLError>
-}
+import Core
 
 final class GameDataSource: NSObject {
     private override init() { }

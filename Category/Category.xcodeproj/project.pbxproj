@@ -14,6 +14,8 @@
 		10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */; };
 		10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FA125D99D3600C4A77A /* GameRepository.swift */; };
 		10F73FA525D99DC200C4A77A /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FA425D99DC200C4A77A /* GameModel.swift */; };
+		10F73FA725D99EF100C4A77A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FA625D99EF100C4A77A /* Core.framework */; };
+		10F73FA825D99EF200C4A77A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FA625D99EF100C4A77A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		401346760AA3FBC7F1C9C7CF /* Pods_Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35AA4CECB67830C5FFC3B6 /* Pods_Category.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		10F73FA925D99EF200C4A77A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10F73FA825D99EF200C4A77A /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		10DACF8925D1909000DED4D0 /* Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF8C25D1909000DED4D0 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -38,6 +54,7 @@
 		10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
 		10F73FA125D99D3600C4A77A /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		10F73FA425D99DC200C4A77A /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		10F73FA625D99EF100C4A77A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CCB765E0D71ABB366F2571 /* Pods-Category.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Category.release.xcconfig"; path = "Target Support Files/Pods-Category/Pods-Category.release.xcconfig"; sourceTree = "<group>"; };
 		4F35AA4CECB67830C5FFC3B6 /* Pods_Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA3E96C18ACA3FC922E2B7E /* Pods-Category.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Category.debug.xcconfig"; path = "Target Support Files/Pods-Category/Pods-Category.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				401346760AA3FBC7F1C9C7CF /* Pods_Category.framework in Frameworks */,
+				10F73FA725D99EF100C4A77A /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +158,7 @@
 		B39B60D0EF89CA3C9256C58F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10F73FA625D99EF100C4A77A /* Core.framework */,
 				4F35AA4CECB67830C5FFC3B6 /* Pods_Category.framework */,
 			);
 			name = Frameworks;
@@ -178,6 +197,7 @@
 				10DACF8525D1909000DED4D0 /* Sources */,
 				10DACF8625D1909000DED4D0 /* Frameworks */,
 				10DACF8725D1909000DED4D0 /* Resources */,
+				10F73FA925D99EF200C4A77A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

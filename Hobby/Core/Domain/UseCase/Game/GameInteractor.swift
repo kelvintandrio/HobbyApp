@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Category
 
 class GameInteractor: GameProtocol {
     private let gameRepository: GameRepositoryProtocol

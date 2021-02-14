@@ -12,14 +12,14 @@ import Combine
 import Core
 import Common
 
-final class GameDataSource: NSObject {
+public final class GameDataSource: NSObject {
     private override init() { }
 
-    static let sharedInstance: GameDataSource =  GameDataSource()
+    public static let sharedInstance: GameDataSource =  GameDataSource()
 }
 
 extension GameDataSource: GameDataSourceProtocol {
-    func getGame() -> AnyPublisher<[Games], Common.URLError> {
+    public func getGame() -> AnyPublisher<[Games], Common.URLError> {
         return Future<[Games], Common.URLError> { completion in
             if let url = URL(string: GameEndpoints.Gets.games.url) {
                 AF.request(url).validate().responseDecodable(of: DataGame.self) { response in
@@ -33,7 +33,7 @@ extension GameDataSource: GameDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError> {
+    public func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError> {
         return Future<String, Common.URLError> { completion in
             if let url = URL(string: (GameEndpoints.Gets.detail.url)+(id)) {
                 AF.request(url).validate().responseDecodable(of: Game.self) { response in

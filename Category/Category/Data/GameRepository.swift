@@ -11,12 +11,12 @@ import Combine
 import Core
 import Common
 
-final class GameRepository: NSObject {
+public final class GameRepository: NSObject {
     typealias GameInstance = (GameDataSource) -> GameRepository
 
     fileprivate let remote: GameDataSource
 
-    private init(remote: GameDataSource) {
+    public init(remote: GameDataSource) {
         self.remote = remote
     }
 
@@ -26,12 +26,12 @@ final class GameRepository: NSObject {
 }
 
 extension GameRepository: GameRepositoryProtocol {
-    func getGame() -> AnyPublisher<[GameModel], Common.URLError> {
+    public func getGame() -> AnyPublisher<[GameModel], Common.URLError> {
         return self.remote.getGame()
             .map { DataMapper.mapGameResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }
-    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError> {
+    public func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError> {
         return self.remote.getGameDescription(id: id)
             .map { $0 }
             .eraseToAnyPublisher()

@@ -13,7 +13,7 @@ jobs:
     env:
       XC_VERSION: ${{ '13.2' }}
       XC_WORKSPACE: ${{ 'HobbyModularization.xcworkspace' }}
-      XC_SCHEME: ${{ 'HobbyModularization' }}
+      XC_SCHEME: ${{ 'Hobby' }}
     steps:
     - uses: actions/checkout@v2
     - name: "#️⃣ Generate Build Number"

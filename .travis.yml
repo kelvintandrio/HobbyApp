@@ -1,5 +1,0 @@
-language: swift
-osx_image: xcode12
-xcode_project: Hobby.xcodeproj
-xcode_scheme: Hobby
-xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11 Pro

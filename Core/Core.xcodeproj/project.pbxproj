@@ -13,6 +13,9 @@
 		10DACF7625D18F4400DED4D0 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF6825D18F4300DED4D0 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10F73F9725D99A3900C4A77A /* GameRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */; };
 		10F73F9925D99A6F00C4A77A /* GameDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9825D99A6F00C4A77A /* GameDataSourceProtocol.swift */; };
+		10F73FAF25D9A11400C4A77A /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FAE25D9A11400C4A77A /* GameModel.swift */; };
+		10F73FB125D9A19800C4A77A /* DataGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FB025D9A19800C4A77A /* DataGame.swift */; };
+		10F73FB325D9A23B00C4A77A /* GameEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FB225D9A23B00C4A77A /* GameEndPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		10DACF7525D18F4400DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepositoryProtocol.swift; sourceTree = "<group>"; };
 		10F73F9825D99A6F00C4A77A /* GameDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSourceProtocol.swift; sourceTree = "<group>"; };
+		10F73FAE25D9A11400C4A77A /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		10F73FB025D9A19800C4A77A /* DataGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGame.swift; sourceTree = "<group>"; };
+		10F73FB225D9A23B00C4A77A /* GameEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndPoints.swift; sourceTree = "<group>"; };
 		7833F4E6272BA1BBBDA70633 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9431E53BC733B15775C6F685 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		AB24EE8D67BE49CAF0EDCD20 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 		10DACF6725D18F4300DED4D0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				10F73FAD25D9A0E800C4A77A /* Domain */,
 				10F73F9325D998FF00C4A77A /* Data */,
 				10DACF6825D18F4300DED4D0 /* Core.h */,
 				10DACF6925D18F4300DED4D0 /* Info.plist */,
@@ -121,6 +128,16 @@
 				10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		10F73FAD25D9A0E800C4A77A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				10F73FAE25D9A11400C4A77A /* GameModel.swift */,
+				10F73FB025D9A19800C4A77A /* DataGame.swift */,
+				10F73FB225D9A23B00C4A77A /* GameEndPoints.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		6995AE250C42F94AE7A0AC3F /* Frameworks */ = {
@@ -277,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F73FB325D9A23B00C4A77A /* GameEndPoints.swift in Sources */,
 				10F73F9925D99A6F00C4A77A /* GameDataSourceProtocol.swift in Sources */,
+				10F73FB125D9A19800C4A77A /* DataGame.swift in Sources */,
 				10F73F9725D99A3900C4A77A /* GameRepositoryProtocol.swift in Sources */,
+				10F73FAF25D9A11400C4A77A /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

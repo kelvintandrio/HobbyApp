@@ -111,6 +111,7 @@
 		1031E91525CB2E4C00F3C1DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E91225CB2E4C00F3C1DF /* ContentView.swift */; };
 		1031E91625CB2E4C00F3C1DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E91325CB2E4C00F3C1DF /* SceneDelegate.swift */; };
 		10F73F8C25D96FBD00C4A77A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 10F73F8B25D96FBD00C4A77A /* .gitignore */; };
+		10F73F8E25D984FB00C4A77A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 10F73F8D25D984FB00C4A77A /* SDWebImageSwiftUI */; };
 		966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87FFF28155280A610B0171EA /* Pods_Hobby.framework */; };
 /* End PBXBuildFile section */
 
@@ -240,6 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F73F8E25D984FB00C4A77A /* SDWebImageSwiftUI in Frameworks */,
 				1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */,
 				1031E82925CB134500F3C1DF /* Realm in Frameworks */,
 				1031E82325CB110400F3C1DF /* Alamofire in Frameworks */,
@@ -649,6 +651,7 @@
 				1031E82225CB110400F3C1DF /* Alamofire */,
 				1031E82825CB134500F3C1DF /* Realm */,
 				1031E82A25CB134500F3C1DF /* RealmSwift */,
+				10F73F8D25D984FB00C4A77A /* SDWebImageSwiftUI */,
 			);
 			productName = Hobby;
 			productReference = 1031E7F425CAFEAB00F3C1DF /* Hobby.app */;
@@ -1184,6 +1187,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		10F73F8D25D984FB00C4A77A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1031E82425CB125A00F3C1DF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

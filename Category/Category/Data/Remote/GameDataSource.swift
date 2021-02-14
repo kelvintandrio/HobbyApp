@@ -19,8 +19,8 @@ final class GameDataSource: NSObject {
 }
 
 extension GameDataSource: GameDataSourceProtocol {
-    func getGame() -> AnyPublisher<[Games], URLError> {
-        return Future<[Games], URLError> { completion in
+    func getGame() -> AnyPublisher<[Games], Common.URLError> {
+        return Future<[Games], Common.URLError> { completion in
             if let url = URL(string: GameEndpoints.Gets.games.url) {
                 AF.request(url).validate().responseDecodable(of: DataGame.self) { response in
                     switch response.result {
@@ -33,8 +33,8 @@ extension GameDataSource: GameDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    func getGameDescription(id: String) -> AnyPublisher<String, URLError> {
-        return Future<String, URLError> { completion in
+    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError> {
+        return Future<String, Common.URLError> { completion in
             if let url = URL(string: (GameEndpoints.Gets.detail.url)+(id)) {
                 AF.request(url).validate().responseDecodable(of: Game.self) { response in
                     switch response.result {

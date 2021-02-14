@@ -8,8 +8,9 @@
 
 import Foundation
 import Combine
+import Common
 
 public protocol GameDataSourceProtocol: class {
-    func getGame() -> AnyPublisher<[Games], URLError>
-    func getGameDescription(id: String) -> AnyPublisher<String, URLError>
+    func getGame() -> AnyPublisher<[Games], Common.URLError>
+    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError>
 }

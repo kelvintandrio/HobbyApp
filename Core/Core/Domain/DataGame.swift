@@ -9,10 +9,10 @@
 import Foundation
 
 public struct DataGame: Decodable {
-    let results: [Games]
+    public let results: [Games]
 }
 public struct Game: Decodable {
-    let description_raw: String
+    public let description_raw: String
 }
 
 public struct Games: Decodable {
@@ -25,10 +25,10 @@ public struct Games: Decodable {
         case descriptionGame = "description_raw"
     }
 
-    let idGame: Int?
-    let nameGame: String?
-    let backgroundImageGame: String?
-    let releasedGame: String?
-    let ratingGame: Float?
-    let descriptionGame: String?
+    public let idGame: Int?
+    public let nameGame: String?
+    public let backgroundImageGame: String?
+    public let releasedGame: String?
+    public let ratingGame: Float?
+    public let descriptionGame: String?
 }

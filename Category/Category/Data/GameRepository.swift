@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 import Core
+import Common
 
 final class GameRepository: NSObject {
     typealias GameInstance = (GameDataSource) -> GameRepository
@@ -25,12 +26,12 @@ final class GameRepository: NSObject {
 }
 
 extension GameRepository: GameRepositoryProtocol {
-    func getGame() -> AnyPublisher<[GameModel], URLError> {
+    func getGame() -> AnyPublisher<[GameModel], Common.URLError> {
         return self.remote.getGame()
             .map { DataMapper.mapGameResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }
-    func getGameDescription(id: String) -> AnyPublisher<String, URLError> {
+    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError> {
         return self.remote.getGameDescription(id: id)
             .map { $0 }
             .eraseToAnyPublisher()

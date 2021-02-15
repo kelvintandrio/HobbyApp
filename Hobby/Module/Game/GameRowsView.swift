@@ -39,15 +39,3 @@ struct GameRowsView: View {
         .cornerRadius(10)
     }
 }
-
-struct GameRowsView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameRowsView(dataGames: GameModel(
-            id: 1,
-            name: "Grand Theft Auto V",
-            image: "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
-            released: "2013-09-17",
-            rating: 4.48,
-            description: ""))
-    }
-}

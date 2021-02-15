@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import Core
 
 final class DataMapper {
-    static func mapGameResponsesToDomains(input gameResponses: [Games]) -> [GameModel] {
+    static func mapGameResponsesToDomains(input gameResponses: [Core.Games]) -> [Core.GameModel] {
         return gameResponses.map { result in
-            return GameModel(
+            return Core.GameModel(
                 id: result.idGame ?? 0,
                 name: result.nameGame ?? "Unknow",
                 image: result.backgroundImageGame ?? "Unknow",

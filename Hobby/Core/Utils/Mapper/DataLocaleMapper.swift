@@ -12,7 +12,7 @@ import Core
 final class DataLocaleMapper {
     static func mapGameToModel(input gameResponses: [GameEntity]) -> [Core.GameModel] {
         return gameResponses.map { result in
-            return GameModel(
+            return Core.GameModel(
                 id: result.id,
                 name: result.name,
                 image: result.image,

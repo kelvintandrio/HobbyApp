@@ -9,13 +9,14 @@
 import Foundation
 import SwiftUI
 import Combine
+import Core
 
 class GameFavoritePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let gameRouter = GameRouter()
     private let gameFavoriteUseCase: GameFavoriteProtocol
 
-    @Published var game: [GameModel] = []
+    @Published var game: [Core.GameModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 

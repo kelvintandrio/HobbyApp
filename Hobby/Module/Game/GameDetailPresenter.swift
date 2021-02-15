@@ -8,12 +8,13 @@
 
 import Foundation
 import Combine
+import Core
 
 class GameDetailPresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let detailUseCase: GameDetailProtocol
 
-    @Published var category: GameModel
+    @Published var category: Core.GameModel
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
     @Published var detailGame: String = ""

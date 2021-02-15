@@ -8,9 +8,10 @@
 
 import Combine
 import Common
+import Core
 
 protocol GameDetailProtocol {
-    func getDetailGame() -> GameModel
+    func getDetailGame() -> Core.GameModel
     func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError>
     func addGameFavorite(game: GameEntity) -> AnyPublisher<Bool, Error>
     func checkFavoriteGame(game: GameEntity) -> Bool

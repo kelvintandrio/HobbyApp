@@ -8,10 +8,11 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Core
 
 struct GameRowsView: View {
 
-    var dataGames: GameModel
+    var dataGames: Core.GameModel
 
     var body: some View {
         HStack {

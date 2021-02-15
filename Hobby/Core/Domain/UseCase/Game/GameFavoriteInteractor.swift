@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Core
 
 class GameFavoriteInteractor: GameFavoriteProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
@@ -15,7 +16,7 @@ class GameFavoriteInteractor: GameFavoriteProtocol {
       self.gameLocaleRepository = repository
     }
 
-    func getGameFavorite() -> AnyPublisher<[GameModel], Error> {
+    func getGameFavorite() -> AnyPublisher<[Core.GameModel], Error> {
         return gameLocaleRepository.getLocaleGame()
     }
 }

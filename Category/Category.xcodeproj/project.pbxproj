@@ -3,13 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		10DACF9325D1909000DED4D0 /* Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF8925D1909000DED4D0 /* Category.framework */; };
 		10DACF9825D1909000DED4D0 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF9725D1909000DED4D0 /* CategoryTests.swift */; };
 		10DACF9A25D1909000DED4D0 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF8C25D1909000DED4D0 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */; };
+		10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FA125D99D3600C4A77A /* GameRepository.swift */; };
+		10F73FA725D99EF100C4A77A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FA625D99EF100C4A77A /* Core.framework */; };
+		10F73FA825D99EF200C4A77A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FA625D99EF100C4A77A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10F73FB525D9A2DB00C4A77A /* GameEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FB425D9A2DB00C4A77A /* GameEndPoints.swift */; };
+		10F73FB725D9A3C100C4A77A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FB625D9A3C100C4A77A /* Common.framework */; };
+		10F73FB825D9A3C100C4A77A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FB625D9A3C100C4A77A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10F73FBA25D9A51F00C4A77A /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FB925D9A51F00C4A77A /* DataMapper.swift */; };
+		10F73FC125D9AC1100C4A77A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 10F73FC025D9AC1100C4A77A /* Alamofire */; };
 		401346760AA3FBC7F1C9C7CF /* Pods_Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F35AA4CECB67830C5FFC3B6 /* Pods_Category.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +32,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		10F73FA925D99EF200C4A77A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10F73FA825D99EF200C4A77A /* Core.framework in Embed Frameworks */,
+				10F73FB825D9A3C100C4A77A /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		10DACF8925D1909000DED4D0 /* Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF8C25D1909000DED4D0 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -30,6 +54,12 @@
 		10DACF9225D1909000DED4D0 /* CategoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CategoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF9725D1909000DED4D0 /* CategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
 		10DACF9925D1909000DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
+		10F73FA125D99D3600C4A77A /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		10F73FA625D99EF100C4A77A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F73FB425D9A2DB00C4A77A /* GameEndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEndPoints.swift; path = ../../../Core/Core/Domain/GameEndPoints.swift; sourceTree = "<group>"; };
+		10F73FB625D9A3C100C4A77A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F73FB925D9A51F00C4A77A /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		28CCB765E0D71ABB366F2571 /* Pods-Category.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Category.release.xcconfig"; path = "Target Support Files/Pods-Category/Pods-Category.release.xcconfig"; sourceTree = "<group>"; };
 		4F35AA4CECB67830C5FFC3B6 /* Pods_Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA3E96C18ACA3FC922E2B7E /* Pods-Category.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Category.debug.xcconfig"; path = "Target Support Files/Pods-Category/Pods-Category.debug.xcconfig"; sourceTree = "<group>"; };
@@ -40,7 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F73FB725D9A3C100C4A77A /* Common.framework in Frameworks */,
+				10F73FC125D9AC1100C4A77A /* Alamofire in Frameworks */,
 				401346760AA3FBC7F1C9C7CF /* Pods_Category.framework in Frameworks */,
+				10F73FA725D99EF100C4A77A /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +111,9 @@
 		10DACF8B25D1909000DED4D0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				10F73FB925D9A51F00C4A77A /* DataMapper.swift */,
+				10F73FA325D99D7E00C4A77A /* Domain */,
+				10F73F9A25D99B0500C4A77A /* Data */,
 				10DACF8C25D1909000DED4D0 /* Category.h */,
 				10DACF8D25D1909000DED4D0 /* Info.plist */,
 			);
@@ -93,9 +129,44 @@
 			path = CategoryTests;
 			sourceTree = "<group>";
 		};
+		10F73F9A25D99B0500C4A77A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				10F73FA125D99D3600C4A77A /* GameRepository.swift */,
+				10F73F9B25D99C0400C4A77A /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		10F73F9B25D99C0400C4A77A /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				10F73F9C25D99C0C00C4A77A /* Response */,
+				10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		10F73F9C25D99C0C00C4A77A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		10F73FA325D99D7E00C4A77A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				10F73FB425D9A2DB00C4A77A /* GameEndPoints.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		B39B60D0EF89CA3C9256C58F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10F73FB625D9A3C100C4A77A /* Common.framework */,
+				10F73FA625D99EF100C4A77A /* Core.framework */,
 				4F35AA4CECB67830C5FFC3B6 /* Pods_Category.framework */,
 			);
 			name = Frameworks;
@@ -134,12 +205,16 @@
 				10DACF8525D1909000DED4D0 /* Sources */,
 				10DACF8625D1909000DED4D0 /* Frameworks */,
 				10DACF8725D1909000DED4D0 /* Resources */,
+				10F73FA925D99EF200C4A77A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Category;
+			packageProductDependencies = (
+				10F73FC025D9AC1100C4A77A /* Alamofire */,
+			);
 			productName = Category;
 			productReference = 10DACF8925D1909000DED4D0 /* Category.framework */;
 			productType = "com.apple.product-type.framework";
@@ -174,6 +249,7 @@
 				TargetAttributes = {
 					10DACF8825D1909000DED4D0 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					10DACF9125D1909000DED4D0 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -189,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 10DACF7F25D1909000DED4D0;
+			packageReferences = (
+				10F73FBF25D9AC1100C4A77A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 10DACF8A25D1909000DED4D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -246,6 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */,
+				10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */,
+				10F73FBA25D9A51F00C4A77A /* DataMapper.swift in Sources */,
+				10F73FB525D9A2DB00C4A77A /* GameEndPoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CBA3E96C18ACA3FC922E2B7E /* Pods-Category.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -407,6 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.algokelvin.Category;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28CCB765E0D71ABB366F2571 /* Pods-Category.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -439,6 +525,7 @@
 		10DACFA125D1909000DED4D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CategoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,6 +543,7 @@
 		10DACFA225D1909000DED4D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CategoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,6 +589,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10F73FBF25D9AC1100C4A77A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10F73FC025D9AC1100C4A77A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10F73FBF25D9AC1100C4A77A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10DACF8025D1909000DED4D0 /* Project object */;
 }

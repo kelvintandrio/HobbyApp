@@ -19,9 +19,7 @@
 		1031E83825CB16DC00F3C1DF /* TravelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */; };
 		1031E83925CB16DC00F3C1DF /* TravelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83125CB16DC00F3C1DF /* TravelRepository.swift */; };
 		1031E83A25CB16DC00F3C1DF /* SportsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83225CB16DC00F3C1DF /* SportsRepository.swift */; };
-		1031E83B25CB16DC00F3C1DF /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83325CB16DC00F3C1DF /* GameRepository.swift */; };
 		1031E83C25CB16DC00F3C1DF /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83425CB16DC00F3C1DF /* MovieRepository.swift */; };
-		1031E83D25CB16DC00F3C1DF /* GameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83525CB16DC00F3C1DF /* GameDataSource.swift */; };
 		1031E83E25CB16DC00F3C1DF /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83625CB16DC00F3C1DF /* MovieDataSource.swift */; };
 		1031E84925CB1B2300F3C1DF /* MovieLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84025CB1B2300F3C1DF /* MovieLocaleDataSource.swift */; };
 		1031E84A25CB1B2300F3C1DF /* GameLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84125CB1B2300F3C1DF /* GameLocaleDataSource.swift */; };
@@ -114,6 +112,10 @@
 		10F73F8E25D984FB00C4A77A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 10F73F8D25D984FB00C4A77A /* SDWebImageSwiftUI */; };
 		10F73F9025D98A4A00C4A77A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73F8F25D98A4A00C4A77A /* Common.framework */; };
 		10F73F9125D98A4A00C4A77A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73F8F25D98A4A00C4A77A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10F73FAB25D9A02000C4A77A /* Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FAA25D9A02000C4A77A /* Category.framework */; };
+		10F73FAC25D9A02000C4A77A /* Category.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FAA25D9A02000C4A77A /* Category.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10F73FC325D9B2C700C4A77A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FC225D9B2C700C4A77A /* Core.framework */; };
+		10F73FC425D9B2C700C4A77A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FC225D9B2C700C4A77A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87FFF28155280A610B0171EA /* Pods_Hobby.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +136,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				10F73FAC25D9A02000C4A77A /* Category.framework in Embed Frameworks */,
+				10F73FC425D9B2C700C4A77A /* Core.framework in Embed Frameworks */,
 				10F73F9125D98A4A00C4A77A /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -155,9 +159,7 @@
 		1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDataSource.swift; sourceTree = "<group>"; };
 		1031E83125CB16DC00F3C1DF /* TravelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelRepository.swift; sourceTree = "<group>"; };
 		1031E83225CB16DC00F3C1DF /* SportsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsRepository.swift; sourceTree = "<group>"; };
-		1031E83325CB16DC00F3C1DF /* GameRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		1031E83425CB16DC00F3C1DF /* MovieRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
-		1031E83525CB16DC00F3C1DF /* GameDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
 		1031E83625CB16DC00F3C1DF /* MovieDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
 		1031E84025CB1B2300F3C1DF /* MovieLocaleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLocaleDataSource.swift; sourceTree = "<group>"; };
 		1031E84125CB1B2300F3C1DF /* GameLocaleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLocaleDataSource.swift; sourceTree = "<group>"; };
@@ -248,6 +250,8 @@
 		1031E91325CB2E4C00F3C1DF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		10F73F8B25D96FBD00C4A77A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		10F73F8F25D98A4A00C4A77A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F73FAA25D9A02000C4A77A /* Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F73FC225D9B2C700C4A77A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		180348F9F5A498FBFA8EAED4 /* Pods-Hobby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hobby.release.xcconfig"; path = "Target Support Files/Pods-Hobby/Pods-Hobby.release.xcconfig"; sourceTree = "<group>"; };
 		39BFE337A746009CFD0A267C /* Pods-Hobby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hobby.debug.xcconfig"; path = "Target Support Files/Pods-Hobby/Pods-Hobby.debug.xcconfig"; sourceTree = "<group>"; };
 		87FFF28155280A610B0171EA /* Pods_Hobby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hobby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,7 +265,9 @@
 				10F73F8E25D984FB00C4A77A /* SDWebImageSwiftUI in Frameworks */,
 				1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */,
 				1031E82925CB134500F3C1DF /* Realm in Frameworks */,
+				10F73FC325D9B2C700C4A77A /* Core.framework in Frameworks */,
 				10F73F9025D98A4A00C4A77A /* Common.framework in Frameworks */,
+				10F73FAB25D9A02000C4A77A /* Category.framework in Frameworks */,
 				1031E82325CB110400F3C1DF /* Alamofire in Frameworks */,
 				966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */,
 			);
@@ -354,7 +360,6 @@
 				1031E83025CB16DC00F3C1DF /* Response */,
 				1031E82E25CB16DC00F3C1DF /* SportsDataSource.swift */,
 				1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */,
-				1031E83525CB16DC00F3C1DF /* GameDataSource.swift */,
 				1031E83625CB16DC00F3C1DF /* MovieDataSource.swift */,
 			);
 			path = Remote;
@@ -365,7 +370,6 @@
 			children = (
 				1031E83125CB16DC00F3C1DF /* TravelRepository.swift */,
 				1031E83225CB16DC00F3C1DF /* SportsRepository.swift */,
-				1031E83325CB16DC00F3C1DF /* GameRepository.swift */,
 				1031E83425CB16DC00F3C1DF /* MovieRepository.swift */,
 			);
 			path = Response;
@@ -642,6 +646,8 @@
 		578B8938E749B630CE36A38F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10F73FC225D9B2C700C4A77A /* Core.framework */,
+				10F73FAA25D9A02000C4A77A /* Category.framework */,
 				10F73F8F25D98A4A00C4A77A /* Common.framework */,
 				87FFF28155280A610B0171EA /* Pods_Hobby.framework */,
 			);
@@ -817,8 +823,6 @@
 				1031E8C525CB1E4A00F3C1DF /* TravelProtocol.swift in Sources */,
 				1031E85825CB1D4600F3C1DF /* SportsEntity.swift in Sources */,
 				1031E8AD25CB1E4A00F3C1DF /* MovieDetailInteractor.swift in Sources */,
-				1031E83B25CB16DC00F3C1DF /* GameRepository.swift in Sources */,
-				1031E83D25CB16DC00F3C1DF /* GameDataSource.swift in Sources */,
 				1031E8B525CB1E4A00F3C1DF /* GameInteractor.swift in Sources */,
 				1031E8F925CB1E6100F3C1DF /* GameFavoriteView.swift in Sources */,
 				1031E91425CB2E4C00F3C1DF /* AppDelegate.swift in Sources */,

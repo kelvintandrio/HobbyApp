@@ -8,13 +8,14 @@
 
 import SwiftUI
 import Combine
+import Core
 
 class GamePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let gameRouter = GameRouter()
     private let gameUseCase: GameProtocol
 
-    @Published var games: [GameModel] = []
+    @Published var games: [Core.GameModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 

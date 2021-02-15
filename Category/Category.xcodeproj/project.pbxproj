@@ -17,6 +17,10 @@
 		105394F125DAECFA009EC607 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394F025DAECFA009EC607 /* MovieRepository.swift */; };
 		1053950325DAF287009EC607 /* MovieLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053950225DAF287009EC607 /* MovieLocaleDataSource.swift */; };
 		1053950525DAF31B009EC607 /* MovieLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053950425DAF31B009EC607 /* MovieLocaleRepository.swift */; };
+		1053951625DAFB5C009EC607 /* SportsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053951525DAFB5C009EC607 /* SportsDataSource.swift */; };
+		1053951825DAFB74009EC607 /* SportsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053951725DAFB74009EC607 /* SportsRepository.swift */; };
+		1053951A25DAFBA8009EC607 /* SportLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053951925DAFBA8009EC607 /* SportLocaleDataSource.swift */; };
+		1053951C25DAFBB6009EC607 /* SportLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053951B25DAFBB6009EC607 /* SportLocaleRepository.swift */; };
 		10DACF9325D1909000DED4D0 /* Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF8925D1909000DED4D0 /* Category.framework */; };
 		10DACF9825D1909000DED4D0 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF9725D1909000DED4D0 /* CategoryTests.swift */; };
 		10DACF9A25D1909000DED4D0 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF8C25D1909000DED4D0 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +69,10 @@
 		105394F025DAECFA009EC607 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		1053950225DAF287009EC607 /* MovieLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLocaleDataSource.swift; sourceTree = "<group>"; };
 		1053950425DAF31B009EC607 /* MovieLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLocaleRepository.swift; sourceTree = "<group>"; };
+		1053951525DAFB5C009EC607 /* SportsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsDataSource.swift; sourceTree = "<group>"; };
+		1053951725DAFB74009EC607 /* SportsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsRepository.swift; sourceTree = "<group>"; };
+		1053951925DAFBA8009EC607 /* SportLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLocaleDataSource.swift; sourceTree = "<group>"; };
+		1053951B25DAFBB6009EC607 /* SportLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLocaleRepository.swift; sourceTree = "<group>"; };
 		10DACF8925D1909000DED4D0 /* Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF8C25D1909000DED4D0 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		10DACF8D25D1909000DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 				105394CE25DABD2F009EC607 /* DataSource */,
 				105394D925DAC71F009EC607 /* GameLocaleRepository.swift */,
 				1053950425DAF31B009EC607 /* MovieLocaleRepository.swift */,
+				1053951B25DAFBB6009EC607 /* SportLocaleRepository.swift */,
 			);
 			path = Locale;
 			sourceTree = "<group>";
@@ -130,6 +139,7 @@
 			children = (
 				105394D125DAC2AD009EC607 /* GameLocaleDataSource.swift */,
 				1053950225DAF287009EC607 /* MovieLocaleDataSource.swift */,
+				1053951925DAFBA8009EC607 /* SportLocaleDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -190,6 +200,7 @@
 				10F73F9C25D99C0C00C4A77A /* DataSource */,
 				10F73FA125D99D3600C4A77A /* GameRepository.swift */,
 				105394F025DAECFA009EC607 /* MovieRepository.swift */,
+				1053951725DAFB74009EC607 /* SportsRepository.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -199,6 +210,7 @@
 			children = (
 				10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */,
 				105394EE25DAEC53009EC607 /* MovieDataSource.swift */,
+				1053951525DAFB5C009EC607 /* SportsDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -374,11 +386,15 @@
 				105394F125DAECFA009EC607 /* MovieRepository.swift in Sources */,
 				1053950325DAF287009EC607 /* MovieLocaleDataSource.swift in Sources */,
 				10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */,
+				1053951C25DAFBB6009EC607 /* SportLocaleRepository.swift in Sources */,
 				105394EF25DAEC53009EC607 /* MovieDataSource.swift in Sources */,
 				10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */,
+				1053951625DAFB5C009EC607 /* SportsDataSource.swift in Sources */,
 				105394D825DAC4A4009EC607 /* ConvertToArray.swift in Sources */,
 				105394DA25DAC71F009EC607 /* GameLocaleRepository.swift in Sources */,
 				1053950525DAF31B009EC607 /* MovieLocaleRepository.swift in Sources */,
+				1053951A25DAFBA8009EC607 /* SportLocaleDataSource.swift in Sources */,
+				1053951825DAFB74009EC607 /* SportsRepository.swift in Sources */,
 				10F73FBA25D9A51F00C4A77A /* DataMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

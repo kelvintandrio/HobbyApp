@@ -1,28 +1,26 @@
 //
-//  SportsDataSource.swift
-//  CapStoneApps
+//  SportDataSource.swift
+//  Category
 //
-//  Created by Kelvin HT on 12/22/20.
-//  Copyright © 2020 Kelvin HT. All rights reserved.
+//  Created by Kelvin HT on 2/16/21.
+//  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
+import Common
 import Combine
+import Core
 import Alamofire
 
-protocol SportDataSourceProtocol: class {
-  func getSport() -> AnyPublisher<[Sports], URLError>
-}
+public final class SportDataSource: NSObject {
+    override init() { }
 
-final class SportDataSource: NSObject {
-    private override init() { }
-
-    static let sharedInstance: SportDataSource =  SportDataSource()
+    public static let sharedInstance: SportDataSource =  SportDataSource()
 }
 
 extension SportDataSource: SportDataSourceProtocol {
-    func getSport() -> AnyPublisher<[Sports], URLError> {
-        return Future<[Sports], URLError> { completion in
+    public func getSport() -> AnyPublisher<[Sports], Common.URLError> {
+        return Future<[Sports], Common.URLError> { completion in
             if let url = URL(string: SportEndpoints.Gets.sport.url) {
                 AF.request(url).validate().responseDecodable(of: DataSports.self) { response in
                     switch response.result {

@@ -65,8 +65,8 @@ enum TravelEndpoints {
     }
 }
 
-enum SportEndpoints {
-    enum Gets: Endpoint {
+public enum SportEndpoints {
+    public enum Gets: Endpoint {
         case sport
 
         public var url: String {

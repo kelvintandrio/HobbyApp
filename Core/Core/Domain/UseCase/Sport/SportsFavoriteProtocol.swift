@@ -1,13 +1,14 @@
 //
 //  SportsFavoriteProtocol.swift
-//  CapStoneApps
+//  Core
 //
-//  Created by Kelvin HT on 1/17/21.
+//  Created by Kelvin HT on 2/16/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
+import Foundation
 import Combine
 
-protocol SportFavoriteProtocol {
+public protocol SportFavoriteProtocol {
     func getSportFavorite() -> AnyPublisher<[SportModel], Error>
 }

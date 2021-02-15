@@ -15,15 +15,10 @@
 		1031E82325CB110400F3C1DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82225CB110400F3C1DF /* Alamofire */; };
 		1031E82925CB134500F3C1DF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82825CB134500F3C1DF /* Realm */; };
 		1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82A25CB134500F3C1DF /* RealmSwift */; };
-		1031E83725CB16DC00F3C1DF /* SportsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E82E25CB16DC00F3C1DF /* SportsDataSource.swift */; };
 		1031E83825CB16DC00F3C1DF /* TravelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */; };
 		1031E83925CB16DC00F3C1DF /* TravelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83125CB16DC00F3C1DF /* TravelRepository.swift */; };
-		1031E83A25CB16DC00F3C1DF /* SportsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83225CB16DC00F3C1DF /* SportsRepository.swift */; };
-		1031E84C25CB1B2300F3C1DF /* SportLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84425CB1B2300F3C1DF /* SportLocaleRepository.swift */; };
 		1031E84E25CB1B2300F3C1DF /* TravelLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84625CB1B2300F3C1DF /* TravelLocaleRepository.swift */; };
-		1031E84F25CB1B2300F3C1DF /* SportLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84725CB1B2300F3C1DF /* SportLocaleDataSource.swift */; };
 		1031E85025CB1B2300F3C1DF /* TravelLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84825CB1B2300F3C1DF /* TravelLocaleDataSource.swift */; };
-		1031E85825CB1D4600F3C1DF /* SportsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85325CB1D4600F3C1DF /* SportsEntity.swift */; };
 		1031E85A25CB1D4600F3C1DF /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */; };
 		1031E85B25CB1D4600F3C1DF /* TravelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85625CB1D4600F3C1DF /* TravelEntity.swift */; };
 		1031E87625CB1DC900F3C1DF /* CustomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86025CB1DC900F3C1DF /* CustomeError.swift */; };
@@ -45,11 +40,8 @@
 		1031E8B525CB1E4A00F3C1DF /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89825CB1E4900F3C1DF /* GameInteractor.swift */; };
 		1031E8B625CB1E4A00F3C1DF /* GameFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89925CB1E4900F3C1DF /* GameFavoriteInteractor.swift */; };
 		1031E8B725CB1E4A00F3C1DF /* GameFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89A25CB1E4900F3C1DF /* GameFavoriteProtocol.swift */; };
-		1031E8B825CB1E4A00F3C1DF /* SportsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89C25CB1E4900F3C1DF /* SportsProtocol.swift */; };
 		1031E8B925CB1E4A00F3C1DF /* SportsFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89D25CB1E4900F3C1DF /* SportsFavoriteInteractor.swift */; };
-		1031E8BA25CB1E4A00F3C1DF /* SportsFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89E25CB1E4900F3C1DF /* SportsFavoriteProtocol.swift */; };
 		1031E8BB25CB1E4A00F3C1DF /* SportsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89F25CB1E4900F3C1DF /* SportsInteractor.swift */; };
-		1031E8BC25CB1E4A00F3C1DF /* SportsDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E8A025CB1E4900F3C1DF /* SportsDetailProtocol.swift */; };
 		1031E8BD25CB1E4A00F3C1DF /* SportsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E8A125CB1E4900F3C1DF /* SportsDetailInteractor.swift */; };
 		1031E8BE25CB1E4A00F3C1DF /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E8A325CB1E4900F3C1DF /* ProfileProtocol.swift */; };
 		1031E8BF25CB1E4A00F3C1DF /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E8A425CB1E4900F3C1DF /* ProfileInteractor.swift */; };
@@ -143,15 +135,10 @@
 		1031E80E25CAFEAC00F3C1DF /* HobbyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyTests.swift; sourceTree = "<group>"; };
 		1031E81025CAFEAC00F3C1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1031E81F25CB0BBB00F3C1DF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		1031E82E25CB16DC00F3C1DF /* SportsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDataSource.swift; sourceTree = "<group>"; };
 		1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDataSource.swift; sourceTree = "<group>"; };
 		1031E83125CB16DC00F3C1DF /* TravelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelRepository.swift; sourceTree = "<group>"; };
-		1031E83225CB16DC00F3C1DF /* SportsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsRepository.swift; sourceTree = "<group>"; };
-		1031E84425CB1B2300F3C1DF /* SportLocaleRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportLocaleRepository.swift; sourceTree = "<group>"; };
 		1031E84625CB1B2300F3C1DF /* TravelLocaleRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelLocaleRepository.swift; sourceTree = "<group>"; };
-		1031E84725CB1B2300F3C1DF /* SportLocaleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportLocaleDataSource.swift; sourceTree = "<group>"; };
 		1031E84825CB1B2300F3C1DF /* TravelLocaleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelLocaleDataSource.swift; sourceTree = "<group>"; };
-		1031E85325CB1D4600F3C1DF /* SportsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsEntity.swift; sourceTree = "<group>"; };
 		1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
 		1031E85625CB1D4600F3C1DF /* TravelEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelEntity.swift; sourceTree = "<group>"; };
 		1031E86025CB1DC900F3C1DF /* CustomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeError.swift; sourceTree = "<group>"; };
@@ -173,11 +160,8 @@
 		1031E89825CB1E4900F3C1DF /* GameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
 		1031E89925CB1E4900F3C1DF /* GameFavoriteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFavoriteInteractor.swift; sourceTree = "<group>"; };
 		1031E89A25CB1E4900F3C1DF /* GameFavoriteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFavoriteProtocol.swift; sourceTree = "<group>"; };
-		1031E89C25CB1E4900F3C1DF /* SportsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsProtocol.swift; sourceTree = "<group>"; };
 		1031E89D25CB1E4900F3C1DF /* SportsFavoriteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsFavoriteInteractor.swift; sourceTree = "<group>"; };
-		1031E89E25CB1E4900F3C1DF /* SportsFavoriteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsFavoriteProtocol.swift; sourceTree = "<group>"; };
 		1031E89F25CB1E4900F3C1DF /* SportsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsInteractor.swift; sourceTree = "<group>"; };
-		1031E8A025CB1E4900F3C1DF /* SportsDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDetailProtocol.swift; sourceTree = "<group>"; };
 		1031E8A125CB1E4900F3C1DF /* SportsDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDetailInteractor.swift; sourceTree = "<group>"; };
 		1031E8A325CB1E4900F3C1DF /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
 		1031E8A425CB1E4900F3C1DF /* ProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
@@ -334,7 +318,6 @@
 			isa = PBXGroup;
 			children = (
 				1031E83025CB16DC00F3C1DF /* Response */,
-				1031E82E25CB16DC00F3C1DF /* SportsDataSource.swift */,
 				1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */,
 			);
 			path = Remote;
@@ -344,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				1031E83125CB16DC00F3C1DF /* TravelRepository.swift */,
-				1031E83225CB16DC00F3C1DF /* SportsRepository.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -353,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				1031E84225CB1B2300F3C1DF /* Entity */,
-				1031E84725CB1B2300F3C1DF /* SportLocaleDataSource.swift */,
 				1031E84825CB1B2300F3C1DF /* TravelLocaleDataSource.swift */,
 			);
 			path = Local;
@@ -362,7 +343,6 @@
 		1031E84225CB1B2300F3C1DF /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				1031E84425CB1B2300F3C1DF /* SportLocaleRepository.swift */,
 				1031E84625CB1B2300F3C1DF /* TravelLocaleRepository.swift */,
 			);
 			path = Entity;
@@ -380,7 +360,6 @@
 		1031E85225CB1D4600F3C1DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1031E85325CB1D4600F3C1DF /* SportsEntity.swift */,
 				1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */,
 				1031E85625CB1D4600F3C1DF /* TravelEntity.swift */,
 			);
@@ -484,11 +463,8 @@
 		1031E89B25CB1E4900F3C1DF /* Sports */ = {
 			isa = PBXGroup;
 			children = (
-				1031E89C25CB1E4900F3C1DF /* SportsProtocol.swift */,
 				1031E89D25CB1E4900F3C1DF /* SportsFavoriteInteractor.swift */,
-				1031E89E25CB1E4900F3C1DF /* SportsFavoriteProtocol.swift */,
 				1031E89F25CB1E4900F3C1DF /* SportsInteractor.swift */,
-				1031E8A025CB1E4900F3C1DF /* SportsDetailProtocol.swift */,
 				1031E8A125CB1E4900F3C1DF /* SportsDetailInteractor.swift */,
 			);
 			path = Sports;
@@ -784,12 +760,10 @@
 				1031E8B025CB1E4A00F3C1DF /* MovieFavoriteInteractor.swift in Sources */,
 				1031E88025CB1DC900F3C1DF /* DataMapper.swift in Sources */,
 				1031E8C525CB1E4A00F3C1DF /* TravelProtocol.swift in Sources */,
-				1031E85825CB1D4600F3C1DF /* SportsEntity.swift in Sources */,
 				1031E8AD25CB1E4A00F3C1DF /* MovieDetailInteractor.swift in Sources */,
 				1031E8B525CB1E4A00F3C1DF /* GameInteractor.swift in Sources */,
 				1031E8F925CB1E6100F3C1DF /* GameFavoriteView.swift in Sources */,
 				1031E91425CB2E4C00F3C1DF /* AppDelegate.swift in Sources */,
-				1031E84F25CB1B2300F3C1DF /* SportLocaleDataSource.swift in Sources */,
 				1031E8F125CB1E6100F3C1DF /* MovieView.swift in Sources */,
 				1031E8F025CB1E6100F3C1DF /* MovieRouter.swift in Sources */,
 				1031E8B625CB1E4A00F3C1DF /* GameFavoriteInteractor.swift in Sources */,
@@ -807,14 +781,11 @@
 				1031E8C025CB1E4A00F3C1DF /* TravelFavoriteProtocol.swift in Sources */,
 				1031E8B725CB1E4A00F3C1DF /* GameFavoriteProtocol.swift in Sources */,
 				1031E90D25CB1E6100F3C1DF /* TravelDetailPresenter.swift in Sources */,
-				1031E84C25CB1B2300F3C1DF /* SportLocaleRepository.swift in Sources */,
-				1031E8B825CB1E4A00F3C1DF /* SportsProtocol.swift in Sources */,
 				1031E8B425CB1E4A00F3C1DF /* GameDetailInteractor.swift in Sources */,
 				1031E8BF25CB1E4A00F3C1DF /* ProfileInteractor.swift in Sources */,
 				1031E8C125CB1E4A00F3C1DF /* TravelDetailProtocol.swift in Sources */,
 				1031E8BD25CB1E4A00F3C1DF /* SportsDetailInteractor.swift in Sources */,
 				1031E90025CB1E6100F3C1DF /* SportRowsView.swift in Sources */,
-				1031E8BA25CB1E4A00F3C1DF /* SportsFavoriteProtocol.swift in Sources */,
 				1031E8B225CB1E4A00F3C1DF /* GameDetailProtocol.swift in Sources */,
 				1031E8F825CB1E6100F3C1DF /* GameDetailView.swift in Sources */,
 				1031E83825CB16DC00F3C1DF /* TravelDataSource.swift in Sources */,
@@ -841,10 +812,8 @@
 				1031E85B25CB1D4600F3C1DF /* TravelEntity.swift in Sources */,
 				1031E85025CB1B2300F3C1DF /* TravelLocaleDataSource.swift in Sources */,
 				1031E8C325CB1E4A00F3C1DF /* TravelDetailInteractor.swift in Sources */,
-				1031E83725CB16DC00F3C1DF /* SportsDataSource.swift in Sources */,
 				1031E8C425CB1E4A00F3C1DF /* TravelInteractor.swift in Sources */,
 				1031E90C25CB1E6100F3C1DF /* TravelPresenter.swift in Sources */,
-				1031E83A25CB16DC00F3C1DF /* SportsRepository.swift in Sources */,
 				1031E85A25CB1D4600F3C1DF /* ProfileEntity.swift in Sources */,
 				1031E90E25CB1E6100F3C1DF /* TravelFavoritePresenter.swift in Sources */,
 				1031E90925CB1E6100F3C1DF /* TravelRowsView.swift in Sources */,
@@ -852,7 +821,6 @@
 				1031E91525CB2E4C00F3C1DF /* ContentView.swift in Sources */,
 				1031E8FA25CB1E6100F3C1DF /* GameRowsView.swift in Sources */,
 				1031E90725CB1E6100F3C1DF /* ProfileView.swift in Sources */,
-				1031E8BC25CB1E4A00F3C1DF /* SportsDetailProtocol.swift in Sources */,
 				1031E87D25CB1DC900F3C1DF /* API.swift in Sources */,
 				1031E8F625CB1E6100F3C1DF /* GameView.swift in Sources */,
 				1031E87C25CB1DC900F3C1DF /* APISport.swift in Sources */,

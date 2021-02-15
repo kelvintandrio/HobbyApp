@@ -24,14 +24,4 @@ final class DataMapper {
             )
         }
     }
-
-    static func mapSportResponsesToDomains(input sportResponses: [Sports]) -> [SportModel] {
-        return sportResponses.map { result in
-            return SportModel(
-                id: Int(result.idSport ?? "0") ?? 0,
-                name: result.nameSport ?? "Unknown",
-                image: result.backgroundImageSport ?? "Unknown",
-                descript: result.descriptionSport ?? "Unknown")
-        }
-    }
 }

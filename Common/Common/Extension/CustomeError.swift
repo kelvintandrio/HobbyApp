@@ -6,7 +6,6 @@
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
-
 public enum URLError: LocalizedError {
     case invalidResponse
     case addressUnreachable(URL)
@@ -31,4 +30,3 @@ public enum DatabaseError: LocalizedError {
         }
     }
 }
-

@@ -14,7 +14,6 @@
 		10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FA125D99D3600C4A77A /* GameRepository.swift */; };
 		10F73FA725D99EF100C4A77A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FA625D99EF100C4A77A /* Core.framework */; };
 		10F73FA825D99EF200C4A77A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FA625D99EF100C4A77A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		10F73FB525D9A2DB00C4A77A /* GameEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FB425D9A2DB00C4A77A /* GameEndPoints.swift */; };
 		10F73FB725D9A3C100C4A77A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FB625D9A3C100C4A77A /* Common.framework */; };
 		10F73FB825D9A3C100C4A77A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FB625D9A3C100C4A77A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10F73FBA25D9A51F00C4A77A /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FB925D9A51F00C4A77A /* DataMapper.swift */; };
@@ -57,7 +56,6 @@
 		10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
 		10F73FA125D99D3600C4A77A /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		10F73FA625D99EF100C4A77A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		10F73FB425D9A2DB00C4A77A /* GameEndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEndPoints.swift; path = ../../../Core/Core/Domain/GameEndPoints.swift; sourceTree = "<group>"; };
 		10F73FB625D9A3C100C4A77A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F73FB925D9A51F00C4A77A /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		28CCB765E0D71ABB366F2571 /* Pods-Category.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Category.release.xcconfig"; path = "Target Support Files/Pods-Category/Pods-Category.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				10F73FB925D9A51F00C4A77A /* DataMapper.swift */,
-				10F73FA325D99D7E00C4A77A /* Domain */,
 				10F73F9A25D99B0500C4A77A /* Data */,
 				10DACF8C25D1909000DED4D0 /* Category.h */,
 				10DACF8D25D1909000DED4D0 /* Info.plist */,
@@ -152,14 +149,6 @@
 			children = (
 			);
 			path = Response;
-			sourceTree = "<group>";
-		};
-		10F73FA325D99D7E00C4A77A /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				10F73FB425D9A2DB00C4A77A /* GameEndPoints.swift */,
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		B39B60D0EF89CA3C9256C58F /* Frameworks */ = {
@@ -328,7 +317,6 @@
 				10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */,
 				10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */,
 				10F73FBA25D9A51F00C4A77A /* DataMapper.swift in Sources */,
-				10F73FB525D9A2DB00C4A77A /* GameEndPoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

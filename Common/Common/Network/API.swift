@@ -36,8 +36,8 @@ enum MovieEndpoints {
     }
 }
 
-enum GameEndpoints {
-    enum Gets: Endpoint {
+public enum GameEndpoints {
+    public enum Gets: Endpoint {
         case games
         case detail
 

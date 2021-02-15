@@ -37,7 +37,6 @@
 		1031E87625CB1DC900F3C1DF /* CustomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86025CB1DC900F3C1DF /* CustomeError.swift */; };
 		1031E87725CB1DC900F3C1DF /* GeneralAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86125CB1DC900F3C1DF /* GeneralAttribute.swift */; };
 		1031E87925CB1DC900F3C1DF /* APIMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86425CB1DC900F3C1DF /* APIMovie.swift */; };
-		1031E87A25CB1DC900F3C1DF /* APIGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86525CB1DC900F3C1DF /* APIGame.swift */; };
 		1031E87B25CB1DC900F3C1DF /* APITravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86625CB1DC900F3C1DF /* APITravel.swift */; };
 		1031E87C25CB1DC900F3C1DF /* APISport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86725CB1DC900F3C1DF /* APISport.swift */; };
 		1031E87D25CB1DC900F3C1DF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86825CB1DC900F3C1DF /* API.swift */; };
@@ -177,7 +176,6 @@
 		1031E86025CB1DC900F3C1DF /* CustomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeError.swift; sourceTree = "<group>"; };
 		1031E86125CB1DC900F3C1DF /* GeneralAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralAttribute.swift; sourceTree = "<group>"; };
 		1031E86425CB1DC900F3C1DF /* APIMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMovie.swift; sourceTree = "<group>"; };
-		1031E86525CB1DC900F3C1DF /* APIGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIGame.swift; sourceTree = "<group>"; };
 		1031E86625CB1DC900F3C1DF /* APITravel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITravel.swift; sourceTree = "<group>"; };
 		1031E86725CB1DC900F3C1DF /* APISport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISport.swift; sourceTree = "<group>"; };
 		1031E86825CB1DC900F3C1DF /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -454,7 +452,6 @@
 			isa = PBXGroup;
 			children = (
 				1031E86425CB1DC900F3C1DF /* APIMovie.swift */,
-				1031E86525CB1DC900F3C1DF /* APIGame.swift */,
 				1031E86625CB1DC900F3C1DF /* APITravel.swift */,
 				1031E86725CB1DC900F3C1DF /* APISport.swift */,
 				1031E86825CB1DC900F3C1DF /* API.swift */,
@@ -900,7 +897,6 @@
 				1031E8FA25CB1E6100F3C1DF /* GameRowsView.swift in Sources */,
 				1031E90725CB1E6100F3C1DF /* ProfileView.swift in Sources */,
 				1031E8BC25CB1E4A00F3C1DF /* SportsDetailProtocol.swift in Sources */,
-				1031E87A25CB1DC900F3C1DF /* APIGame.swift in Sources */,
 				1031E87D25CB1DC900F3C1DF /* API.swift in Sources */,
 				1031E8F625CB1E6100F3C1DF /* GameView.swift in Sources */,
 				1031E87C25CB1DC900F3C1DF /* APISport.swift in Sources */,

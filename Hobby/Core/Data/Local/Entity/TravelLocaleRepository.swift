@@ -52,7 +52,7 @@ extension TravelLocaleRepository: TravelLocaleRepositoryProtocol {
 
     func getLocaleTravel() -> AnyPublisher<[TravelModel], Error> {
         return self.locale.getTravelLocale()
-            .map { DataLocaleMapper.mapTravelToModel(input: $0) }
+            .map { DataLocaleMapper02.mapTravelToModel(input: $0) }
             .eraseToAnyPublisher()
     }
 }

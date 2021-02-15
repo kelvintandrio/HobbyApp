@@ -1,34 +1,29 @@
 //
 //  GameLocaleDataSource.swift
-//  CapStoneApps
+//  Category
 //
-//  Created by Kelvin HT on 1/14/21.
+//  Created by Kelvin HT on 2/15/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 import Combine
+import Core
+import Common
 
-protocol GameLocaleDataSourceProtocol: class {
-    func getGameLocale() -> AnyPublisher<[GameEntity], Error>
-    func addGameLocale(from categories: GameEntity) -> AnyPublisher<Bool, Error>
-    func deleteGameLocale(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
-    func checkGameLocale(from categories: GameEntity) -> Bool
-}
-
-final class GameLocaleDataSource: NSObject {
-    private let realmGame: Realm?
-    private init(realm: Realm?) {
+public final class GameLocaleDataSource: NSObject {
+    public let realmGame: Realm?
+    public  init(realm: Realm?) {
         self.realmGame = realm
     }
-    static let sharedInstance: (Realm?) -> GameLocaleDataSource = { realmDbGame in
+    public static let sharedInstance: (Realm?) -> GameLocaleDataSource = { realmDbGame in
         return GameLocaleDataSource(realm: realmDbGame)
     }
 }
 
 extension GameLocaleDataSource: GameLocaleDataSourceProtocol {
-    func getGameLocale() -> AnyPublisher<[GameEntity], Error> {
+    public func getGameLocale() -> AnyPublisher<[GameEntity], Error> {
         return Future<[GameEntity], Error> { completion in
             if let realmGame = self.realmGame {
                 let categories: Results<GameEntity> = {
@@ -41,7 +36,7 @@ extension GameLocaleDataSource: GameLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    func addGameLocale(from categories: GameEntity) -> AnyPublisher<Bool, Error> {
+    public func addGameLocale(from categories: GameEntity) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realmGame {
                 do {
@@ -57,7 +52,7 @@ extension GameLocaleDataSource: GameLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    func deleteGameLocale(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    public func deleteGameLocale(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         if let realmGame = realmGame {
             do {
                 try realmGame.write {
@@ -71,7 +66,7 @@ extension GameLocaleDataSource: GameLocaleDataSourceProtocol {
             result(.failure(.invalidInstance))
         }
     }
-    func checkGameLocale(from categories: GameEntity) -> Bool {
+    public func checkGameLocale(from categories: GameEntity) -> Bool {
         if let realmGame = realmGame {
             let game: GameEntity? = {
                 realmGame.object(ofType: GameEntity.self, forPrimaryKey: categories.id)

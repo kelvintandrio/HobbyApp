@@ -13,7 +13,7 @@ import Core
 import Common
 
 public final class GameDataSource: NSObject {
-    private override init() { }
+    override init() { }
 
     public static let sharedInstance: GameDataSource =  GameDataSource()
 }

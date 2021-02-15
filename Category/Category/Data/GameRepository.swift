@@ -12,7 +12,7 @@ import Core
 import Common
 
 public final class GameRepository: NSObject {
-    typealias GameInstance = (GameDataSource) -> GameRepository
+    public typealias GameInstance = (GameDataSource) -> GameRepository
 
     let remote: GameDataSource
 
@@ -20,7 +20,7 @@ public final class GameRepository: NSObject {
         self.remote = remote
     }
 
-    static let sharedInstance: GameInstance = { remoteRepo in
+    public static let sharedInstance: GameInstance = { remoteRepo in
         return GameRepository(remote: remoteRepo)
     }
 }

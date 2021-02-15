@@ -54,7 +54,7 @@ extension MovieLocaleRepository: MovieLocaleRepositoryProtocol {
 
     func getLocaleMovie() -> AnyPublisher<[MovieModel], Error> {
         return self.locale.getMovieLocale()
-            .map { DataLocaleMapper.mapMovieToModel(input: $0) }
+            .map { DataLocaleMapper02.mapMovieToModel(input: $0) }
             .eraseToAnyPublisher()
     }
 }

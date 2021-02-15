@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		105394C325DABAC6009EC607 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 105394C225DABAC6009EC607 /* Realm */; };
+		105394C525DABAC6009EC607 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 105394C425DABAC6009EC607 /* RealmSwift */; };
+		105394D025DABD65009EC607 /* DataLocaleMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394CF25DABD65009EC607 /* DataLocaleMapper.swift */; };
+		105394D225DAC2AD009EC607 /* GameLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394D125DAC2AD009EC607 /* GameLocaleDataSource.swift */; };
+		105394D825DAC4A4009EC607 /* ConvertToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394D725DAC4A4009EC607 /* ConvertToArray.swift */; };
+		105394DA25DAC71F009EC607 /* GameLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394D925DAC71F009EC607 /* GameLocaleRepository.swift */; };
 		10DACF9325D1909000DED4D0 /* Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF8925D1909000DED4D0 /* Category.framework */; };
 		10DACF9825D1909000DED4D0 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF9725D1909000DED4D0 /* CategoryTests.swift */; };
 		10DACF9A25D1909000DED4D0 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF8C25D1909000DED4D0 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,6 +53,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		105394CF25DABD65009EC607 /* DataLocaleMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLocaleMapper.swift; sourceTree = "<group>"; };
+		105394D125DAC2AD009EC607 /* GameLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleDataSource.swift; sourceTree = "<group>"; };
+		105394D725DAC4A4009EC607 /* ConvertToArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToArray.swift; sourceTree = "<group>"; };
+		105394D925DAC71F009EC607 /* GameLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleRepository.swift; sourceTree = "<group>"; };
 		10DACF8925D1909000DED4D0 /* Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF8C25D1909000DED4D0 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		10DACF8D25D1909000DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,10 +78,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105394C525DABAC6009EC607 /* RealmSwift in Frameworks */,
 				10F73FB725D9A3C100C4A77A /* Common.framework in Frameworks */,
 				10F73FC125D9AC1100C4A77A /* Alamofire in Frameworks */,
 				401346760AA3FBC7F1C9C7CF /* Pods_Category.framework in Frameworks */,
 				10F73FA725D99EF100C4A77A /* Core.framework in Frameworks */,
+				105394C325DABAC6009EC607 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +102,26 @@
 			isa = PBXGroup;
 			children = (
 				10F73FB925D9A51F00C4A77A /* DataMapper.swift */,
+				105394CF25DABD65009EC607 /* DataLocaleMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		105394BD25DAB942009EC607 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				105394CE25DABD2F009EC607 /* DataSource */,
+				105394D925DAC71F009EC607 /* GameLocaleRepository.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		105394CE25DABD2F009EC607 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				105394D125DAC2AD009EC607 /* GameLocaleDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		10DACF7F25D1909000DED4D0 = {
@@ -137,7 +167,9 @@
 		10F73F9A25D99B0500C4A77A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				105394BD25DAB942009EC607 /* Locale */,
 				10F73F9B25D99C0400C4A77A /* Remote */,
+				105394D725DAC4A4009EC607 /* ConvertToArray.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -211,6 +243,8 @@
 			name = Category;
 			packageProductDependencies = (
 				10F73FC025D9AC1100C4A77A /* Alamofire */,
+				105394C225DABAC6009EC607 /* Realm */,
+				105394C425DABAC6009EC607 /* RealmSwift */,
 			);
 			productName = Category;
 			productReference = 10DACF8925D1909000DED4D0 /* Category.framework */;
@@ -264,6 +298,7 @@
 			mainGroup = 10DACF7F25D1909000DED4D0;
 			packageReferences = (
 				10F73FBF25D9AC1100C4A77A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				105394C125DABAC6009EC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 10DACF8A25D1909000DED4D0 /* Products */;
 			projectDirPath = "";
@@ -322,8 +357,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105394D225DAC2AD009EC607 /* GameLocaleDataSource.swift in Sources */,
+				105394D025DABD65009EC607 /* DataLocaleMapper.swift in Sources */,
 				10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */,
 				10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */,
+				105394D825DAC4A4009EC607 /* ConvertToArray.swift in Sources */,
+				105394DA25DAC71F009EC607 /* GameLocaleRepository.swift in Sources */,
 				10F73FBA25D9A51F00C4A77A /* DataMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +626,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		105394C125DABAC6009EC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.2;
+			};
+		};
 		10F73FBF25D9AC1100C4A77A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -598,6 +645,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		105394C225DABAC6009EC607 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105394C125DABAC6009EC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		105394C425DABAC6009EC607 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105394C125DABAC6009EC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
 		10F73FC025D9AC1100C4A77A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 10F73FBF25D9AC1100C4A77A /* XCRemoteSwiftPackageReference "Alamofire" */;

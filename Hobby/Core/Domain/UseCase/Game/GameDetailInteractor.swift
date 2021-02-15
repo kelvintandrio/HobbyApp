@@ -9,6 +9,7 @@
 import Combine
 import Core
 import Common
+import Category
 
 class GameDetailInteractor: GameDetailProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol

@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Common
+import Category
 
 struct GameDetailView: View {
     @ObservedObject var presenter: GameDetailPresenter

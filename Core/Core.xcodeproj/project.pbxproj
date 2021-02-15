@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00B0B6BBEA27D55AA6F990FB /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7833F4E6272BA1BBBDA70633 /* Pods_Core.framework */; };
+		105394C825DABBBD009EC607 /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394C725DABBBD009EC607 /* GameEntity.swift */; };
+		105394CB25DABBE7009EC607 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 105394CA25DABBE7009EC607 /* Realm */; };
+		105394CD25DABBE7009EC607 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 105394CC25DABBE7009EC607 /* RealmSwift */; };
+		105394D625DAC381009EC607 /* GameLocaleDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394D525DAC381009EC607 /* GameLocaleDataSourceProtocol.swift */; };
+		105394DC25DAC774009EC607 /* GameLocaleRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394DB25DAC774009EC607 /* GameLocaleRepositoryProtocol.swift */; };
 		10DACF6F25D18F4400DED4D0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF6525D18F4300DED4D0 /* Core.framework */; };
 		10DACF7425D18F4400DED4D0 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF7325D18F4400DED4D0 /* CoreTests.swift */; };
 		10DACF7625D18F4400DED4D0 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF6825D18F4300DED4D0 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +49,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		105394C725DABBBD009EC607 /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
+		105394D525DAC381009EC607 /* GameLocaleDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleDataSourceProtocol.swift; sourceTree = "<group>"; };
+		105394DB25DAC774009EC607 /* GameLocaleRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleRepositoryProtocol.swift; sourceTree = "<group>"; };
 		10DACF6525D18F4300DED4D0 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF6825D18F4300DED4D0 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		10DACF6925D18F4300DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105394CD25DABBE7009EC607 /* RealmSwift in Frameworks */,
+				105394CB25DABBE7009EC607 /* Realm in Frameworks */,
 				00B0B6BBEA27D55AA6F990FB /* Pods_Core.framework in Frameworks */,
 				10F73FBC25D9A8C700C4A77A /* Common.framework in Frameworks */,
 			);
@@ -88,6 +98,31 @@
 				10F73FB025D9A19800C4A77A /* DataGame.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		105394C625DABB9D009EC607 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				105394C725DABBBD009EC607 /* GameEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		105394D325DAC306009EC607 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				105394D425DAC322009EC607 /* Response */,
+				105394D525DAC381009EC607 /* GameLocaleDataSourceProtocol.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		105394D425DAC322009EC607 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				105394DB25DAC774009EC607 /* GameLocaleRepositoryProtocol.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		10DACF5B25D18F4300DED4D0 = {
@@ -133,6 +168,7 @@
 		10F73F9325D998FF00C4A77A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				105394D325DAC306009EC607 /* Locale */,
 				10F73F9425D9994500C4A77A /* Remote */,
 			);
 			path = Data;
@@ -158,6 +194,7 @@
 		10F73FAD25D9A0E800C4A77A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				105394C625DABB9D009EC607 /* Entity */,
 				105394BA25DAB079009EC607 /* Game */,
 			);
 			path = Domain;
@@ -212,6 +249,10 @@
 			dependencies = (
 			);
 			name = Core;
+			packageProductDependencies = (
+				105394CA25DABBE7009EC607 /* Realm */,
+				105394CC25DABBE7009EC607 /* RealmSwift */,
+			);
 			productName = Core;
 			productReference = 10DACF6525D18F4300DED4D0 /* Core.framework */;
 			productType = "com.apple.product-type.framework";
@@ -262,6 +303,9 @@
 				Base,
 			);
 			mainGroup = 10DACF5B25D18F4300DED4D0;
+			packageReferences = (
+				105394C925DABBE7009EC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 10DACF6625D18F4300DED4D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -321,8 +365,11 @@
 			files = (
 				10F73F9925D99A6F00C4A77A /* GameDataSourceProtocol.swift in Sources */,
 				10F73FB125D9A19800C4A77A /* DataGame.swift in Sources */,
+				105394D625DAC381009EC607 /* GameLocaleDataSourceProtocol.swift in Sources */,
 				10F73F9725D99A3900C4A77A /* GameRepositoryProtocol.swift in Sources */,
 				10F73FAF25D9A11400C4A77A /* GameModel.swift in Sources */,
+				105394DC25DAC774009EC607 /* GameLocaleRepositoryProtocol.swift in Sources */,
+				105394C825DABBBD009EC607 /* GameEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +630,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		105394C925DABBE7009EC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		105394CA25DABBE7009EC607 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105394C925DABBE7009EC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		105394CC25DABBE7009EC607 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105394C925DABBE7009EC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10DACF5C25D18F4300DED4D0 /* Project object */;
 }

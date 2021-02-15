@@ -7,6 +7,8 @@
 //
 
 import Combine
+import Core
+import Common
 
 class MovieInteractor: MovieProtocol {
     private let movieRepository: MovieRepositoryProtocol
@@ -15,7 +17,7 @@ class MovieInteractor: MovieProtocol {
       self.movieRepository = repository
     }
 
-    func getMovie() -> AnyPublisher<[MovieModel], URLError> {
+    func getMovie() -> AnyPublisher<[MovieModel], Common.URLError> {
         return movieRepository.getMovie()
     }
 }

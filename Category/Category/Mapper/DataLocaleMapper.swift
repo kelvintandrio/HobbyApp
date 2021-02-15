@@ -31,27 +31,27 @@ public final class DataLocaleMapper {
         gameEntity.rating = gameModel.rating
         return gameEntity
     }
-//    public static func mapMovieToModel(input movieResponses: [MovieEntity]) -> [MovieModel] {
-//        return movieResponses.map { result in
-//            return MovieModel(
-//                id: result.id,
-//                name: result.name,
-//                image: result.image,
-//                descript: result.descript,
-//                released: result.released,
-//                rating: result.rating)
-//        }
-//    }
-//    public static func mapMovieToEntity(input movieModel: MovieModel) -> MovieEntity {
-//        let movieEntity = MovieEntity()
-//        movieEntity.id = movieModel.id
-//        movieEntity.name = movieModel.name
-//        movieEntity.image = movieModel.image
-//        movieEntity.descript = movieModel.descript
-//        movieEntity.released = movieModel.released
-//        movieEntity.rating = movieModel.rating
-//        return movieEntity
-//    }
+    public static func mapMovieToModel(input movieResponses: [MovieEntity]) -> [MovieModel] {
+        return movieResponses.map { result in
+            return MovieModel(
+                id: result.id,
+                name: result.name,
+                image: result.image,
+                released: result.released,
+                rating: result.rating,
+                description: result.description)
+        }
+    }
+    public static func mapMovieToEntity(input movieModel: MovieModel) -> MovieEntity {
+        let movieEntity = MovieEntity()
+        movieEntity.id = movieModel.id
+        movieEntity.name = movieModel.name
+        movieEntity.image = movieModel.image
+        movieEntity.descript = movieModel.descript
+        movieEntity.released = movieModel.released
+        movieEntity.rating = movieModel.rating
+        return movieEntity
+    }
 //
 //    public static func mapTravelToModel(input travelResponses: [TravelEntity]) -> [TravelModel] {
 //        return travelResponses.map { result in

@@ -19,10 +19,6 @@
 		1031E83825CB16DC00F3C1DF /* TravelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */; };
 		1031E83925CB16DC00F3C1DF /* TravelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83125CB16DC00F3C1DF /* TravelRepository.swift */; };
 		1031E83A25CB16DC00F3C1DF /* SportsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83225CB16DC00F3C1DF /* SportsRepository.swift */; };
-		1031E83C25CB16DC00F3C1DF /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83425CB16DC00F3C1DF /* MovieRepository.swift */; };
-		1031E83E25CB16DC00F3C1DF /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E83625CB16DC00F3C1DF /* MovieDataSource.swift */; };
-		1031E84925CB1B2300F3C1DF /* MovieLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84025CB1B2300F3C1DF /* MovieLocaleDataSource.swift */; };
-		1031E84B25CB1B2300F3C1DF /* MovieLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84325CB1B2300F3C1DF /* MovieLocaleRepository.swift */; };
 		1031E84C25CB1B2300F3C1DF /* SportLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84425CB1B2300F3C1DF /* SportLocaleRepository.swift */; };
 		1031E84E25CB1B2300F3C1DF /* TravelLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84625CB1B2300F3C1DF /* TravelLocaleRepository.swift */; };
 		1031E84F25CB1B2300F3C1DF /* SportLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E84725CB1B2300F3C1DF /* SportLocaleDataSource.swift */; };
@@ -30,7 +26,6 @@
 		1031E85825CB1D4600F3C1DF /* SportsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85325CB1D4600F3C1DF /* SportsEntity.swift */; };
 		1031E85A25CB1D4600F3C1DF /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */; };
 		1031E85B25CB1D4600F3C1DF /* TravelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85625CB1D4600F3C1DF /* TravelEntity.swift */; };
-		1031E85C25CB1D4600F3C1DF /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85725CB1D4600F3C1DF /* MovieEntity.swift */; };
 		1031E87625CB1DC900F3C1DF /* CustomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86025CB1DC900F3C1DF /* CustomeError.swift */; };
 		1031E87725CB1DC900F3C1DF /* GeneralAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86125CB1DC900F3C1DF /* GeneralAttribute.swift */; };
 		1031E87925CB1DC900F3C1DF /* APIMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86425CB1DC900F3C1DF /* APIMovie.swift */; };
@@ -41,12 +36,9 @@
 		1031E87F25CB1DC900F3C1DF /* DataLocaleMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86B25CB1DC900F3C1DF /* DataLocaleMapper.swift */; };
 		1031E88025CB1DC900F3C1DF /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E86C25CB1DC900F3C1DF /* DataMapper.swift */; };
 		1031E88B25CB1E2D00F3C1DF /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88A25CB1E2D00F3C1DF /* Injection.swift */; };
-		1031E8AC25CB1E4A00F3C1DF /* MovieProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88E25CB1E4900F3C1DF /* MovieProtocol.swift */; };
 		1031E8AD25CB1E4A00F3C1DF /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */; };
 		1031E8AE25CB1E4A00F3C1DF /* MovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89025CB1E4900F3C1DF /* MovieInteractor.swift */; };
-		1031E8AF25CB1E4A00F3C1DF /* MovieDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89125CB1E4900F3C1DF /* MovieDetailProtocol.swift */; };
 		1031E8B025CB1E4A00F3C1DF /* MovieFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89225CB1E4900F3C1DF /* MovieFavoriteInteractor.swift */; };
-		1031E8B125CB1E4A00F3C1DF /* MovieFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89325CB1E4900F3C1DF /* MovieFavoriteProtocol.swift */; };
 		1031E8B225CB1E4A00F3C1DF /* GameDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89525CB1E4900F3C1DF /* GameDetailProtocol.swift */; };
 		1031E8B325CB1E4A00F3C1DF /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89625CB1E4900F3C1DF /* GameProtocol.swift */; };
 		1031E8B425CB1E4A00F3C1DF /* GameDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89725CB1E4900F3C1DF /* GameDetailInteractor.swift */; };
@@ -155,10 +147,6 @@
 		1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDataSource.swift; sourceTree = "<group>"; };
 		1031E83125CB16DC00F3C1DF /* TravelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelRepository.swift; sourceTree = "<group>"; };
 		1031E83225CB16DC00F3C1DF /* SportsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsRepository.swift; sourceTree = "<group>"; };
-		1031E83425CB16DC00F3C1DF /* MovieRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
-		1031E83625CB16DC00F3C1DF /* MovieDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
-		1031E84025CB1B2300F3C1DF /* MovieLocaleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLocaleDataSource.swift; sourceTree = "<group>"; };
-		1031E84325CB1B2300F3C1DF /* MovieLocaleRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLocaleRepository.swift; sourceTree = "<group>"; };
 		1031E84425CB1B2300F3C1DF /* SportLocaleRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportLocaleRepository.swift; sourceTree = "<group>"; };
 		1031E84625CB1B2300F3C1DF /* TravelLocaleRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelLocaleRepository.swift; sourceTree = "<group>"; };
 		1031E84725CB1B2300F3C1DF /* SportLocaleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportLocaleDataSource.swift; sourceTree = "<group>"; };
@@ -166,7 +154,6 @@
 		1031E85325CB1D4600F3C1DF /* SportsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsEntity.swift; sourceTree = "<group>"; };
 		1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
 		1031E85625CB1D4600F3C1DF /* TravelEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelEntity.swift; sourceTree = "<group>"; };
-		1031E85725CB1D4600F3C1DF /* MovieEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		1031E86025CB1DC900F3C1DF /* CustomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeError.swift; sourceTree = "<group>"; };
 		1031E86125CB1DC900F3C1DF /* GeneralAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralAttribute.swift; sourceTree = "<group>"; };
 		1031E86425CB1DC900F3C1DF /* APIMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMovie.swift; sourceTree = "<group>"; };
@@ -177,12 +164,9 @@
 		1031E86B25CB1DC900F3C1DF /* DataLocaleMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLocaleMapper.swift; sourceTree = "<group>"; };
 		1031E86C25CB1DC900F3C1DF /* DataMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		1031E88A25CB1E2D00F3C1DF /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
-		1031E88E25CB1E4900F3C1DF /* MovieProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieProtocol.swift; sourceTree = "<group>"; };
 		1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
 		1031E89025CB1E4900F3C1DF /* MovieInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInteractor.swift; sourceTree = "<group>"; };
-		1031E89125CB1E4900F3C1DF /* MovieDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailProtocol.swift; sourceTree = "<group>"; };
 		1031E89225CB1E4900F3C1DF /* MovieFavoriteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieFavoriteInteractor.swift; sourceTree = "<group>"; };
-		1031E89325CB1E4900F3C1DF /* MovieFavoriteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieFavoriteProtocol.swift; sourceTree = "<group>"; };
 		1031E89525CB1E4900F3C1DF /* GameDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailProtocol.swift; sourceTree = "<group>"; };
 		1031E89625CB1E4900F3C1DF /* GameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		1031E89725CB1E4900F3C1DF /* GameDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailInteractor.swift; sourceTree = "<group>"; };
@@ -352,7 +336,6 @@
 				1031E83025CB16DC00F3C1DF /* Response */,
 				1031E82E25CB16DC00F3C1DF /* SportsDataSource.swift */,
 				1031E82F25CB16DC00F3C1DF /* TravelDataSource.swift */,
-				1031E83625CB16DC00F3C1DF /* MovieDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -362,7 +345,6 @@
 			children = (
 				1031E83125CB16DC00F3C1DF /* TravelRepository.swift */,
 				1031E83225CB16DC00F3C1DF /* SportsRepository.swift */,
-				1031E83425CB16DC00F3C1DF /* MovieRepository.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -371,7 +353,6 @@
 			isa = PBXGroup;
 			children = (
 				1031E84225CB1B2300F3C1DF /* Entity */,
-				1031E84025CB1B2300F3C1DF /* MovieLocaleDataSource.swift */,
 				1031E84725CB1B2300F3C1DF /* SportLocaleDataSource.swift */,
 				1031E84825CB1B2300F3C1DF /* TravelLocaleDataSource.swift */,
 			);
@@ -381,7 +362,6 @@
 		1031E84225CB1B2300F3C1DF /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				1031E84325CB1B2300F3C1DF /* MovieLocaleRepository.swift */,
 				1031E84425CB1B2300F3C1DF /* SportLocaleRepository.swift */,
 				1031E84625CB1B2300F3C1DF /* TravelLocaleRepository.swift */,
 			);
@@ -403,7 +383,6 @@
 				1031E85325CB1D4600F3C1DF /* SportsEntity.swift */,
 				1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */,
 				1031E85625CB1D4600F3C1DF /* TravelEntity.swift */,
-				1031E85725CB1D4600F3C1DF /* MovieEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,12 +461,9 @@
 		1031E88D25CB1E4900F3C1DF /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				1031E88E25CB1E4900F3C1DF /* MovieProtocol.swift */,
 				1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */,
 				1031E89025CB1E4900F3C1DF /* MovieInteractor.swift */,
-				1031E89125CB1E4900F3C1DF /* MovieDetailProtocol.swift */,
 				1031E89225CB1E4900F3C1DF /* MovieFavoriteInteractor.swift */,
-				1031E89325CB1E4900F3C1DF /* MovieFavoriteProtocol.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -802,7 +778,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1031E8FD25CB1E6100F3C1DF /* GameRouter.swift in Sources */,
-				1031E8AC25CB1E4A00F3C1DF /* MovieProtocol.swift in Sources */,
 				1031E8C225CB1E4A00F3C1DF /* TravelFavoriteInteractor.swift in Sources */,
 				1031E8EF25CB1E6100F3C1DF /* MoviePresenter.swift in Sources */,
 				1031E90825CB1E6100F3C1DF /* TravelView.swift in Sources */,
@@ -818,7 +793,6 @@
 				1031E8F125CB1E6100F3C1DF /* MovieView.swift in Sources */,
 				1031E8F025CB1E6100F3C1DF /* MovieRouter.swift in Sources */,
 				1031E8B625CB1E4A00F3C1DF /* GameFavoriteInteractor.swift in Sources */,
-				1031E83C25CB16DC00F3C1DF /* MovieRepository.swift in Sources */,
 				1031E8FC25CB1E6100F3C1DF /* GameDetailPresenter.swift in Sources */,
 				1031E87B25CB1DC900F3C1DF /* APITravel.swift in Sources */,
 				1031E8AE25CB1E4A00F3C1DF /* MovieInteractor.swift in Sources */,
@@ -831,22 +805,18 @@
 				1031E90A25CB1E6100F3C1DF /* TravelRouter.swift in Sources */,
 				1031E91625CB2E4C00F3C1DF /* SceneDelegate.swift in Sources */,
 				1031E8C025CB1E4A00F3C1DF /* TravelFavoriteProtocol.swift in Sources */,
-				1031E8B125CB1E4A00F3C1DF /* MovieFavoriteProtocol.swift in Sources */,
 				1031E8B725CB1E4A00F3C1DF /* GameFavoriteProtocol.swift in Sources */,
 				1031E90D25CB1E6100F3C1DF /* TravelDetailPresenter.swift in Sources */,
 				1031E84C25CB1B2300F3C1DF /* SportLocaleRepository.swift in Sources */,
-				1031E85C25CB1D4600F3C1DF /* MovieEntity.swift in Sources */,
 				1031E8B825CB1E4A00F3C1DF /* SportsProtocol.swift in Sources */,
 				1031E8B425CB1E4A00F3C1DF /* GameDetailInteractor.swift in Sources */,
 				1031E8BF25CB1E4A00F3C1DF /* ProfileInteractor.swift in Sources */,
 				1031E8C125CB1E4A00F3C1DF /* TravelDetailProtocol.swift in Sources */,
 				1031E8BD25CB1E4A00F3C1DF /* SportsDetailInteractor.swift in Sources */,
 				1031E90025CB1E6100F3C1DF /* SportRowsView.swift in Sources */,
-				1031E84925CB1B2300F3C1DF /* MovieLocaleDataSource.swift in Sources */,
 				1031E8BA25CB1E4A00F3C1DF /* SportsFavoriteProtocol.swift in Sources */,
 				1031E8B225CB1E4A00F3C1DF /* GameDetailProtocol.swift in Sources */,
 				1031E8F825CB1E6100F3C1DF /* GameDetailView.swift in Sources */,
-				1031E84B25CB1B2300F3C1DF /* MovieLocaleRepository.swift in Sources */,
 				1031E83825CB16DC00F3C1DF /* TravelDataSource.swift in Sources */,
 				1031E8F325CB1E6100F3C1DF /* MovieDetailPresenter.swift in Sources */,
 				1031E8BB25CB1E4A00F3C1DF /* SportsInteractor.swift in Sources */,
@@ -873,11 +843,9 @@
 				1031E8C325CB1E4A00F3C1DF /* TravelDetailInteractor.swift in Sources */,
 				1031E83725CB16DC00F3C1DF /* SportsDataSource.swift in Sources */,
 				1031E8C425CB1E4A00F3C1DF /* TravelInteractor.swift in Sources */,
-				1031E83E25CB16DC00F3C1DF /* MovieDataSource.swift in Sources */,
 				1031E90C25CB1E6100F3C1DF /* TravelPresenter.swift in Sources */,
 				1031E83A25CB16DC00F3C1DF /* SportsRepository.swift in Sources */,
 				1031E85A25CB1D4600F3C1DF /* ProfileEntity.swift in Sources */,
-				1031E8AF25CB1E4A00F3C1DF /* MovieDetailProtocol.swift in Sources */,
 				1031E90E25CB1E6100F3C1DF /* TravelFavoritePresenter.swift in Sources */,
 				1031E90925CB1E6100F3C1DF /* TravelRowsView.swift in Sources */,
 				1031E90425CB1E6100F3C1DF /* SportDetailView.swift in Sources */,

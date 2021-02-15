@@ -1,28 +1,26 @@
 //
 //  MovieDataSource.swift
-//  CapStoneApps
+//  Category
 //
-//  Created by Kelvin HT on 12/15/20.
-//  Copyright © 2020 Kelvin HT. All rights reserved.
+//  Created by Kelvin HT on 2/16/21.
+//  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
-import Alamofire
+import Common
 import Combine
+import Alamofire
+import Core
 
-protocol MovieDataSourceProtocol: class {
-    func getMovie() -> AnyPublisher<[Movies], URLError>
-}
+public final class MovieDataSource: NSObject {
+    override init() { }
 
-final class MovieDataSource: NSObject {
-    private override init() { }
-
-    static let sharedInstance: MovieDataSource =  MovieDataSource()
+    public static let sharedInstance: MovieDataSource =  MovieDataSource()
 }
 
 extension MovieDataSource: MovieDataSourceProtocol {
-    func getMovie() -> AnyPublisher<[Movies], URLError> {
-        return Future<[Movies], URLError> { completion in
+    public func getMovie() -> AnyPublisher<[Movies], Common.URLError> {
+        return Future<[Movies], Common.URLError> { completion in
             if let url = URL(string: MovieEndpoints.Gets.nowPlaying.url) {
                 AF.request(url).validate().responseDecodable(of: DataMovies.self) { response in
                     switch response.result {

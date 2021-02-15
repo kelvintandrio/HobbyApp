@@ -1,14 +1,15 @@
 //
 //  MovieDetailProtocol.swift
-//  CapStoneApps
+//  Core
 //
-//  Created by Kelvin HT on 1/12/21.
+//  Created by Kelvin HT on 2/16/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
+import Foundation
 import Combine
 
-protocol MovieDetailProtocol {
+public protocol MovieDetailProtocol {
     func getDetailMovie() -> MovieModel
     func addMovieFavorite(movie: MovieEntity) -> AnyPublisher<Bool, Error>
     func checkFavoriteMovie(movie: MovieEntity) -> Bool

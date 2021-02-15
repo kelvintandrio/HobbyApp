@@ -1,34 +1,29 @@
 //
 //  MovieLocaleDataSource.swift
-//  CapStoneApps
+//  Category
 //
-//  Created by Kelvin HT on 1/14/21.
+//  Created by Kelvin HT on 2/16/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 import Combine
+import Core
+import Common
 
-protocol MovieLocaleDataSourceProtocol: class {
-    func getMovieLocale() -> AnyPublisher<[MovieEntity], Error>
-    func addMovieLocale(from categories: MovieEntity) -> AnyPublisher<Bool, Error>
-    func deleteMovieLocale(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
-    func checkMovieLocale(from categories: MovieEntity) -> Bool
-}
-
-final class MovieLocaleDataSource: NSObject {
-    private let realmMovie: Realm?
-    private init(realm: Realm?) {
+public final class MovieLocaleDataSource: NSObject {
+    public  let realmMovie: Realm?
+    public init(realm: Realm?) {
         self.realmMovie = realm
     }
-    static let sharedInstance: (Realm?) -> MovieLocaleDataSource = { realmDbMovie in
+    public static let sharedInstance: (Realm?) -> MovieLocaleDataSource = { realmDbMovie in
         return MovieLocaleDataSource(realm: realmDbMovie)
     }
 }
 
 extension MovieLocaleDataSource: MovieLocaleDataSourceProtocol {
-    func getMovieLocale() -> AnyPublisher<[MovieEntity], Error> {
+    public func getMovieLocale() -> AnyPublisher<[MovieEntity], Error> {
         return Future<[MovieEntity], Error> { completion in
             if let realmMovie = self.realmMovie {
                 let categories: Results<MovieEntity> = {
@@ -41,7 +36,7 @@ extension MovieLocaleDataSource: MovieLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    func addMovieLocale(from categories: MovieEntity) -> AnyPublisher<Bool, Error> {
+    public func addMovieLocale(from categories: MovieEntity) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realmMovie {
                 do {
@@ -57,7 +52,7 @@ extension MovieLocaleDataSource: MovieLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    func deleteMovieLocale(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    public func deleteMovieLocale(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         if let realmMovie = realmMovie {
             do {
                 try realmMovie.write {
@@ -73,7 +68,7 @@ extension MovieLocaleDataSource: MovieLocaleDataSourceProtocol {
             result(.failure(.invalidInstance))
         }
     }
-    func checkMovieLocale(from categories: MovieEntity) -> Bool {
+    public func checkMovieLocale(from categories: MovieEntity) -> Bool {
         if let realmMovie = realmMovie {
             let movie: MovieEntity? = {
                 realmMovie.object(ofType: MovieEntity.self, forPrimaryKey: categories.id)

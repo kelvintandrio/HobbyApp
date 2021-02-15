@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Core
 
 class MovieDetailInteractor: MovieDetailProtocol {
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol

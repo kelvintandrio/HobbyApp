@@ -13,6 +13,10 @@
 		105394D225DAC2AD009EC607 /* GameLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394D125DAC2AD009EC607 /* GameLocaleDataSource.swift */; };
 		105394D825DAC4A4009EC607 /* ConvertToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394D725DAC4A4009EC607 /* ConvertToArray.swift */; };
 		105394DA25DAC71F009EC607 /* GameLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394D925DAC71F009EC607 /* GameLocaleRepository.swift */; };
+		105394EF25DAEC53009EC607 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394EE25DAEC53009EC607 /* MovieDataSource.swift */; };
+		105394F125DAECFA009EC607 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394F025DAECFA009EC607 /* MovieRepository.swift */; };
+		1053950325DAF287009EC607 /* MovieLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053950225DAF287009EC607 /* MovieLocaleDataSource.swift */; };
+		1053950525DAF31B009EC607 /* MovieLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053950425DAF31B009EC607 /* MovieLocaleRepository.swift */; };
 		10DACF9325D1909000DED4D0 /* Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF8925D1909000DED4D0 /* Category.framework */; };
 		10DACF9825D1909000DED4D0 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF9725D1909000DED4D0 /* CategoryTests.swift */; };
 		10DACF9A25D1909000DED4D0 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF8C25D1909000DED4D0 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +61,10 @@
 		105394D125DAC2AD009EC607 /* GameLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleDataSource.swift; sourceTree = "<group>"; };
 		105394D725DAC4A4009EC607 /* ConvertToArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToArray.swift; sourceTree = "<group>"; };
 		105394D925DAC71F009EC607 /* GameLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleRepository.swift; sourceTree = "<group>"; };
+		105394EE25DAEC53009EC607 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
+		105394F025DAECFA009EC607 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		1053950225DAF287009EC607 /* MovieLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLocaleDataSource.swift; sourceTree = "<group>"; };
+		1053950425DAF31B009EC607 /* MovieLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLocaleRepository.swift; sourceTree = "<group>"; };
 		10DACF8925D1909000DED4D0 /* Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF8C25D1909000DED4D0 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		10DACF8D25D1909000DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +120,7 @@
 			children = (
 				105394CE25DABD2F009EC607 /* DataSource */,
 				105394D925DAC71F009EC607 /* GameLocaleRepository.swift */,
+				1053950425DAF31B009EC607 /* MovieLocaleRepository.swift */,
 			);
 			path = Locale;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				105394D125DAC2AD009EC607 /* GameLocaleDataSource.swift */,
+				1053950225DAF287009EC607 /* MovieLocaleDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -179,6 +189,7 @@
 			children = (
 				10F73F9C25D99C0C00C4A77A /* DataSource */,
 				10F73FA125D99D3600C4A77A /* GameRepository.swift */,
+				105394F025DAECFA009EC607 /* MovieRepository.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */,
+				105394EE25DAEC53009EC607 /* MovieDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -359,10 +371,14 @@
 			files = (
 				105394D225DAC2AD009EC607 /* GameLocaleDataSource.swift in Sources */,
 				105394D025DABD65009EC607 /* DataLocaleMapper.swift in Sources */,
+				105394F125DAECFA009EC607 /* MovieRepository.swift in Sources */,
+				1053950325DAF287009EC607 /* MovieLocaleDataSource.swift in Sources */,
 				10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */,
+				105394EF25DAEC53009EC607 /* MovieDataSource.swift in Sources */,
 				10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */,
 				105394D825DAC4A4009EC607 /* ConvertToArray.swift in Sources */,
 				105394DA25DAC71F009EC607 /* GameLocaleRepository.swift in Sources */,
+				1053950525DAF31B009EC607 /* MovieLocaleRepository.swift in Sources */,
 				10F73FBA25D9A51F00C4A77A /* DataMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

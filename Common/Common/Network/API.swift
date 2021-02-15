@@ -23,8 +23,8 @@ protocol Endpoint {
     var url: String { get }
 }
 
-enum MovieEndpoints {
-    enum Gets: Endpoint {
+public enum MovieEndpoints {
+    public enum Gets: Endpoint {
         case nowPlaying
 
         public var url: String {

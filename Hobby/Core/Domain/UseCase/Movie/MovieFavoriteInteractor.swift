@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Core
 
 class MovieFavoriteInteractor: MovieFavoriteProtocol {
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol

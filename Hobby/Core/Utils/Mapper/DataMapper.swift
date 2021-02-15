@@ -10,19 +10,6 @@ import Foundation
 import Core
 
 final class DataMapper {
-    static func mapMovieResponsesToDomains(input movieResponses: [Movies]) -> [MovieModel] {
-        return movieResponses.map { result in
-            return MovieModel(
-                id: result.idMovie ?? 0,
-                name: result.nameMovie ?? "Unknow",
-                image: result.backgroundImageMovie ?? "Unknow",
-                descript: result.descriptionMovie ?? "Unknow",
-                released: result.releasedMovie ?? "Unknow",
-                rating: result.ratingMovie ?? 0.0
-            )
-        }
-    }
-
     static func mapTravelResponsesToDomains(input travelResponses: [Travels]) -> [TravelModel] {
         return travelResponses.map { result in
             return TravelModel(

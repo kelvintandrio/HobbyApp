@@ -16,7 +16,7 @@ public struct GameModel: Equatable, Identifiable {
     public let released: String
     public let rating: Float
     public let description: String
-    
+
     public init(id: Int, name: String, image: String, released: String, rating: Float, description: String) {
         self.id = id
         self.name = name

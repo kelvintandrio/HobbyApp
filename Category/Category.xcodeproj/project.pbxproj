@@ -86,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		105394BC25DAB298009EC607 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				10F73FB925D9A51F00C4A77A /* DataMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		10DACF7F25D1909000DED4D0 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +117,7 @@
 		10DACF8B25D1909000DED4D0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				10F73FB925D9A51F00C4A77A /* DataMapper.swift */,
+				105394BC25DAB298009EC607 /* Mapper */,
 				10F73F9A25D99B0500C4A77A /* Data */,
 				10DACF8C25D1909000DED4D0 /* Category.h */,
 				10DACF8D25D1909000DED4D0 /* Info.plist */,
@@ -129,7 +137,6 @@
 		10F73F9A25D99B0500C4A77A /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				10F73FA125D99D3600C4A77A /* GameRepository.swift */,
 				10F73F9B25D99C0400C4A77A /* Remote */,
 			);
 			path = Data;
@@ -138,17 +145,18 @@
 		10F73F9B25D99C0400C4A77A /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				10F73F9C25D99C0C00C4A77A /* Response */,
-				10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */,
+				10F73F9C25D99C0C00C4A77A /* DataSource */,
+				10F73FA125D99D3600C4A77A /* GameRepository.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		10F73F9C25D99C0C00C4A77A /* Response */ = {
+		10F73F9C25D99C0C00C4A77A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */,
 			);
-			path = Response;
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		B39B60D0EF89CA3C9256C58F /* Frameworks */ = {

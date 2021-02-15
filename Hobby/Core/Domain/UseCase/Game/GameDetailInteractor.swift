@@ -13,19 +13,19 @@ import Common
 class GameDetailInteractor: GameDetailProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
     private let repository: GameRepositoryProtocol
-    private let category: GameModel
+    private let category: Core.GameModel
 
     required init(
         repository: GameRepositoryProtocol,
         repositoryLocale: GameLocaleRepositoryProtocol,
-        category: GameModel
+        category: Core.GameModel
     ) {
         self.repository = repository
         self.category = category
         self.gameLocaleRepository = repositoryLocale
     }
 
-    func getDetailGame() -> GameModel {
+    func getDetailGame() -> Core.GameModel {
         return category
     }
 

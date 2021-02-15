@@ -40,7 +40,7 @@ class GamePresenter: ObservableObject {
     }
 
     func linkBuilder<Content: View>(
-        for category: GameModel,
+        for category: Core.GameModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(destination: gameRouter.goToGameDetailView(for: category)) { content() }

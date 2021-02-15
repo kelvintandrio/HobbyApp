@@ -7,7 +7,8 @@
 //
 
 import Combine
+import Core
 
 protocol GameFavoriteProtocol {
-    func getGameFavorite() -> AnyPublisher<[GameModel], Error>
+    func getGameFavorite() -> AnyPublisher<[Core.GameModel], Error>
 }

@@ -8,10 +8,11 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Core
 
 struct GameRowsView: View {
 
-    var dataGames: GameModel
+    var dataGames: Core.GameModel
 
     var body: some View {
         HStack {
@@ -36,17 +37,5 @@ struct GameRowsView: View {
         }.frame(width: UIScreen.main.bounds.width - 32, height: 150)
             .background(Color(red: .random(in: 0...0.5), green: .random(in: 0...0.5), blue: .random(in: 0...0.5)))
         .cornerRadius(10)
-    }
-}
-
-struct GameRowsView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameRowsView(dataGames: GameModel(
-            id: 1,
-            name: "Grand Theft Auto V",
-            image: "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
-            released: "2013-09-17",
-            rating: 4.48,
-            description: ""))
     }
 }

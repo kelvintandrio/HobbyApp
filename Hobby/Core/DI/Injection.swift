@@ -63,7 +63,7 @@ public final class Injection: NSObject {
         return GameInteractor(repository: repositoryGame)
     }
 
-    func provideGameDetail(category: GameModel) -> GameDetailProtocol {
+    func provideGameDetail(category: Core.GameModel) -> GameDetailProtocol {
         let repositoryGame = provideGameRepository()
         let repositoryLocaleGame = provideGameLocaleRepository()
         return GameDetailInteractor(repository: repositoryGame,

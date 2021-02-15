@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import Core
 
 final class DataLocaleMapper {
-    static func mapGameToModel(input gameResponses: [GameEntity]) -> [GameModel] {
+    static func mapGameToModel(input gameResponses: [GameEntity]) -> [Core.GameModel] {
         return gameResponses.map { result in
-            return GameModel(
+            return Core.GameModel(
                 id: result.id,
                 name: result.name,
                 image: result.image,
@@ -21,7 +22,7 @@ final class DataLocaleMapper {
             )
         }
     }
-    static func mapGameToEntity(input gameModel: GameModel) -> GameEntity {
+    static func mapGameToEntity(input gameModel: Core.GameModel) -> GameEntity {
         let gameEntity = GameEntity()
         gameEntity.id = gameModel.id
         gameEntity.name = gameModel.name

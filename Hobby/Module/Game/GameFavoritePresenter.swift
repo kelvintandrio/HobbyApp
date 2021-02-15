@@ -9,13 +9,14 @@
 import Foundation
 import SwiftUI
 import Combine
+import Core
 
 class GameFavoritePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let gameRouter = GameRouter()
     private let gameFavoriteUseCase: GameFavoriteProtocol
 
-    @Published var game: [GameModel] = []
+    @Published var game: [Core.GameModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
@@ -40,7 +41,7 @@ class GameFavoritePresenter: ObservableObject {
     }
 
     func linkBuilder<Content: View>(
-        for category: GameModel,
+        for category: Core.GameModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(destination: gameRouter.goToGameDetailView(for: category)) { content() }

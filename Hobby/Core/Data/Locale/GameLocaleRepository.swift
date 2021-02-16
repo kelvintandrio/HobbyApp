@@ -1,8 +1,8 @@
 //
 //  GameLocaleRepository.swift
-//  Category
+//  Hobby
 //
-//  Created by Kelvin HT on 2/15/21.
+//  Created by Kelvin HT on 2/17/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
@@ -11,7 +11,14 @@ import Combine
 import Core
 import Common
 
-public final class GameLocaleRepository: NSObject {
+protocol GameLocaleRepositoryProtocol {
+    func getLocaleGame() -> AnyPublisher<[Core.GameModel], Error>
+    func addLocaleGame(from categories: GameEntity) -> AnyPublisher<Bool, Error>
+    func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkLocaleGame(from categories: GameEntity) -> Bool
+}
+
+final class GameLocaleRepository: NSObject {
     public typealias GameLocaleInstance = (GameLocaleDataSource) -> GameLocaleRepository
 
     let locale: GameLocaleDataSource
@@ -26,10 +33,10 @@ public final class GameLocaleRepository: NSObject {
 }
 
 extension GameLocaleRepository: GameLocaleRepositoryProtocol {
-    public func checkLocaleGame(from categories: GameEntity) -> Bool {
+    func checkLocaleGame(from categories: GameEntity) -> Bool {
         return locale.checkGameLocale(from: categories)
     }
-    public func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         locale.deleteGameLocale(from: categories) { deleteFavorite in
             switch deleteFavorite {
             case .success(let resultAdd):
@@ -41,13 +48,13 @@ extension GameLocaleRepository: GameLocaleRepositoryProtocol {
             }
         }
     }
-    public func addLocaleGame(from categories: GameEntity) -> AnyPublisher<Bool, Error> {
+    func addLocaleGame(from categories: GameEntity) -> AnyPublisher<Bool, Error> {
         return self.locale.addGameLocale(from: categories)
             .map { $0 }
             .eraseToAnyPublisher()
     }
 
-    public func getLocaleGame() -> AnyPublisher<[Core.GameModel], Error> {
+    func getLocaleGame() -> AnyPublisher<[Core.GameModel], Error> {
         return self.locale.getGameLocale()
             .map { DataLocaleMapper.mapGameToModel(input: $0) }
             .eraseToAnyPublisher()

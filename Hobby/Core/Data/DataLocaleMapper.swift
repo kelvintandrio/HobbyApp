@@ -1,16 +1,16 @@
 //
 //  DataLocaleMapper.swift
-//  Category
+//  Hobby
 //
-//  Created by Kelvin HT on 2/15/21.
+//  Created by Kelvin HT on 2/17/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
 import Core
 
-public final class DataLocaleMapper {
-    public static func mapGameToModel(input gameResponses: [GameEntity]) -> [Core.GameModel] {
+final class DataLocaleMapper {
+    static func mapGameToModel(input gameResponses: [GameEntity]) -> [Core.GameModel] {
         return gameResponses.map { result in
             return Core.GameModel(
                 id: result.id,
@@ -22,7 +22,7 @@ public final class DataLocaleMapper {
             )
         }
     }
-    public static func mapGameToEntity(input gameModel: Core.GameModel) -> GameEntity {
+    static func mapGameToEntity(input gameModel: Core.GameModel) -> GameEntity {
         let gameEntity = GameEntity()
         gameEntity.id = gameModel.id
         gameEntity.name = gameModel.name
@@ -31,7 +31,7 @@ public final class DataLocaleMapper {
         gameEntity.rating = gameModel.rating
         return gameEntity
     }
-    public static func mapMovieToModel(input movieResponses: [MovieEntity]) -> [MovieModel] {
+    static func mapMovieToModel(input movieResponses: [MovieEntity]) -> [MovieModel] {
         return movieResponses.map { result in
             return MovieModel(
                 id: result.id,
@@ -42,7 +42,7 @@ public final class DataLocaleMapper {
                 description: result.description)
         }
     }
-    public static func mapMovieToEntity(input movieModel: MovieModel) -> MovieEntity {
+    static func mapMovieToEntity(input movieModel: MovieModel) -> MovieEntity {
         let movieEntity = MovieEntity()
         movieEntity.id = movieModel.id
         movieEntity.name = movieModel.name
@@ -53,7 +53,7 @@ public final class DataLocaleMapper {
         return movieEntity
     }
 
-    public static func mapTravelToModel(input travelResponses: [TravelEntity]) -> [TravelModel] {
+    static func mapTravelToModel(input travelResponses: [TravelEntity]) -> [TravelModel] {
         return travelResponses.map { result in
             return TravelModel(
                 id: result.id,
@@ -67,7 +67,7 @@ public final class DataLocaleMapper {
             )
         }
     }
-    public static func mapTravelToEntity(input travelModel: TravelModel) -> TravelEntity {
+    static func mapTravelToEntity(input travelModel: TravelModel) -> TravelEntity {
         let travelEntity = TravelEntity()
         travelEntity.id = travelModel.id
         travelEntity.name = travelModel.name
@@ -80,7 +80,7 @@ public final class DataLocaleMapper {
         return travelEntity
     }
 
-    public static func mapSportToModel(input sportResponses: [SportEntity]) -> [SportModel] {
+    static func mapSportToModel(input sportResponses: [SportEntity]) -> [SportModel] {
         return sportResponses.map { result in
             return SportModel(
                 id: result.id,
@@ -90,7 +90,7 @@ public final class DataLocaleMapper {
             )
         }
     }
-    public static func mapSportToEntity(input sportModel: SportModel) -> SportEntity {
+    static func mapSportToEntity(input sportModel: SportModel) -> SportEntity {
         let sportEntity = SportEntity()
         sportEntity.id = sportModel.id
         sportEntity.name = sportModel.name

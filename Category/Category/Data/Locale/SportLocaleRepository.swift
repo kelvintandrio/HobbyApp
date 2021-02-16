@@ -29,7 +29,10 @@ extension SportLocaleRepository: SportLocaleRepositoryProtocol {
     public func checkLocaleSport(from categories: SportEntity) -> Bool {
         return locale.checkSportLocale(from: categories)
     }
-    public func deleteLocaleSport(from categories: SportEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    public func deleteLocaleSport(
+        from categories: SportEntity,
+        result: @escaping (Result<Bool, DatabaseError>) -> Void
+    ) {
         locale.deleteSportLocale(from: categories) { deleteFavorite in
             switch deleteFavorite {
             case .success(let resultAdd):

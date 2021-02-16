@@ -29,7 +29,10 @@ extension MovieLocaleRepository: MovieLocaleRepositoryProtocol {
     public func checkLocaleMovie(from categories: MovieEntity) -> Bool {
         return locale.checkMovieLocale(from: categories)
     }
-    public func deleteLocaleMovie(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    public func deleteLocaleMovie(
+        from categories: MovieEntity,
+        result: @escaping (Result<Bool, DatabaseError>) -> Void
+    ) {
         locale.deleteMovieLocale(from: categories) { deleteFavorite in
             switch deleteFavorite {
             case .success(let resultAdd):

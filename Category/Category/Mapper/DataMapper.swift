@@ -43,4 +43,18 @@ final class DataMapper {
                 description: result.descriptionSport ?? "Unknown")
         }
     }
+    static func mapTravelResponsesToDomains(input travelResponses: [Travels]) -> [TravelModel] {
+        return travelResponses.map { result in
+            return TravelModel(
+                id: result.id ,
+                name: result.name ,
+                image: result.image,
+                latitude: result.latitude,
+                longitude: result.longitude,
+                descript: result.descript ?? "",
+                address: result.address ,
+                like: result.like
+            )
+        }
+    }
 }

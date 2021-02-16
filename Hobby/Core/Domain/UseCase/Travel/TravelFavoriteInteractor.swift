@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Core
 
 class TravelFavoriteInteractor: TravelFavoriteProtocol {
     private let travelLocaleRepository: TravelLocaleRepositoryProtocol

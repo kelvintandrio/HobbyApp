@@ -52,7 +52,10 @@ extension SportLocaleDataSource: SportLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    public func deleteSportLocale(from categories: SportEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    public func deleteSportLocale(
+        from categories: SportEntity,
+        result: @escaping (Result<Bool, DatabaseError>) -> Void
+    ) {
         if let realmSport = realmSport {
             do {
                 try realmSport.write {

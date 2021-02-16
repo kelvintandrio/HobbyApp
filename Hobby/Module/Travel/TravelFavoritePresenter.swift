@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import Core
 
 class TravelFavoritePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
@@ -40,7 +41,7 @@ class TravelFavoritePresenter: ObservableObject {
     }
 
     func linkBuilder<Content: View>(
-        for category: TravelModel,
+        for category: Core.TravelModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(destination: travelRouter.goToTravelDetailView(for: category)) { content() }

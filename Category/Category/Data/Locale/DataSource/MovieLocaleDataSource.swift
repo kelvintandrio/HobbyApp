@@ -52,7 +52,10 @@ extension MovieLocaleDataSource: MovieLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    public func deleteMovieLocale(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    public func deleteMovieLocale(
+        from categories: MovieEntity,
+        result: @escaping (Result<Bool, DatabaseError>) -> Void
+    ) {
         if let realmMovie = realmMovie {
             do {
                 try realmMovie.write {

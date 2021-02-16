@@ -52,8 +52,8 @@ public enum GameEndpoints {
     }
 }
 
-enum TravelEndpoints {
-    enum Gets: Endpoint {
+public enum TravelEndpoints {
+    public enum Gets: Endpoint {
         case travel
 
         public var url: String {

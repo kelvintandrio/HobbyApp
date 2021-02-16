@@ -384,14 +384,9 @@
 		1031E8C725CB1E6000F3C1DF /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				1031E8C825CB1E6000F3C1DF /* MovieDetailView.swift */,
-				1031E8C925CB1E6000F3C1DF /* MoviePresenter.swift */,
-				1031E8CA25CB1E6000F3C1DF /* MovieRouter.swift */,
-				1031E8CB25CB1E6000F3C1DF /* MovieView.swift */,
-				1031E8CC25CB1E6000F3C1DF /* MovieRowsView.swift */,
-				1031E8CD25CB1E6000F3C1DF /* MovieDetailPresenter.swift */,
-				1031E8CE25CB1E6000F3C1DF /* MovieFavoriteView.swift */,
-				1031E8CF25CB1E6000F3C1DF /* MovieFavoritePresenter.swift */,
+				1053954F25DC1C6A009EC607 /* Router */,
+				1053954E25DC1C62009EC607 /* Presenter */,
+				1053954D25DC1C57009EC607 /* View */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -399,14 +394,9 @@
 		1031E8D025CB1E6000F3C1DF /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				1031E8D125CB1E6000F3C1DF /* GameView.swift */,
-				1031E8D225CB1E6000F3C1DF /* GamePresenter.swift */,
-				1031E8D325CB1E6000F3C1DF /* GameDetailView.swift */,
-				1031E8D425CB1E6000F3C1DF /* GameFavoriteView.swift */,
-				1031E8D525CB1E6000F3C1DF /* GameRowsView.swift */,
-				1031E8D625CB1E6000F3C1DF /* GameFavoritePresenter.swift */,
-				1031E8D725CB1E6000F3C1DF /* GameDetailPresenter.swift */,
-				1031E8D825CB1E6000F3C1DF /* GameRouter.swift */,
+				1053955225DC1CA0009EC607 /* Router */,
+				1053955125DC1C9A009EC607 /* Presenter */,
+				1053955025DC1C93009EC607 /* View */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -414,14 +404,9 @@
 		1031E8D925CB1E6000F3C1DF /* Sports */ = {
 			isa = PBXGroup;
 			children = (
-				1031E8DA25CB1E6000F3C1DF /* SportView.swift */,
-				1031E8DB25CB1E6000F3C1DF /* SportFavoriteView.swift */,
-				1031E8DC25CB1E6000F3C1DF /* SportRowsView.swift */,
-				1031E8DD25CB1E6000F3C1DF /* SportsDetailPresenter.swift */,
-				1031E8DE25CB1E6000F3C1DF /* SportsFavoritePresenter.swift */,
-				1031E8DF25CB1E6000F3C1DF /* SportsPresenter.swift */,
-				1031E8E025CB1E6000F3C1DF /* SportDetailView.swift */,
-				1031E8E125CB1E6000F3C1DF /* SportRouter.swift */,
+				1053955525DC1CCC009EC607 /* Router */,
+				1053955425DC1CC5009EC607 /* Presenter */,
+				1053955325DC1CC0009EC607 /* View */,
 			);
 			path = Sports;
 			sourceTree = "<group>";
@@ -429,8 +414,8 @@
 		1031E8E225CB1E6000F3C1DF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				1031E8E325CB1E6000F3C1DF /* ProfilePresenter.swift */,
-				1031E8E425CB1E6000F3C1DF /* ProfileView.swift */,
+				1053955725DC1D0B009EC607 /* Presenter */,
+				1053955625DC1D04009EC607 /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -438,14 +423,9 @@
 		1031E8E525CB1E6000F3C1DF /* Travel */ = {
 			isa = PBXGroup;
 			children = (
-				1031E8E625CB1E6000F3C1DF /* TravelView.swift */,
-				1031E8E725CB1E6000F3C1DF /* TravelRowsView.swift */,
-				1031E8E825CB1E6000F3C1DF /* TravelRouter.swift */,
-				1031E8E925CB1E6000F3C1DF /* TravelDetailView.swift */,
-				1031E8EA25CB1E6000F3C1DF /* TravelPresenter.swift */,
-				1031E8EB25CB1E6000F3C1DF /* TravelDetailPresenter.swift */,
-				1031E8EC25CB1E6000F3C1DF /* TravelFavoritePresenter.swift */,
-				1031E8ED25CB1E6000F3C1DF /* TravelFavoriteView.swift */,
+				1053955A25DC1D40009EC607 /* Router */,
+				1053955925DC1D2D009EC607 /* Presenter */,
+				1053955825DC1D1F009EC607 /* View */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -458,6 +438,138 @@
 				1031E91325CB2E4C00F3C1DF /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		1053954D25DC1C57009EC607 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8CC25CB1E6000F3C1DF /* MovieRowsView.swift */,
+				1031E8C825CB1E6000F3C1DF /* MovieDetailView.swift */,
+				1031E8CB25CB1E6000F3C1DF /* MovieView.swift */,
+				1031E8CE25CB1E6000F3C1DF /* MovieFavoriteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1053954E25DC1C62009EC607 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8C925CB1E6000F3C1DF /* MoviePresenter.swift */,
+				1031E8CD25CB1E6000F3C1DF /* MovieDetailPresenter.swift */,
+				1031E8CF25CB1E6000F3C1DF /* MovieFavoritePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1053954F25DC1C6A009EC607 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8CA25CB1E6000F3C1DF /* MovieRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1053955025DC1C93009EC607 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8D525CB1E6000F3C1DF /* GameRowsView.swift */,
+				1031E8D125CB1E6000F3C1DF /* GameView.swift */,
+				1031E8D325CB1E6000F3C1DF /* GameDetailView.swift */,
+				1031E8D425CB1E6000F3C1DF /* GameFavoriteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1053955125DC1C9A009EC607 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8D225CB1E6000F3C1DF /* GamePresenter.swift */,
+				1031E8D625CB1E6000F3C1DF /* GameFavoritePresenter.swift */,
+				1031E8D725CB1E6000F3C1DF /* GameDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1053955225DC1CA0009EC607 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8D825CB1E6000F3C1DF /* GameRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1053955325DC1CC0009EC607 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8DA25CB1E6000F3C1DF /* SportView.swift */,
+				1031E8DB25CB1E6000F3C1DF /* SportFavoriteView.swift */,
+				1031E8DC25CB1E6000F3C1DF /* SportRowsView.swift */,
+				1031E8E025CB1E6000F3C1DF /* SportDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1053955425DC1CC5009EC607 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8DD25CB1E6000F3C1DF /* SportsDetailPresenter.swift */,
+				1031E8DE25CB1E6000F3C1DF /* SportsFavoritePresenter.swift */,
+				1031E8DF25CB1E6000F3C1DF /* SportsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1053955525DC1CCC009EC607 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8E125CB1E6000F3C1DF /* SportRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1053955625DC1D04009EC607 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8E425CB1E6000F3C1DF /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1053955725DC1D0B009EC607 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8E325CB1E6000F3C1DF /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1053955825DC1D1F009EC607 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8E625CB1E6000F3C1DF /* TravelView.swift */,
+				1031E8E725CB1E6000F3C1DF /* TravelRowsView.swift */,
+				1031E8E925CB1E6000F3C1DF /* TravelDetailView.swift */,
+				1031E8ED25CB1E6000F3C1DF /* TravelFavoriteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1053955925DC1D2D009EC607 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8EA25CB1E6000F3C1DF /* TravelPresenter.swift */,
+				1031E8EB25CB1E6000F3C1DF /* TravelDetailPresenter.swift */,
+				1031E8EC25CB1E6000F3C1DF /* TravelFavoritePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1053955A25DC1D40009EC607 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1031E8E825CB1E6000F3C1DF /* TravelRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		578B8938E749B630CE36A38F /* Frameworks */ = {

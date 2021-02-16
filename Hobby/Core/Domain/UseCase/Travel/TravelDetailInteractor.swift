@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Core
 
 class TravelDetailInteractor: TravelDetailProtocol {
     private let travelLocaleRepository: TravelLocaleRepositoryProtocol

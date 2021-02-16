@@ -15,7 +15,10 @@ public struct ActivityIndicator: UIViewRepresentable {
       return UIActivityIndicatorView(style: .large)
     }
 
-    public func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
+    public func updateUIView(
+        _ uiView: UIActivityIndicatorView,
+        context: UIViewRepresentableContext<ActivityIndicator>
+    ) {
       uiView.startAnimating()
     }
 }

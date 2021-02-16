@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
+import Core
 
 class MoviePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []

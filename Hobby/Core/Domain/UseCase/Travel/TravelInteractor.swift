@@ -7,6 +7,8 @@
 //
 
 import Combine
+import Core
+import Common
 
 class TravelInteractor: TravelProtocol {
     private let travelRepository: TravelRepositoryProtocol
@@ -15,7 +17,7 @@ class TravelInteractor: TravelProtocol {
       self.travelRepository = repository
     }
 
-    func getTravel() -> AnyPublisher<[TravelModel], URLError> {
+    func getTravel() -> AnyPublisher<[TravelModel], Common.URLError> {
         return travelRepository.getTravel()
     }
 }

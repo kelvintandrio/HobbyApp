@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Core
 
 class SportDetailInteractor: SportsDetailProtocol {
     private let sportLocaleRepository: SportLocaleRepositoryProtocol

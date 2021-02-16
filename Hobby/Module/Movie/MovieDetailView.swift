@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Common
+import Category
 
 struct MovieDetailView: View {
 
@@ -39,11 +40,11 @@ struct MovieDetailView: View {
             Button(action: {
                 if self.onLove == false {
                     self.onLove = true
-                    self.presenter.addFavorite(movie: DataLocaleMapper02.mapMovieToEntity(input: self.presenter.category))
+                    self.presenter.addFavorite(movie: DataLocaleMapper.mapMovieToEntity(input: self.presenter.category))
                 } else {
                     self.onLove = false
                     self.presenter
-                        .deleteFavorite(movie: DataLocaleMapper02.mapMovieToEntity(input: self.presenter.category))
+                        .deleteFavorite(movie: DataLocaleMapper.mapMovieToEntity(input: self.presenter.category))
                 }
             }, label: {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
@@ -55,6 +56,6 @@ struct MovieDetailView: View {
     }
 
     func checkDataMovieFavorite() {
-        onLove = self.presenter.checkFavorite(movie: DataLocaleMapper02.mapMovieToEntity(input: self.presenter.category))
+        onLove = self.presenter.checkFavorite(movie: DataLocaleMapper.mapMovieToEntity(input: self.presenter.category))
     }
 }

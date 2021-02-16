@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
+import Core
 
 class SportsPresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []

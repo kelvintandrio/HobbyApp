@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Core
 
 class SportsDetailPresenter: ObservableObject {
     private let detailUseCase: SportsDetailProtocol

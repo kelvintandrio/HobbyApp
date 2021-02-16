@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Core
 
 class SportFavoriteInteractor: SportFavoriteProtocol {
     private let sportLocaleRepository: SportLocaleRepositoryProtocol

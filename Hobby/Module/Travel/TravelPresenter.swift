@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
+import Core
 
 class TravelPresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []

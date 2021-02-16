@@ -7,6 +7,8 @@
 //
 
 import Combine
+import Core
+import Common
 
 class SportsInteractor: SportsProtocol {
     private let sportRepository: SportRepositoryProtocol
@@ -15,7 +17,7 @@ class SportsInteractor: SportsProtocol {
       self.sportRepository = repository
     }
 
-    func getSport() -> AnyPublisher<[SportModel], URLError> {
+    func getSport() -> AnyPublisher<[SportModel], Common.URLError> {
         return sportRepository.getSport()
     }
 }

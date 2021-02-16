@@ -1,17 +1,23 @@
 //
 //  SportLocaleRepository.swift
-//  Category
+//  Hobby
 //
-//  Created by Kelvin HT on 2/16/21.
+//  Created by Kelvin HT on 2/17/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
+import Combine
 import Common
 import Core
-import Combine
 
-public final class SportLocaleRepository: NSObject {
+protocol SportLocaleRepositoryProtocol {
+    func getLocaleSport() -> AnyPublisher<[Core.SportModel], Error>
+    func addLocaleSport(from categories: SportEntity) -> AnyPublisher<Bool, Error>
+    func deleteLocaleSport(from categories: SportEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkLocaleSport(from categories: SportEntity) -> Bool
+}
+final class SportLocaleRepository: NSObject {
     public typealias SportLocaleInstance = (SportLocaleDataSource) -> SportLocaleRepository
 
     let locale: SportLocaleDataSource
@@ -26,10 +32,10 @@ public final class SportLocaleRepository: NSObject {
 }
 
 extension SportLocaleRepository: SportLocaleRepositoryProtocol {
-    public func checkLocaleSport(from categories: SportEntity) -> Bool {
+    func checkLocaleSport(from categories: SportEntity) -> Bool {
         return locale.checkSportLocale(from: categories)
     }
-    public func deleteLocaleSport(
+    func deleteLocaleSport(
         from categories: SportEntity,
         result: @escaping (Result<Bool, DatabaseError>) -> Void
     ) {
@@ -42,13 +48,13 @@ extension SportLocaleRepository: SportLocaleRepositoryProtocol {
             }
         }
     }
-    public func addLocaleSport(from categories: SportEntity) -> AnyPublisher<Bool, Error> {
+    func addLocaleSport(from categories: SportEntity) -> AnyPublisher<Bool, Error> {
         return self.locale.addSportLocale(from: categories)
             .map { $0 }
             .eraseToAnyPublisher()
     }
 
-    public func getLocaleSport() -> AnyPublisher<[SportModel], Error> {
+    func getLocaleSport() -> AnyPublisher<[SportModel], Error> {
         return self.locale.getSportLocale()
             .map { DataLocaleMapper.mapSportToModel(input: $0) }
             .eraseToAnyPublisher()

@@ -1,19 +1,24 @@
 //
 //  MovieLocaleDataSource.swift
-//  Category
+//  Hobby
 //
-//  Created by Kelvin HT on 2/16/21.
+//  Created by Kelvin HT on 2/17/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
-import RealmSwift
 import Combine
-import Core
+import RealmSwift
 import Common
 
-public final class MovieLocaleDataSource: NSObject {
-    public  let realmMovie: Realm?
+protocol MovieLocaleDataSourceProtocol: class {
+    func getMovieLocale() -> AnyPublisher<[MovieEntity], Error>
+    func addMovieLocale(from categories: MovieEntity) -> AnyPublisher<Bool, Error>
+    func deleteMovieLocale(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkMovieLocale(from categories: MovieEntity) -> Bool
+}
+final class MovieLocaleDataSource: NSObject {
+    public let realmMovie: Realm?
     public init(realm: Realm?) {
         self.realmMovie = realm
     }

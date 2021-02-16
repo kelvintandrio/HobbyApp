@@ -1,18 +1,23 @@
 //
 //  SportLocaleDataSource.swift
-//  Category
+//  Hobby
 //
-//  Created by Kelvin HT on 2/16/21.
+//  Created by Kelvin HT on 2/17/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
-import Core
-import Common
 import Combine
+import Common
 import RealmSwift
 
-public final class SportLocaleDataSource: NSObject {
+protocol SportLocaleDataSourceProtocol: class {
+    func getSportLocale() -> AnyPublisher<[SportEntity], Error>
+    func addSportLocale(from categories: SportEntity) -> AnyPublisher<Bool, Error>
+    func deleteSportLocale(from categories: SportEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkSportLocale(from categories: SportEntity) -> Bool
+}
+final class SportLocaleDataSource: NSObject {
     public let realmSport: Realm?
     public init(realm: Realm?) {
         self.realmSport = realm
@@ -23,7 +28,7 @@ public final class SportLocaleDataSource: NSObject {
 }
 
 extension SportLocaleDataSource: SportLocaleDataSourceProtocol {
-    public func getSportLocale() -> AnyPublisher<[SportEntity], Error> {
+    func getSportLocale() -> AnyPublisher<[SportEntity], Error> {
         return Future<[SportEntity], Error> { completion in
             if let realmSport = self.realmSport {
                 let categories: Results<SportEntity> = {
@@ -36,7 +41,7 @@ extension SportLocaleDataSource: SportLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    public func addSportLocale(from categories: SportEntity) -> AnyPublisher<Bool, Error> {
+    func addSportLocale(from categories: SportEntity) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realmSport {
                 do {
@@ -52,7 +57,7 @@ extension SportLocaleDataSource: SportLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    public func deleteSportLocale(
+    func deleteSportLocale(
         from categories: SportEntity,
         result: @escaping (Result<Bool, DatabaseError>) -> Void
     ) {
@@ -71,7 +76,7 @@ extension SportLocaleDataSource: SportLocaleDataSourceProtocol {
             result(.failure(.invalidInstance))
         }
     }
-    public func checkSportLocale(from categories: SportEntity) -> Bool {
+    func checkSportLocale(from categories: SportEntity) -> Bool {
         if let realmSport = realmSport {
             let sport: SportEntity? = {
                 realmSport.object(ofType: SportEntity.self, forPrimaryKey: categories.id)

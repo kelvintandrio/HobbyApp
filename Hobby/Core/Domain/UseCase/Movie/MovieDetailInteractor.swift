@@ -9,6 +9,12 @@
 import Combine
 import Core
 
+protocol MovieDetailProtocol {
+    func getDetailMovie() -> Core.MovieModel
+    func addMovieFavorite(movie: MovieEntity) -> AnyPublisher<Bool, Error>
+    func checkFavoriteMovie(movie: MovieEntity) -> Bool
+    func deleteMovieFavorite(movie: MovieEntity)
+}
 class MovieDetailInteractor: MovieDetailProtocol {
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol
     private let repository: MovieRepositoryProtocol
@@ -24,7 +30,7 @@ class MovieDetailInteractor: MovieDetailProtocol {
         self.movieLocaleRepository = repositoryLocale
     }
 
-    func getDetailMovie() -> MovieModel {
+    func getDetailMovie() -> Core.MovieModel {
         return category
     }
 

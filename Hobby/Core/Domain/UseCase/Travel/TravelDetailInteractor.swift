@@ -8,7 +8,14 @@
 
 import Combine
 import Core
+import Combine
 
+protocol TravelDetailProtocol {
+    func getDetailTravel() -> TravelModel
+    func addTravelFavorite(travel: TravelEntity) -> AnyPublisher<Bool, Error>
+    func checkFavoriteTravel(travel: TravelEntity) -> Bool
+    func deleteTravelFavorite(travel: TravelEntity)
+}
 class TravelDetailInteractor: TravelDetailProtocol {
     private let travelLocaleRepository: TravelLocaleRepositoryProtocol
     private let repository: TravelRepositoryProtocol

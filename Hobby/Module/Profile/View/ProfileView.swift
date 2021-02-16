@@ -12,10 +12,14 @@ import Common
 struct ProfileView: View {
 
     @ObservedObject var profilePresenter: ProfilePresenter
+    @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter
+    @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter
+    @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter
+    @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center) {
+        NavigationView {
+            VStack {
                 VStack {
                     Image("background_profile")
                         .resizable()
@@ -27,84 +31,43 @@ struct ProfileView: View {
                         .padding(.bottom, -50)
 
                     Text(self.profilePresenter.profile.name)
-                        .font(.custom("Roboto-Bold", size: 30))
+                        .font(.system(size: 25))
+                        .fontWeight(.bold)
                         .frame(minWidth: 0, maxWidth: .infinity)
                     Text(self.profilePresenter.profile.job)
-                        .font(.custom("Roboto-Medium", size: 25))
+                        .font(.system(size: 20))
+                        .fontWeight(.medium)
                         .frame(minWidth: 0, maxWidth: .infinity)
                     Text(self.profilePresenter.profile.company)
-                        .font(.custom("Roboto-Medium", size: 20))
+                        .font(.system(size: 15))
+                        .fontWeight(.medium)
                         .frame(minWidth: 0, maxWidth: .infinity)
+                }.edgesIgnoringSafeArea(.top)
 
-                    VStack {
-                        Text("ABOUT ME")
-                            .padding(.leading, 50.0)
-                            .padding(.trailing, 50.0)
-                            .padding(.top, 10.0)
-                            .padding(.bottom, 30.0)
-                            .font(.custom("Roboto-Regular", size: 20))
-                            .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                            .cornerRadius(20.0)
-
-                        VStack {
-                            Text(ConstantVal.ProfileUser.aboutMe)
-                                .font(.custom("Roboto-Regular", size: 15))
-                                .lineLimit(50)
-                                .padding(.all, 16.0)
-                                .border(Color(red: 251.0/255, green: 135.0/255, blue: 0.0/255, opacity: 1.0), width: 1)
-                        }
-                        .background(Color.white)
-                        .cornerRadius(20.0)
-                        .offset(y: -20.0)
-                    }
-                    .padding(.top, 16.0)
-
+                VStack {
                     Text("Your Favorite")
-                        .font(.title)
+                        .font(.system(size: 24))
                         .fontWeight(.semibold)
-                    VStack {
-                        HStack {
-                            Image(ConstantVal.TabBarImage.movieTabBar)
-                            Text("MOVIE")
-                                .bold()
-                        }
-                    }.cornerRadius(10.0)
-                    .padding(EdgeInsets(top: 10, leading: 150, bottom: 10, trailing: 150))
-                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                    .onTapGesture {
-                        print("You click Movie Sports")
-                    }
+                        .padding(.top)
 
-                    VStack {
-                        HStack {
-                            Image(ConstantVal.TabBarImage.gameTabBar)
-                            Text("GAME")
-                                .bold()
-                        }
-                    }.cornerRadius(10.0)
-                    .padding(EdgeInsets(top: 10, leading: 154, bottom: 10, trailing: 154))
-                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                    .onTapGesture {
-                        print("You click Game")
+                    NavigationLink(destination: MovieFavoriteView(presenterMovieFavorite: presenterMovieFavorite)) {
+                        TabFavoriteViewUI(title: "MOVIE", image: ConstantVal.TabBarImage.movieTabBar)
                     }
+                    NavigationLink(destination: GameFavoriteView(presenterGameFavorite: presenterGameFavorite)) {
+                        TabFavoriteViewUI(title: "GAME", image: ConstantVal.TabBarImage.gameTabBar)
+                    }
+                    NavigationLink(destination: SportFavoriteView(presenterSportFavorite: presenterSportFavorite)) {
+                        TabFavoriteViewUI(title: "SPORT", image: ConstantVal.TabBarImage.sportTabBar)
+                    }
+                    NavigationLink(destination: TravelFavoriteView(presenterTravelFavorite: presenterTravelFavorite)) {
+                        TabFavoriteViewUI(title: "TRAVEL", image: ConstantVal.TabBarImage.travelTabBar)
+                    }
+                }.padding(.bottom)
+                .edgesIgnoringSafeArea(.top)
 
-                    VStack {
-                        HStack {
-                            Image(ConstantVal.TabBarImage.sportTabBar)
-                            Text("SPORTS")
-                                .bold()
-                        }
-                    }.cornerRadius(10.0)
-                    .padding(EdgeInsets(top: 10, leading: 145, bottom: 10, trailing: 145))
-                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                    .onTapGesture {
-                        print("You click Sports")
-                    }
-                }
             }.onAppear {
                 self.profilePresenter.getProfile()
             }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         }
     }
 }

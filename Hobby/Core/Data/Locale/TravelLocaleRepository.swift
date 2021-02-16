@@ -1,17 +1,23 @@
 //
 //  TravelLocaleRepository.swift
-//  Category
+//  Hobby
 //
-//  Created by Kelvin HT on 2/16/21.
+//  Created by Kelvin HT on 2/17/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
+import Combine
 import Common
 import Core
-import Combine
 
-public final class TravelLocaleRepository: NSObject {
+protocol TravelLocaleRepositoryProtocol {
+    func getLocaleTravel() -> AnyPublisher<[TravelModel], Error>
+    func addLocaleTravel(from categories: TravelEntity) -> AnyPublisher<Bool, Error>
+    func deleteLocaleTravel(from categories: TravelEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkLocaleTravel(from categories: TravelEntity) -> Bool
+}
+final class TravelLocaleRepository: NSObject {
     public typealias TravelLocaleInstance = (TravelLocaleDataSource) -> TravelLocaleRepository
 
     let locale: TravelLocaleDataSource
@@ -26,10 +32,10 @@ public final class TravelLocaleRepository: NSObject {
 }
 
 extension TravelLocaleRepository: TravelLocaleRepositoryProtocol {
-    public func checkLocaleTravel(from categories: TravelEntity) -> Bool {
+    func checkLocaleTravel(from categories: TravelEntity) -> Bool {
         return locale.checkTravelLocale(from: categories)
     }
-    public func deleteLocaleTravel(
+    func deleteLocaleTravel(
         from categories: TravelEntity,
         result: @escaping (Result<Bool, DatabaseError>) -> Void
     ) {
@@ -42,13 +48,13 @@ extension TravelLocaleRepository: TravelLocaleRepositoryProtocol {
             }
         }
     }
-    public func addLocaleTravel(from categories: TravelEntity) -> AnyPublisher<Bool, Error> {
+    func addLocaleTravel(from categories: TravelEntity) -> AnyPublisher<Bool, Error> {
         return self.locale.addTravelLocale(from: categories)
             .map { $0 }
             .eraseToAnyPublisher()
     }
 
-    public func getLocaleTravel() -> AnyPublisher<[TravelModel], Error> {
+    func getLocaleTravel() -> AnyPublisher<[TravelModel], Error> {
         return self.locale.getTravelLocale()
             .map { DataLocaleMapper.mapTravelToModel(input: $0) }
             .eraseToAnyPublisher()

@@ -1,17 +1,23 @@
 //
 //  MovieLocaleRepository.swift
-//  Category
+//  Hobby
 //
-//  Created by Kelvin HT on 2/16/21.
+//  Created by Kelvin HT on 2/17/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import Foundation
 import Combine
-import Core
 import Common
+import Core
 
-public final class MovieLocaleRepository: NSObject {
+protocol MovieLocaleRepositoryProtocol {
+    func getLocaleMovie() -> AnyPublisher<[Core.MovieModel], Error>
+    func addLocaleMovie(from categories: MovieEntity) -> AnyPublisher<Bool, Error>
+    func deleteLocaleMovie(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkLocaleMovie(from categories: MovieEntity) -> Bool
+}
+final class MovieLocaleRepository: NSObject {
     public typealias MovieLocaleInstance = (MovieLocaleDataSource) -> MovieLocaleRepository
 
     let locale: MovieLocaleDataSource
@@ -26,10 +32,10 @@ public final class MovieLocaleRepository: NSObject {
 }
 
 extension MovieLocaleRepository: MovieLocaleRepositoryProtocol {
-    public func checkLocaleMovie(from categories: MovieEntity) -> Bool {
+    func checkLocaleMovie(from categories: MovieEntity) -> Bool {
         return locale.checkMovieLocale(from: categories)
     }
-    public func deleteLocaleMovie(
+    func deleteLocaleMovie(
         from categories: MovieEntity,
         result: @escaping (Result<Bool, DatabaseError>) -> Void
     ) {
@@ -44,13 +50,13 @@ extension MovieLocaleRepository: MovieLocaleRepositoryProtocol {
             }
         }
     }
-    public func addLocaleMovie(from categories: MovieEntity) -> AnyPublisher<Bool, Error> {
+    func addLocaleMovie(from categories: MovieEntity) -> AnyPublisher<Bool, Error> {
         return self.locale.addMovieLocale(from: categories)
             .map { $0 }
             .eraseToAnyPublisher()
     }
 
-    public func getLocaleMovie() -> AnyPublisher<[MovieModel], Error> {
+     func getLocaleMovie() -> AnyPublisher<[MovieModel], Error> {
         return self.locale.getMovieLocale()
             .map { DataLocaleMapper.mapMovieToModel(input: $0) }
             .eraseToAnyPublisher()

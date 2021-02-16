@@ -8,7 +8,6 @@
 
 import Combine
 import Core
-import Combine
 
 protocol TravelDetailProtocol {
     func getDetailTravel() -> TravelModel

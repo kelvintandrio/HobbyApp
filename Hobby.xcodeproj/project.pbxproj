@@ -17,12 +17,9 @@
 		1031E8AD25CB1E4A00F3C1DF /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */; };
 		1031E8AE25CB1E4A00F3C1DF /* MovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89025CB1E4900F3C1DF /* MovieInteractor.swift */; };
 		1031E8B025CB1E4A00F3C1DF /* MovieFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89225CB1E4900F3C1DF /* MovieFavoriteInteractor.swift */; };
-		1031E8B225CB1E4A00F3C1DF /* GameDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89525CB1E4900F3C1DF /* GameDetailProtocol.swift */; };
-		1031E8B325CB1E4A00F3C1DF /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89625CB1E4900F3C1DF /* GameProtocol.swift */; };
 		1031E8B425CB1E4A00F3C1DF /* GameDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89725CB1E4900F3C1DF /* GameDetailInteractor.swift */; };
 		1031E8B525CB1E4A00F3C1DF /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89825CB1E4900F3C1DF /* GameInteractor.swift */; };
 		1031E8B625CB1E4A00F3C1DF /* GameFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89925CB1E4900F3C1DF /* GameFavoriteInteractor.swift */; };
-		1031E8B725CB1E4A00F3C1DF /* GameFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89A25CB1E4900F3C1DF /* GameFavoriteProtocol.swift */; };
 		1031E8B925CB1E4A00F3C1DF /* SportsFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89D25CB1E4900F3C1DF /* SportsFavoriteInteractor.swift */; };
 		1031E8BB25CB1E4A00F3C1DF /* SportsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E89F25CB1E4900F3C1DF /* SportsInteractor.swift */; };
 		1031E8BD25CB1E4A00F3C1DF /* SportsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E8A125CB1E4900F3C1DF /* SportsDetailInteractor.swift */; };
@@ -133,12 +130,9 @@
 		1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
 		1031E89025CB1E4900F3C1DF /* MovieInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInteractor.swift; sourceTree = "<group>"; };
 		1031E89225CB1E4900F3C1DF /* MovieFavoriteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieFavoriteInteractor.swift; sourceTree = "<group>"; };
-		1031E89525CB1E4900F3C1DF /* GameDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailProtocol.swift; sourceTree = "<group>"; };
-		1031E89625CB1E4900F3C1DF /* GameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		1031E89725CB1E4900F3C1DF /* GameDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailInteractor.swift; sourceTree = "<group>"; };
 		1031E89825CB1E4900F3C1DF /* GameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
 		1031E89925CB1E4900F3C1DF /* GameFavoriteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFavoriteInteractor.swift; sourceTree = "<group>"; };
-		1031E89A25CB1E4900F3C1DF /* GameFavoriteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFavoriteProtocol.swift; sourceTree = "<group>"; };
 		1031E89D25CB1E4900F3C1DF /* SportsFavoriteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsFavoriteInteractor.swift; sourceTree = "<group>"; };
 		1031E89F25CB1E4900F3C1DF /* SportsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsInteractor.swift; sourceTree = "<group>"; };
 		1031E8A125CB1E4900F3C1DF /* SportsDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDetailInteractor.swift; sourceTree = "<group>"; };
@@ -351,12 +345,9 @@
 		1031E89425CB1E4900F3C1DF /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				1031E89525CB1E4900F3C1DF /* GameDetailProtocol.swift */,
-				1031E89625CB1E4900F3C1DF /* GameProtocol.swift */,
 				1031E89725CB1E4900F3C1DF /* GameDetailInteractor.swift */,
 				1031E89825CB1E4900F3C1DF /* GameInteractor.swift */,
 				1031E89925CB1E4900F3C1DF /* GameFavoriteInteractor.swift */,
-				1031E89A25CB1E4900F3C1DF /* GameFavoriteProtocol.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -831,18 +822,15 @@
 				1053956C25DC3834009EC607 /* MovieLocaleDataSource.swift in Sources */,
 				1031E90A25CB1E6100F3C1DF /* TravelRouter.swift in Sources */,
 				1031E91625CB2E4C00F3C1DF /* SceneDelegate.swift in Sources */,
-				1031E8B725CB1E4A00F3C1DF /* GameFavoriteProtocol.swift in Sources */,
 				1031E90D25CB1E6100F3C1DF /* TravelDetailPresenter.swift in Sources */,
 				1031E8B425CB1E4A00F3C1DF /* GameDetailInteractor.swift in Sources */,
 				1031E8BF25CB1E4A00F3C1DF /* ProfileInteractor.swift in Sources */,
 				1031E8BD25CB1E4A00F3C1DF /* SportsDetailInteractor.swift in Sources */,
 				1031E90025CB1E6100F3C1DF /* SportRowsView.swift in Sources */,
-				1031E8B225CB1E4A00F3C1DF /* GameDetailProtocol.swift in Sources */,
 				1031E8F825CB1E6100F3C1DF /* GameDetailView.swift in Sources */,
 				1031E8F325CB1E6100F3C1DF /* MovieDetailPresenter.swift in Sources */,
 				1031E8BB25CB1E4A00F3C1DF /* SportsInteractor.swift in Sources */,
 				1053958025DC407A009EC607 /* TravelEntity.swift in Sources */,
-				1031E8B325CB1E4A00F3C1DF /* GameProtocol.swift in Sources */,
 				1031E8F725CB1E6100F3C1DF /* GamePresenter.swift in Sources */,
 				1031E8F425CB1E6100F3C1DF /* MovieFavoriteView.swift in Sources */,
 				1031E8EE25CB1E6100F3C1DF /* MovieDetailView.swift in Sources */,

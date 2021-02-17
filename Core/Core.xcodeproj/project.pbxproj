@@ -26,6 +26,8 @@
 		1053953025DB0C22009EC607 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053952F25DB0C22009EC607 /* TravelModel.swift */; };
 		1053953525DB774D009EC607 /* TravelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053953425DB774D009EC607 /* TravelProtocol.swift */; };
 		1053953925DB776E009EC607 /* TravelFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053953825DB776E009EC607 /* TravelFavoriteProtocol.swift */; };
+		106382FB25DD7BBD00CD42DB /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106382FA25DD7BBD00CD42DB /* GameProtocol.swift */; };
+		106382FD25DD7C4B00CD42DB /* GameFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106382FC25DD7C4B00CD42DB /* GameFavoriteProtocol.swift */; };
 		10DACF6F25D18F4400DED4D0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF6525D18F4300DED4D0 /* Core.framework */; };
 		10DACF7425D18F4400DED4D0 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF7325D18F4400DED4D0 /* CoreTests.swift */; };
 		10DACF7625D18F4400DED4D0 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF6825D18F4300DED4D0 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,6 +82,8 @@
 		1053952F25DB0C22009EC607 /* TravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 		1053953425DB774D009EC607 /* TravelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelProtocol.swift; sourceTree = "<group>"; };
 		1053953825DB776E009EC607 /* TravelFavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFavoriteProtocol.swift; sourceTree = "<group>"; };
+		106382FA25DD7BBD00CD42DB /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
+		106382FC25DD7C4B00CD42DB /* GameFavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoriteProtocol.swift; sourceTree = "<group>"; };
 		10DACF6525D18F4300DED4D0 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF6825D18F4300DED4D0 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		10DACF6925D18F4300DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 		1053957625DC3DC1009EC607 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				106382FA25DD7BBD00CD42DB /* GameProtocol.swift */,
+				106382FC25DD7C4B00CD42DB /* GameFavoriteProtocol.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -447,8 +453,10 @@
 				10F73FB125D9A19800C4A77A /* DataGame.swift in Sources */,
 				105394EB25DAEB34009EC607 /* MovieModel.swift in Sources */,
 				1053953525DB774D009EC607 /* TravelProtocol.swift in Sources */,
+				106382FB25DD7BBD00CD42DB /* GameProtocol.swift in Sources */,
 				1053953025DB0C22009EC607 /* TravelModel.swift in Sources */,
 				10F73F9725D99A3900C4A77A /* GameRepositoryProtocol.swift in Sources */,
+				106382FD25DD7C4B00CD42DB /* GameFavoriteProtocol.swift in Sources */,
 				1053950925DAF7FD009EC607 /* SportsDataSourceProtocol.swift in Sources */,
 				105394E925DAEB24009EC607 /* DataMovie.swift in Sources */,
 				10F73FAF25D9A11400C4A77A /* GameModel.swift in Sources */,

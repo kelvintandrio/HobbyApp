@@ -11,6 +11,13 @@ import Core
 import Common
 import Category
 
+protocol GameDetailProtocol {
+    func getDetailGame() -> Core.GameModel
+    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError>
+    func addGameFavorite(game: GameEntity) -> AnyPublisher<Bool, Error>
+    func checkFavoriteGame(game: GameEntity) -> Bool
+    func deleteGameFavorite(game: GameEntity)
+}
 class GameDetailInteractor: GameDetailProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
     private let repository: GameRepositoryProtocol

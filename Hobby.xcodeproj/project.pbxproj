@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,6 @@
 		1031E80425CAFEAB00F3C1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1031E80225CAFEAB00F3C1DF /* LaunchScreen.storyboard */; };
 		1031E80F25CAFEAC00F3C1DF /* HobbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E80E25CAFEAC00F3C1DF /* HobbyTests.swift */; };
 		1031E82025CB0BBB00F3C1DF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1031E81F25CB0BBB00F3C1DF /* .swiftlint.yml */; };
-		1031E82325CB110400F3C1DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82225CB110400F3C1DF /* Alamofire */; };
-		1031E82925CB134500F3C1DF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82825CB134500F3C1DF /* Realm */; };
-		1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1031E82A25CB134500F3C1DF /* RealmSwift */; };
 		1031E85A25CB1D4600F3C1DF /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */; };
 		1031E88B25CB1E2D00F3C1DF /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88A25CB1E2D00F3C1DF /* Injection.swift */; };
 		1031E8AD25CB1E4A00F3C1DF /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */; };
@@ -86,7 +83,6 @@
 		1053958825DC439F009EC607 /* TravelLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053958725DC439F009EC607 /* TravelLocaleRepository.swift */; };
 		1053958A25DC4539009EC607 /* ConvertToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053958925DC4539009EC607 /* ConvertToArray.swift */; };
 		10F73F8C25D96FBD00C4A77A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 10F73F8B25D96FBD00C4A77A /* .gitignore */; };
-		10F73F8E25D984FB00C4A77A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 10F73F8D25D984FB00C4A77A /* SDWebImageSwiftUI */; };
 		10F73F9025D98A4A00C4A77A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73F8F25D98A4A00C4A77A /* Common.framework */; };
 		10F73F9125D98A4A00C4A77A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73F8F25D98A4A00C4A77A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10F73FAB25D9A02000C4A77A /* Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FAA25D9A02000C4A77A /* Category.framework */; };
@@ -216,13 +212,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10F73F8E25D984FB00C4A77A /* SDWebImageSwiftUI in Frameworks */,
-				1031E82B25CB134500F3C1DF /* RealmSwift in Frameworks */,
-				1031E82925CB134500F3C1DF /* Realm in Frameworks */,
 				10F73FC325D9B2C700C4A77A /* Core.framework in Frameworks */,
 				10F73F9025D98A4A00C4A77A /* Common.framework in Frameworks */,
 				10F73FAB25D9A02000C4A77A /* Category.framework in Frameworks */,
-				1031E82325CB110400F3C1DF /* Alamofire in Frameworks */,
 				966F81C27176FA443D61F9DF /* Pods_Hobby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,10 +669,6 @@
 			);
 			name = Hobby;
 			packageProductDependencies = (
-				1031E82225CB110400F3C1DF /* Alamofire */,
-				1031E82825CB134500F3C1DF /* Realm */,
-				1031E82A25CB134500F3C1DF /* RealmSwift */,
-				10F73F8D25D984FB00C4A77A /* SDWebImageSwiftUI */,
 			);
 			productName = Hobby;
 			productReference = 1031E7F425CAFEAB00F3C1DF /* Hobby.app */;
@@ -733,9 +721,6 @@
 			);
 			mainGroup = 1031E7EB25CAFEAB00F3C1DF;
 			packageReferences = (
-				1031E82125CB110400F3C1DF /* XCRemoteSwiftPackageReference "Alamofire" */,
-				1031E82425CB125A00F3C1DF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 1031E7F525CAFEAB00F3C1DF /* Products */;
 			projectDirPath = "";
@@ -1040,8 +1025,9 @@
 			baseConfigurationReference = 39BFE337A746009CFD0A267C /* Pods-Hobby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Hobby/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Hobby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1050,6 +1036,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.algokelvin.Hobby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1060,8 +1047,9 @@
 			baseConfigurationReference = 180348F9F5A498FBFA8EAED4 /* Pods-Hobby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"Hobby/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Hobby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1070,6 +1058,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.algokelvin.Hobby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1148,56 +1137,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1031E82125CB110400F3C1DF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.1;
-			};
-		};
-		1031E82425CB125A00F3C1DF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.0;
-			};
-		};
-		1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.5.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1031E82225CB110400F3C1DF /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1031E82125CB110400F3C1DF /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		1031E82825CB134500F3C1DF /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		1031E82A25CB134500F3C1DF /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1031E82725CB134500F3C1DF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-		10F73F8D25D984FB00C4A77A /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1031E82425CB125A00F3C1DF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1031E7EC25CAFEAB00F3C1DF /* Project object */;
 }

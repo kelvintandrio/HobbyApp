@@ -11,16 +11,16 @@ target 'Hobby' do
 end
  
 target 'Common' do
-project '../FinalSubmission/Common/Common'
+project 'Common/Common'
  
 end
 
 target 'Core' do
-project '../FinalSubmission/Core/Core'
+project 'Core/Core'
  
 end
 
 target 'Category' do
-project '../FinalSubmission/Category/Category'
+project 'Category/Category'
  
 end

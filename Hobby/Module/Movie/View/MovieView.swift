@@ -15,10 +15,7 @@ struct MovieView: View {
     var body: some View {
         ZStack {
             if presenterMovie.loadingState {
-                VStack {
-                    Text("Loading...")
-                    ActivityIndicator()
-                }
+                LoadingViewUI()
             } else {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: false) {
@@ -29,8 +26,8 @@ struct MovieView: View {
                                 }.buttonStyle(PlainButtonStyle())
                             }.padding(8)
                         }
-                    }
-                }.navigationBarTitle(Text("Game"), displayMode: .automatic)
+                    }.navigationBarTitle(Text("Movie"), displayMode: .inline)
+                }
             }
         }.onAppear {
             if self.presenterMovie.movies.count == 0 {

@@ -15,10 +15,7 @@ struct TravelView: View {
     var body: some View {
         ZStack {
             if presenterTravel.loadingState {
-                VStack {
-                    Text("Loading...")
-                    ActivityIndicator()
-                }
+                LoadingViewUI()
             } else {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: false) {
@@ -29,8 +26,8 @@ struct TravelView: View {
                                 }.buttonStyle(PlainButtonStyle())
                             }.padding(8)
                         }
-                    }
-                }.navigationBarTitle(Text("Travel"), displayMode: .automatic)
+                    }.navigationBarTitle(Text("Travel"), displayMode: .inline)
+                }
             }
         }.onAppear {
             if self.presenterTravel.travels.count == 0 {

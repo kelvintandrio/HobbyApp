@@ -10,10 +10,11 @@ import Combine
 import Core
 import Common
 
-class MovieInteractor: MovieProtocol {
-    private let movieRepository: MovieRepositoryProtocol
+class MovieInteractor<Response, R: MovieRepositoryProtocol>: MovieProtocol
+where R.Response == Response {
+    private let movieRepository: R
 
-    required init(repository: MovieRepositoryProtocol) {
+    required init(repository: R) {
       self.movieRepository = repository
     }
 

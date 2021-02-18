@@ -17,11 +17,11 @@ protocol MovieDetailProtocol {
 }
 class MovieDetailInteractor: MovieDetailProtocol {
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol
-    private let repository: MovieRepositoryProtocol
+    private let repository: HobbyRepositoryProtocol
     private let category: MovieModel
 
     required init(
-        repository: MovieRepositoryProtocol,
+        repository: HobbyRepositoryProtocol,
         repositoryLocale: MovieLocaleRepositoryProtocol,
         category: MovieModel
     ) {

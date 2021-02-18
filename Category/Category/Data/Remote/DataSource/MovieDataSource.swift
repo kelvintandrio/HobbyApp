@@ -13,7 +13,7 @@ import Alamofire
 import Core
 
 public final class MovieDataSource: NSObject {
-    override init() { }
+    public override init() { }
 
     public static let sharedInstance: MovieDataSource =  MovieDataSource()
 }

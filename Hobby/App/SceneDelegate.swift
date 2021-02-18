@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import Category
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,9 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
 
+        let movieUsecase: MovieInteractor<MovieRepository> = Injection.init().provideMovie()
+
         let profileUseCase = Injection.init().provideProfile()
         let gameUseCase = Injection.init().provideGame()
-        let movieUsecase = Injection.init().provideMovie()
+//        let movieUsecase = Injection.init().provideMovie()
         let travelUseCase = Injection.init().provideTravel()
         let sportUseCase = Injection.init().provideSport()
 

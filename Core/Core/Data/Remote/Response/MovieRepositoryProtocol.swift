@@ -11,5 +11,6 @@ import Combine
 import Common
 
 public protocol MovieRepositoryProtocol {
+    associatedtype Response
     func getMovie() -> AnyPublisher<[MovieModel], Common.URLError>
 }

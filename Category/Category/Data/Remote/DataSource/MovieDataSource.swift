@@ -19,7 +19,9 @@ public final class MovieDataSource: NSObject {
 }
 
 extension MovieDataSource: MovieDataSourceProtocol {
-    public func getMovie() -> AnyPublisher<[Movies], Common.URLError> {
+    public typealias Response = Movies
+    
+    public func getMovie() -> AnyPublisher<[Response], Common.URLError> {
         return Future<[Movies], Common.URLError> { completion in
             if let url = URL(string: MovieEndpoints.Gets.nowPlaying.url) {
                 AF.request(url).validate().responseDecodable(of: DataMovies.self) { response in

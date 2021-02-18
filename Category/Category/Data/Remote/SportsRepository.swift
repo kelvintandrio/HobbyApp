@@ -27,7 +27,7 @@ public final class SportRepository: NSObject {
 
 extension SportRepository: SportRepositoryProtocol {
     public func getSport() -> AnyPublisher<[SportModel], Common.URLError> {
-        return self.remote.getSport()
+        return self.remote.getData()
             .map { DataMapper.mapSportResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }

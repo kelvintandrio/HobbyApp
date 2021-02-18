@@ -26,8 +26,10 @@ public final class MovieRepository: NSObject {
 }
 
 extension MovieRepository: MovieRepositoryProtocol {
-    public func getMovie() -> AnyPublisher<[MovieModel], Common.URLError> {
-        return self.remote.getMovie()
+    public typealias Response = MovieModel
+
+    public func getMovie() -> AnyPublisher<[Response], Common.URLError> {
+        return self.remote.getData()
             .map { DataMapper.mapMovieResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }

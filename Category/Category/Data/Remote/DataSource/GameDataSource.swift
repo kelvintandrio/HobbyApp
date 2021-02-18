@@ -18,8 +18,10 @@ public final class GameDataSource: NSObject {
     public static let sharedInstance: GameDataSource =  GameDataSource()
 }
 
-extension GameDataSource: GameDataSourceProtocol {
-    public func getGame() -> AnyPublisher<[Games], Common.URLError> {
+extension GameDataSource: DataSource {
+    public typealias Response = [Games]
+
+    public func getData() -> AnyPublisher<[Games], Common.URLError> {
         return Future<[Games], Common.URLError> { completion in
             if let url = URL(string: GameEndpoints.Gets.games.url) {
                 AF.request(url).validate().responseDecodable(of: DataGame.self) { response in

@@ -15,6 +15,12 @@ public final class Injection: NSObject {
     func provideProfile() -> ProfileProtocol {
       return ProfileInteractor()
     }
+    
+    /**Injection General**/
+    private func provideRepository() -> HobbyRepositoryProtocol {
+        let remote: RemoteDataSource = RemoteDataSource.sharedInstance
+        return HobbyRepository.sharedInstance(remote)
+    }
 
     /**Travel Injection - Start**/
     func provideTravelRepository() -> TravelRepositoryProtocol {
@@ -78,8 +84,8 @@ public final class Injection: NSObject {
 
     /**Movie Injection - Start**/
     func provideMovieRepository() -> MovieRepositoryProtocol {
-        let remoteMovie = MovieDataSource.sharedInstance
-        return MovieRepository.sharedInstance(remoteMovie)
+        let remoteMovie = provideRepository()
+        return MovieRepository.sharedInstance(remoteMovie as! MovieDataSource)
     }
 
     func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {

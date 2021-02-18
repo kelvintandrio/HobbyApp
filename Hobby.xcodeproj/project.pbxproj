@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10199EB825DEEB310009E0E7 /* HobbyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EB725DEEB310009E0E7 /* HobbyRepository.swift */; };
+		10199EBA25DEEB8D0009E0E7 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EB925DEEB8D0009E0E7 /* RemoteDataSource.swift */; };
 		1031E7FE25CAFEAB00F3C1DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1031E7FD25CAFEAB00F3C1DF /* Assets.xcassets */; };
 		1031E80125CAFEAB00F3C1DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1031E80025CAFEAB00F3C1DF /* Preview Assets.xcassets */; };
 		1031E80425CAFEAB00F3C1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1031E80225CAFEAB00F3C1DF /* LaunchScreen.storyboard */; };
@@ -116,6 +118,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		10199EB725DEEB310009E0E7 /* HobbyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyRepository.swift; sourceTree = "<group>"; };
+		10199EB925DEEB8D0009E0E7 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		1031E7F425CAFEAB00F3C1DF /* Hobby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hobby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1031E7FD25CAFEAB00F3C1DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1031E80025CAFEAB00F3C1DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -230,6 +234,14 @@
 				180348F9F5A498FBFA8EAED4 /* Pods-Hobby.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		10199EB525DEEB150009E0E7 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				10199EB925DEEB8D0009E0E7 /* RemoteDataSource.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 		1031E7EB25CAFEAB00F3C1DF = {
@@ -587,8 +599,10 @@
 		1053956125DC33A4009EC607 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				10199EB525DEEB150009E0E7 /* Remote */,
 				1053956D25DC38F0009EC607 /* Entity */,
 				1053956325DC368A009EC607 /* Locale */,
+				10199EB725DEEB310009E0E7 /* HobbyRepository.swift */,
 				1053957225DC3C8D009EC607 /* DataLocaleMapper.swift */,
 				1053958925DC4539009EC607 /* ConvertToArray.swift */,
 			);
@@ -832,6 +846,8 @@
 				1031E8BB25CB1E4A00F3C1DF /* SportsInteractor.swift in Sources */,
 				1053958025DC407A009EC607 /* TravelEntity.swift in Sources */,
 				1031E8F725CB1E6100F3C1DF /* GamePresenter.swift in Sources */,
+				10199EBA25DEEB8D0009E0E7 /* RemoteDataSource.swift in Sources */,
+				10199EB825DEEB310009E0E7 /* HobbyRepository.swift in Sources */,
 				1031E8F425CB1E6100F3C1DF /* MovieFavoriteView.swift in Sources */,
 				1031E8EE25CB1E6100F3C1DF /* MovieDetailView.swift in Sources */,
 				1031E90B25CB1E6100F3C1DF /* TravelDetailView.swift in Sources */,

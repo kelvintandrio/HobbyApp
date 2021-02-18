@@ -25,9 +25,10 @@ public final class Injection: NSObject {
     }
 
     /**Travel Injection - Start**/
-    func provideTravelRepository() -> TravelRepositoryProtocol {
-        let remoteTravel = TravelDataSource.sharedInstance
-        return TravelRepository.sharedInstance(remoteTravel)
+    func provideTravel<U: TravelProtocol>() -> U {
+        let remote = TravelDataSource()
+        let repository = TravelRepository(remote: remote)
+        return TravelInteractor(repository: repository) as! U
     }
 
     func provideTravelLocaleRepository() -> TravelLocaleRepositoryProtocol {
@@ -36,13 +37,8 @@ public final class Injection: NSObject {
         return TravelLocaleRepository.sharedInstance(localeTravel)
     }
 
-    func provideTravel() -> TravelProtocol {
-        let repositoryTravel = provideTravelRepository()
-        return TravelInteractor(repository: repositoryTravel)
-    }
-
     func provideTravelDetail(category: TravelModel) -> TravelDetailProtocol {
-        let repositoryTravel = provideTravelRepository()
+        let repositoryTravel = provideRepository()
         let repositoryLocaleTravel = provideTravelLocaleRepository()
         return TravelDetailInteractor(repository: repositoryTravel,
                                       repositoryLocale: repositoryLocaleTravel, category: category)
@@ -90,21 +86,12 @@ public final class Injection: NSObject {
         let repository = MovieRepository(remote: remote)
         return MovieInteractor(repository: repository) as! U
     }
-//    func provideMovieRepository() -> Repository {
-//        let remoteMovie = MovieDataSource.sharedInstance
-//        return MovieRepository.sharedInstance(remoteMovie)
-//    }
 
     func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {
         let realm = try? Realm()
         let localeMovie = MovieLocaleDataSource.sharedInstance(realm)
         return MovieLocaleRepository.sharedInstance(localeMovie)
     }
-
-//    func provideMovie() -> MovieProtocol {
-//        let repositoryMovie = provideMovieRepository()
-//        return MovieInteractor(repository: repositoryMovie)
-//    }
 
     func provideMovieDetail(category: MovieModel) -> MovieDetailProtocol {
         let repositoryMovie = provideRepository()

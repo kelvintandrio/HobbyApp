@@ -19,11 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                options connectionOptions: UIScene.ConnectionOptions) {
 
         let movieUsecase: MovieInteractor<MovieRepository> = Injection.init().provideMovie()
+        let travelUseCase: TravelInteractor<TravelRepository> = Injection.init().provideTravel()
 
         let profileUseCase = Injection.init().provideProfile()
         let gameUseCase = Injection.init().provideGame()
 //        let movieUsecase = Injection.init().provideMovie()
-        let travelUseCase = Injection.init().provideTravel()
+//        let travelUseCase = Injection.init().provideTravel()
         let sportUseCase = Injection.init().provideSport()
 
         let gameFavoriteUseCase = Injection.init().provideGameFavorite()

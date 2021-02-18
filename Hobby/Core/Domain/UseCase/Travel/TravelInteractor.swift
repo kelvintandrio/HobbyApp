@@ -10,14 +10,14 @@ import Combine
 import Core
 import Common
 
-class TravelInteractor: TravelProtocol {
-    private let travelRepository: TravelRepositoryProtocol
+class TravelInteractor<R: Repository>: TravelProtocol {
+    private let travelRepository: R
 
-    required init(repository: TravelRepositoryProtocol) {
+    required init(repository: R) {
       self.travelRepository = repository
     }
 
     func getTravel() -> AnyPublisher<[TravelModel], Common.URLError> {
-        return travelRepository.getTravel()
+        return travelRepository.getData() as! AnyPublisher<[TravelModel], Common.URLError>
     }
 }

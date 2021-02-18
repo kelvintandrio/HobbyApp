@@ -13,7 +13,7 @@ import Combine
 import Alamofire
 
 public final class TravelDataSource: NSObject {
-    override init() { }
+    public override init() { }
 
     public static let sharedInstance: TravelDataSource =  TravelDataSource()
 }

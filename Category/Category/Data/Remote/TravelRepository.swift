@@ -25,8 +25,10 @@ public final class TravelRepository: NSObject {
     }
 }
 
-extension TravelRepository: TravelRepositoryProtocol {
-    public func getTravel() -> AnyPublisher<[TravelModel], Common.URLError> {
+extension TravelRepository: Repository {
+    public typealias Response = [TravelModel]
+
+    public func getData() -> AnyPublisher<[TravelModel], Common.URLError> {
         return self.remote.getData()
             .map { DataMapper.mapTravelResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()

@@ -13,7 +13,6 @@
 		1031E80125CAFEAB00F3C1DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1031E80025CAFEAB00F3C1DF /* Preview Assets.xcassets */; };
 		1031E80425CAFEAB00F3C1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1031E80225CAFEAB00F3C1DF /* LaunchScreen.storyboard */; };
 		1031E80F25CAFEAC00F3C1DF /* HobbyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E80E25CAFEAC00F3C1DF /* HobbyTests.swift */; };
-		1031E82025CB0BBB00F3C1DF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1031E81F25CB0BBB00F3C1DF /* .swiftlint.yml */; };
 		1031E85A25CB1D4600F3C1DF /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */; };
 		1031E88B25CB1E2D00F3C1DF /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88A25CB1E2D00F3C1DF /* Injection.swift */; };
 		1031E8AD25CB1E4A00F3C1DF /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */; };
@@ -128,7 +127,6 @@
 		1031E80A25CAFEAC00F3C1DF /* HobbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HobbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1031E80E25CAFEAC00F3C1DF /* HobbyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyTests.swift; sourceTree = "<group>"; };
 		1031E81025CAFEAC00F3C1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1031E81F25CB0BBB00F3C1DF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		1031E85525CB1D4600F3C1DF /* ProfileEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
 		1031E88A25CB1E2D00F3C1DF /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		1031E88F25CB1E4900F3C1DF /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				10F73F8B25D96FBD00C4A77A /* .gitignore */,
-				1031E81F25CB0BBB00F3C1DF /* .swiftlint.yml */,
 				1031E7F625CAFEAB00F3C1DF /* Hobby */,
 				1031E80D25CAFEAC00F3C1DF /* HobbyTests */,
 				1031E7F525CAFEAB00F3C1DF /* Products */,
@@ -742,7 +739,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1031E82025CB0BBB00F3C1DF /* .swiftlint.yml in Resources */,
 				1031E80425CAFEAB00F3C1DF /* LaunchScreen.storyboard in Resources */,
 				1031E80125CAFEAB00F3C1DF /* Preview Assets.xcassets in Resources */,
 				10F73F8C25D96FBD00C4A77A /* .gitignore in Resources */,
@@ -775,7 +771,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then \n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+			shellScript = "
+";
 		};
 		27C81BC19F47D8CEC3106806 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

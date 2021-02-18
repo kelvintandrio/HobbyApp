@@ -15,13 +15,13 @@ protocol MovieDetailProtocol {
     func checkFavoriteMovie(movie: MovieEntity) -> Bool
     func deleteMovieFavorite(movie: MovieEntity)
 }
-class MovieDetailInteractor<R: Repository>: MovieDetailProtocol {
+class MovieDetailInteractor: MovieDetailProtocol {
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol
-    private let repository: R
+    private let repository: HobbyRepositoryProtocol
     private let category: MovieModel
 
     required init(
-        repository: R,
+        repository: HobbyRepositoryProtocol,
         repositoryLocale: MovieLocaleRepositoryProtocol,
         category: MovieModel
     ) {

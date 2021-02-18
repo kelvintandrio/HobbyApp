@@ -12,13 +12,13 @@ protocol HobbyRepositoryProtocol { }
 
 final class HobbyRepository: NSObject {
     typealias HobbyInstance = (RemoteDataSource) -> HobbyRepository
-    
+
     fileprivate let remote: RemoteDataSource
-    
+
     private init(remote: RemoteDataSource) {
       self.remote = remote
     }
-    
+
     static let sharedInstance: HobbyInstance = {remoteRepo in
         return HobbyRepository(remote: remoteRepo)
     }

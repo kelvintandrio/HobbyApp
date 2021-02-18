@@ -10,12 +10,14 @@ import Foundation
 import RealmSwift
 import Category
 import Core
+import Common
+import UIKit
 
 public final class Injection: NSObject {
     func provideProfile() -> ProfileProtocol {
       return ProfileInteractor()
     }
-    
+
     /**Injection General**/
     private func provideRepository() -> HobbyRepositoryProtocol {
         let remote: RemoteDataSource = RemoteDataSource.sharedInstance
@@ -83,10 +85,15 @@ public final class Injection: NSObject {
     /**Game Injection - End**/
 
     /**Movie Injection - Start**/
-    func provideMovieRepository() -> Repository {
-        let remoteMovie = MovieDataSource.sharedInstance
-        return MovieRepository.sharedInstance(remoteMovie)
+    func provideMovie<U: MovieProtocol>() -> U {
+        let remote = MovieDataSource()
+        let repository = MovieRepository(remote: remote)
+        return MovieInteractor(repository: repository) as! U
     }
+//    func provideMovieRepository() -> Repository {
+//        let remoteMovie = MovieDataSource.sharedInstance
+//        return MovieRepository.sharedInstance(remoteMovie)
+//    }
 
     func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {
         let realm = try? Realm()
@@ -94,13 +101,13 @@ public final class Injection: NSObject {
         return MovieLocaleRepository.sharedInstance(localeMovie)
     }
 
-    func provideMovie() -> MovieProtocol {
-        let repositoryMovie = provideMovieRepository()
-        return MovieInteractor(repository: repositoryMovie)
-    }
+//    func provideMovie() -> MovieProtocol {
+//        let repositoryMovie = provideMovieRepository()
+//        return MovieInteractor(repository: repositoryMovie)
+//    }
 
     func provideMovieDetail(category: MovieModel) -> MovieDetailProtocol {
-        let repositoryMovie = provideMovieRepository()
+        let repositoryMovie = provideRepository()
         let repositoryLocaleMovie = provideMovieLocaleRepository()
         return MovieDetailInteractor(repository: repositoryMovie,
         repositoryLocale: repositoryLocaleMovie, category: category)

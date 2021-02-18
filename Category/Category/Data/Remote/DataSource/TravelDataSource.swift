@@ -18,8 +18,10 @@ public final class TravelDataSource: NSObject {
     public static let sharedInstance: TravelDataSource =  TravelDataSource()
 }
 
-extension TravelDataSource: TravelDataSourceProtocol {
-    public func getTravel() -> AnyPublisher<[Travels], Common.URLError> {
+extension TravelDataSource: DataSource {
+    public typealias Response = [Travels]
+
+    public func getData() -> AnyPublisher<[Travels], Common.URLError> {
         return Future<[Travels], Common.URLError> { completion in
             if let url = URL(string: TravelEndpoints.Gets.travel.url) {
                 AF.request(url).validate().responseDecodable(of: DataTravels.self) { response in

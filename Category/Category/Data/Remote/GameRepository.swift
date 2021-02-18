@@ -27,7 +27,7 @@ public final class GameRepository: NSObject {
 
 extension GameRepository: GameRepositoryProtocol {
     public func getGame() -> AnyPublisher<[GameModel], Common.URLError> {
-        return self.remote.getGame()
+        return self.remote.getData()
             .map { DataMapper.mapGameResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }

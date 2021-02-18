@@ -10,14 +10,14 @@ import Combine
 import Core
 import Common
 
-class MovieInteractor: MovieProtocol {
-    private let movieRepository: MovieRepositoryProtocol
+class MovieInteractor<R: Repository>: MovieProtocol {
+    private let movieRepository: R
 
-    required init(repository: MovieRepositoryProtocol) {
+    required init(repository: R) {
       self.movieRepository = repository
     }
 
     func getMovie() -> AnyPublisher<[MovieModel], Common.URLError> {
-        return movieRepository.getMovie()
+        return movieRepository.getData() as! AnyPublisher<[MovieModel], Common.URLError>
     }
 }

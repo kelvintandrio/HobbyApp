@@ -83,9 +83,9 @@ public final class Injection: NSObject {
     /**Game Injection - End**/
 
     /**Movie Injection - Start**/
-    func provideMovieRepository() -> MovieRepositoryProtocol {
-        let remoteMovie = provideRepository()
-        return MovieRepository.sharedInstance(remoteMovie as! MovieDataSource)
+    func provideMovieRepository() -> Repository {
+        let remoteMovie = MovieDataSource.sharedInstance
+        return MovieRepository.sharedInstance(remoteMovie)
     }
 
     func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {

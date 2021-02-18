@@ -8,6 +8,7 @@
 
 import Foundation
 import Core
+import Category
 
 final class DataLocaleMapper {
     static func mapGameToModel(input gameResponses: [GameEntity]) -> [Core.GameModel] {

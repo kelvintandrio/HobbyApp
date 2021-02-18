@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10199EA225DE89890009E0E7 /* DataMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EA125DE89890009E0E7 /* DataMovie.swift */; };
+		10199EA425DE89A80009E0E7 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EA325DE89A80009E0E7 /* MovieModel.swift */; };
 		105394C325DABAC6009EC607 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 105394C225DABAC6009EC607 /* Realm */; };
 		105394C525DABAC6009EC607 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 105394C425DABAC6009EC607 /* RealmSwift */; };
 		105394EF25DAEC53009EC607 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394EE25DAEC53009EC607 /* MovieDataSource.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		10199EA125DE89890009E0E7 /* DataMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMovie.swift; sourceTree = "<group>"; };
+		10199EA325DE89A80009E0E7 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		105394EE25DAEC53009EC607 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
 		105394F025DAECFA009EC607 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		1053951525DAFB5C009EC607 /* SportsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsDataSource.swift; sourceTree = "<group>"; };
@@ -102,6 +106,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10199E9F25DE89640009E0E7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				10199EA025DE89710009E0E7 /* Movie */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		10199EA025DE89710009E0E7 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				10199EA125DE89890009E0E7 /* DataMovie.swift */,
+				10199EA325DE89A80009E0E7 /* MovieModel.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
 		105394BC25DAB298009EC607 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +154,7 @@
 		10DACF8B25D1909000DED4D0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				10199E9F25DE89640009E0E7 /* Domain */,
 				105394BC25DAB298009EC607 /* Mapper */,
 				10F73F9A25D99B0500C4A77A /* Data */,
 				10DACF8C25D1909000DED4D0 /* Category.h */,
@@ -347,8 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10199EA425DE89A80009E0E7 /* MovieModel.swift in Sources */,
 				105394F125DAECFA009EC607 /* MovieRepository.swift in Sources */,
 				10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */,
+				10199EA225DE89890009E0E7 /* DataMovie.swift in Sources */,
 				1053953D25DB7EA0009EC607 /* TravelRepository.swift in Sources */,
 				105394EF25DAEC53009EC607 /* MovieDataSource.swift in Sources */,
 				10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */,

@@ -19,6 +19,8 @@ public final class MovieDataSource: NSObject {
 }
 
 extension MovieDataSource: MovieDataSourceProtocol {
+    public typealias Response = [Movies]
+
     public func getMovie() -> AnyPublisher<[Movies], Common.URLError> {
         return Future<[Movies], Common.URLError> { completion in
             if let url = URL(string: MovieEndpoints.Gets.nowPlaying.url) {

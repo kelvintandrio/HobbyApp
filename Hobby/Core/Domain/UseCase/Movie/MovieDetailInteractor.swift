@@ -7,21 +7,23 @@
 //
 
 import Combine
+import Category
 import Core
 
 protocol MovieDetailProtocol {
-    func getDetailMovie() -> Core.MovieModel
+    func getDetailMovie() -> MovieModel
     func addMovieFavorite(movie: MovieEntity) -> AnyPublisher<Bool, Error>
     func checkFavoriteMovie(movie: MovieEntity) -> Bool
     func deleteMovieFavorite(movie: MovieEntity)
 }
-class MovieDetailInteractor: MovieDetailProtocol {
+class MovieDetailInteractor<R: MovieRepositoryProtocol>: MovieDetailProtocol {
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol
-    private let repository: MovieRepositoryProtocol
     private let category: MovieModel
 
+    private let repository: R
+
     required init(
-        repository: MovieRepositoryProtocol,
+        repository: R,
         repositoryLocale: MovieLocaleRepositoryProtocol,
         category: MovieModel
     ) {
@@ -30,7 +32,7 @@ class MovieDetailInteractor: MovieDetailProtocol {
         self.movieLocaleRepository = repositoryLocale
     }
 
-    func getDetailMovie() -> Core.MovieModel {
+    func getDetailMovie() -> MovieModel {
         return category
     }
 

@@ -7,8 +7,11 @@
 //
 
 import Combine
-import Core
+import Category
 
+protocol MovieFavoriteProtocol {
+    func getMovieFavorite() -> AnyPublisher<[MovieModel], Error>
+}
 class MovieFavoriteInteractor: MovieFavoriteProtocol {
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol
 

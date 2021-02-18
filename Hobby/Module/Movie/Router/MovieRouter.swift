@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import Core
+import Category
 
 class MovieRouter {
     func goToMovieDetailView (for category: MovieModel) -> some View {

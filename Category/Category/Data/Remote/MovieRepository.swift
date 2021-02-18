@@ -11,7 +11,9 @@ import Combine
 import Common
 import Core
 
-public final class MovieRepository: NSObject {
+public final class MovieRepository<RemoteDataSource: MovieDataSourceProtocol>: NSObject
+where RemoteDataSource.Response == [DataMovies] {
+
     public typealias MovieInstance = (MovieDataSource) -> MovieRepository
 
     let remote: MovieDataSource
@@ -20,12 +22,14 @@ public final class MovieRepository: NSObject {
         self.remote = remote
     }
 
-    public static let sharedInstance: MovieInstance = { remoteRepo in
+    public let sharedInstance: MovieInstance = { remoteRepo in
         return MovieRepository(remote: remoteRepo)
     }
 }
 
 extension MovieRepository: MovieRepositoryProtocol {
+    public typealias Response = [MovieModel]
+
     public func getMovie() -> AnyPublisher<[MovieModel], Common.URLError> {
         return self.remote.getMovie()
             .map { DataMapper.mapMovieResponsesToDomains(input: $0) }

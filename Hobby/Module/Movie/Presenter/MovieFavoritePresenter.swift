@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 import Core
+import Category
 
 class MovieFavoritePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []

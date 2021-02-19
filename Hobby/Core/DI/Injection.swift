@@ -113,18 +113,14 @@ public final class Injection: NSObject {
         return SportLocaleRepository.sharedInstance(localeSport)
     }
 
-    func provideSportRepository() -> SportRepositoryProtocol {
-        let remoteSport = SportDataSource.sharedInstance
-        return SportRepository.sharedInstance(remoteSport)
-    }
-
-    func provideSport() -> SportsProtocol {
-        let repositorySport = provideSportRepository()
-        return SportsInteractor(repository: repositorySport)
+    func provideSport<U: SportsProtocol>() -> U {
+        let remote = SportDataSource()
+        let repository = SportRepository(remote: remote)
+        return SportsInteractor(repository: repository) as! U
     }
 
     func provideSportDetail(category: SportModel) -> SportsDetailProtocol {
-        let repositorySport = provideSportRepository()
+        let repositorySport = provideRepository()
         let repositoryLocaleSport = provideSportLocaleRepository()
         return SportDetailInteractor(repository: repositorySport,
                                       repositoryLocale: repositoryLocaleSport, category: category)

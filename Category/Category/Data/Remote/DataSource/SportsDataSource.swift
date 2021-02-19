@@ -13,7 +13,7 @@ import Core
 import Alamofire
 
 public final class SportDataSource: NSObject {
-    override init() { }
+    public override init() { }
 
     public static let sharedInstance: SportDataSource =  SportDataSource()
 }

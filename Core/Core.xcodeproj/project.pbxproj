@@ -27,7 +27,6 @@
 		10DACF6F25D18F4400DED4D0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF6525D18F4300DED4D0 /* Core.framework */; };
 		10DACF7425D18F4400DED4D0 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF7325D18F4400DED4D0 /* CoreTests.swift */; };
 		10DACF7625D18F4400DED4D0 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF6825D18F4300DED4D0 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10F73F9725D99A3900C4A77A /* GameRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */; };
 		10F73FAF25D9A11400C4A77A /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FAE25D9A11400C4A77A /* GameModel.swift */; };
 		10F73FB125D9A19800C4A77A /* DataGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FB025D9A19800C4A77A /* DataGame.swift */; };
 		10F73FBC25D9A8C700C4A77A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FBB25D9A8C700C4A77A /* Common.framework */; };
@@ -81,7 +80,6 @@
 		10DACF6E25D18F4400DED4D0 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF7325D18F4400DED4D0 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		10DACF7525D18F4400DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepositoryProtocol.swift; sourceTree = "<group>"; };
 		10F73FAE25D9A11400C4A77A /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		10F73FB025D9A19800C4A77A /* DataGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGame.swift; sourceTree = "<group>"; };
 		10F73FBB25D9A8C700C4A77A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,7 +252,6 @@
 		10F73F9525D99A0E00C4A77A /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				10F73F9625D99A3900C4A77A /* GameRepositoryProtocol.swift */,
 				10199EA925DEBF1B0009E0E7 /* Repository.swift */,
 			);
 			path = Response;
@@ -440,7 +437,6 @@
 				106382FB25DD7BBD00CD42DB /* GameProtocol.swift in Sources */,
 				10199EAA25DEBF1B0009E0E7 /* Repository.swift in Sources */,
 				1053953025DB0C22009EC607 /* TravelModel.swift in Sources */,
-				10F73F9725D99A3900C4A77A /* GameRepositoryProtocol.swift in Sources */,
 				106382FD25DD7C4B00CD42DB /* GameFavoriteProtocol.swift in Sources */,
 				105394E925DAEB24009EC607 /* DataMovie.swift in Sources */,
 				10F73FAF25D9A11400C4A77A /* GameModel.swift in Sources */,

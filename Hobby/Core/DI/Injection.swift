@@ -51,10 +51,6 @@ public final class Injection: NSObject {
     /**Travel Injection - End**/
 
     /**Game Injection - Start**/
-//    func provideGameRepository() -> GameRepositoryProtocol {
-//        let remoteGame = GameDataSource.sharedInstance
-//        return GameRepository.sharedInstance(remoteGame)
-//    }
     func provideGame<U: GameProtocol>() -> U {
         let remote = GameDataSource()
         let repository = GameRepository(remote: remote)

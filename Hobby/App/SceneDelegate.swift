@@ -21,9 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let movieUsecase: MovieInteractor<MovieRepository> = Injection.init().provideMovie()
         let travelUseCase: TravelInteractor<TravelRepository> = Injection.init().provideTravel()
         let sportUseCase: SportsInteractor<SportRepository> = Injection.init().provideSport()
+        let gameUseCase: GameInteractor<GameRepository> = Injection.init().provideGame()
 
         let profileUseCase = Injection.init().provideProfile()
-        let gameUseCase = Injection.init().provideGame()
+//        let gameUseCase = Injection.init().provideGame()
 //        let movieUsecase = Injection.init().provideMovie()
 //        let travelUseCase = Injection.init().provideTravel()
 //        let sportUseCase = Injection.init().provideSport()

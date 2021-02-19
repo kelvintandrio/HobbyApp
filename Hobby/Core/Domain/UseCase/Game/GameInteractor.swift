@@ -11,14 +11,14 @@ import Category
 import Core
 import Common
 
-class GameInteractor: GameProtocol {
-    private let gameRepository: GameRepositoryProtocol
+class GameInteractor<R: Repository>: GameProtocol {
+    private let gameRepository: R
 
-    required init(repository: GameRepositoryProtocol) {
+    required init(repository: R) {
       self.gameRepository = repository
     }
 
     func getGame() -> AnyPublisher<[Core.GameModel], Common.URLError> {
-        return gameRepository.getGame()
+        return gameRepository.getData() as! AnyPublisher<[GameModel], Common.URLError>
     }
 }

@@ -20,11 +20,11 @@ protocol GameDetailProtocol {
 }
 class GameDetailInteractor: GameDetailProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
-    private let repository: GameRepositoryProtocol
+    private let repository: HobbyRepositoryProtocol
     private let category: Core.GameModel
 
     required init(
-        repository: GameRepositoryProtocol,
+        repository: HobbyRepositoryProtocol,
         repositoryLocale: GameLocaleRepositoryProtocol,
         category: Core.GameModel
     ) {

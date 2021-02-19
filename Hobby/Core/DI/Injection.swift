@@ -51,9 +51,14 @@ public final class Injection: NSObject {
     /**Travel Injection - End**/
 
     /**Game Injection - Start**/
-    func provideGameRepository() -> GameRepositoryProtocol {
-        let remoteGame = GameDataSource.sharedInstance
-        return GameRepository.sharedInstance(remoteGame)
+//    func provideGameRepository() -> GameRepositoryProtocol {
+//        let remoteGame = GameDataSource.sharedInstance
+//        return GameRepository.sharedInstance(remoteGame)
+//    }
+    func provideGame<U: GameProtocol>() -> U {
+        let remote = GameDataSource()
+        let repository = GameRepository(remote: remote)
+        return GameInteractor(repository: repository) as! U
     }
 
     func provideGameLocaleRepository() -> GameLocaleRepositoryProtocol {
@@ -62,13 +67,8 @@ public final class Injection: NSObject {
         return GameLocaleRepository.sharedInstance(localeGame)
     }
 
-    func provideGame() -> GameProtocol {
-        let repositoryGame = provideGameRepository()
-        return GameInteractor(repository: repositoryGame)
-    }
-
     func provideGameDetail(category: Core.GameModel) -> GameDetailProtocol {
-        let repositoryGame = provideGameRepository()
+        let repositoryGame = provideRepository()
         let repositoryLocaleGame = provideGameLocaleRepository()
         return GameDetailInteractor(repository: repositoryGame,
                                     repositoryLocale: repositoryLocaleGame, category: category)

@@ -25,9 +25,10 @@ public final class Injection: NSObject {
     }
 
     /**Travel Injection - Start**/
-    func provideTravelRepository() -> TravelRepositoryProtocol {
-        let remoteTravel = TravelDataSource.sharedInstance
-        return TravelRepository.sharedInstance(remoteTravel)
+    func provideTravel<U: TravelProtocol>() -> U {
+        let remote = TravelDataSource()
+        let repository = TravelRepository(remote: remote)
+        return TravelInteractor(repository: repository) as! U
     }
 
     func provideTravelLocaleRepository() -> TravelLocaleRepositoryProtocol {
@@ -36,13 +37,8 @@ public final class Injection: NSObject {
         return TravelLocaleRepository.sharedInstance(localeTravel)
     }
 
-    func provideTravel() -> TravelProtocol {
-        let repositoryTravel = provideTravelRepository()
-        return TravelInteractor(repository: repositoryTravel)
-    }
-
     func provideTravelDetail(category: TravelModel) -> TravelDetailProtocol {
-        let repositoryTravel = provideTravelRepository()
+        let repositoryTravel = provideRepository()
         let repositoryLocaleTravel = provideTravelLocaleRepository()
         return TravelDetailInteractor(repository: repositoryTravel,
                                       repositoryLocale: repositoryLocaleTravel, category: category)
@@ -55,9 +51,10 @@ public final class Injection: NSObject {
     /**Travel Injection - End**/
 
     /**Game Injection - Start**/
-    func provideGameRepository() -> GameRepositoryProtocol {
-        let remoteGame = GameDataSource.sharedInstance
-        return GameRepository.sharedInstance(remoteGame)
+    func provideGame<U: GameProtocol>() -> U {
+        let remote = GameDataSource()
+        let repository = GameRepository(remote: remote)
+        return GameInteractor(repository: repository) as! U
     }
 
     func provideGameLocaleRepository() -> GameLocaleRepositoryProtocol {
@@ -66,13 +63,8 @@ public final class Injection: NSObject {
         return GameLocaleRepository.sharedInstance(localeGame)
     }
 
-    func provideGame() -> GameProtocol {
-        let repositoryGame = provideGameRepository()
-        return GameInteractor(repository: repositoryGame)
-    }
-
     func provideGameDetail(category: Core.GameModel) -> GameDetailProtocol {
-        let repositoryGame = provideGameRepository()
+        let repositoryGame = provideRepository()
         let repositoryLocaleGame = provideGameLocaleRepository()
         return GameDetailInteractor(repository: repositoryGame,
                                     repositoryLocale: repositoryLocaleGame, category: category)
@@ -90,21 +82,12 @@ public final class Injection: NSObject {
         let repository = MovieRepository(remote: remote)
         return MovieInteractor(repository: repository) as! U
     }
-//    func provideMovieRepository() -> Repository {
-//        let remoteMovie = MovieDataSource.sharedInstance
-//        return MovieRepository.sharedInstance(remoteMovie)
-//    }
 
     func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {
         let realm = try? Realm()
         let localeMovie = MovieLocaleDataSource.sharedInstance(realm)
         return MovieLocaleRepository.sharedInstance(localeMovie)
     }
-
-//    func provideMovie() -> MovieProtocol {
-//        let repositoryMovie = provideMovieRepository()
-//        return MovieInteractor(repository: repositoryMovie)
-//    }
 
     func provideMovieDetail(category: MovieModel) -> MovieDetailProtocol {
         let repositoryMovie = provideRepository()
@@ -126,18 +109,14 @@ public final class Injection: NSObject {
         return SportLocaleRepository.sharedInstance(localeSport)
     }
 
-    func provideSportRepository() -> SportRepositoryProtocol {
-        let remoteSport = SportDataSource.sharedInstance
-        return SportRepository.sharedInstance(remoteSport)
-    }
-
-    func provideSport() -> SportsProtocol {
-        let repositorySport = provideSportRepository()
-        return SportsInteractor(repository: repositorySport)
+    func provideSport<U: SportsProtocol>() -> U {
+        let remote = SportDataSource()
+        let repository = SportRepository(remote: remote)
+        return SportsInteractor(repository: repository) as! U
     }
 
     func provideSportDetail(category: SportModel) -> SportsDetailProtocol {
-        let repositorySport = provideSportRepository()
+        let repositorySport = provideRepository()
         let repositoryLocaleSport = provideSportLocaleRepository()
         return SportDetailInteractor(repository: repositorySport,
                                       repositoryLocale: repositoryLocaleSport, category: category)

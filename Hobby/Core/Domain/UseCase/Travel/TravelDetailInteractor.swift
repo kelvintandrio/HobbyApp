@@ -17,11 +17,11 @@ protocol TravelDetailProtocol {
 }
 class TravelDetailInteractor: TravelDetailProtocol {
     private let travelLocaleRepository: TravelLocaleRepositoryProtocol
-    private let repository: TravelRepositoryProtocol
+    private let repository: HobbyRepositoryProtocol
     private let category: TravelModel
 
     required init(
-        repository: TravelRepositoryProtocol,
+        repository: HobbyRepositoryProtocol,
         repositoryLocale: TravelLocaleRepositoryProtocol,
         category: TravelModel
     ) {

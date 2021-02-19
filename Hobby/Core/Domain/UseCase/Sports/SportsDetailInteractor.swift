@@ -11,11 +11,11 @@ import Core
 
 class SportDetailInteractor: SportsDetailProtocol {
     private let sportLocaleRepository: SportLocaleRepositoryProtocol
-    private let repository: SportRepositoryProtocol
+    private let repository: HobbyRepositoryProtocol
     private let category: SportModel
 
     required init(
-        repository: SportRepositoryProtocol,
+        repository: HobbyRepositoryProtocol,
         repositoryLocale: SportLocaleRepositoryProtocol,
         category: SportModel
     ) {

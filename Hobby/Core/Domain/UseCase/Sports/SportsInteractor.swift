@@ -10,14 +10,14 @@ import Combine
 import Core
 import Common
 
-class SportsInteractor: SportsProtocol {
-    private let sportRepository: SportRepositoryProtocol
+class SportsInteractor<R: Repository>: SportsProtocol {
+    private let sportRepository: R
 
-    required init(repository: SportRepositoryProtocol) {
+    required init(repository: R) {
       self.sportRepository = repository
     }
 
     func getSport() -> AnyPublisher<[SportModel], Common.URLError> {
-        return sportRepository.getSport()
+        return sportRepository.getData() as! AnyPublisher<[SportModel], Common.URLError>
     }
 }

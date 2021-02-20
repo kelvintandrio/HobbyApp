@@ -10,6 +10,7 @@ import Foundation
 import Combine
 import Common
 import Core
+import Category
 
 protocol TravelLocaleRepositoryProtocol {
     func getLocaleTravel() -> AnyPublisher<[TravelModel], Error>
@@ -56,7 +57,7 @@ extension TravelLocaleRepository: TravelLocaleRepositoryProtocol {
 
     func getLocaleTravel() -> AnyPublisher<[TravelModel], Error> {
         return self.locale.getTravelLocale()
-            .map { DataLocaleMapper02.mapTravelToModel(input: $0) }
+            .map { DataLocaleMapper.mapTravelToModel(input: $0) }
             .eraseToAnyPublisher()
     }
 }

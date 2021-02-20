@@ -8,15 +8,18 @@
 
 import Combine
 import Core
+import Category
 
-class TravelFavoriteInteractor: TravelFavoriteProtocol {
+class TravelFavoriteInteractor: FavoriteProtocol {
+    typealias Response = [TravelModel]
+
     private let travelLocaleRepository: TravelLocaleRepositoryProtocol
 
     required init(repository: TravelLocaleRepositoryProtocol) {
       self.travelLocaleRepository = repository
     }
 
-    func getTravelFavorite() -> AnyPublisher<[TravelModel], Error> {
+    func getDataFavorite() -> AnyPublisher<[TravelModel], Error> {
         return travelLocaleRepository.getLocaleTravel()
     }
 }

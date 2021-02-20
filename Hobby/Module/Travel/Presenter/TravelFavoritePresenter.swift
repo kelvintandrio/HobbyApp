@@ -9,24 +9,27 @@
 import Foundation
 import SwiftUI
 import Combine
+import Category
 import Core
 
-class TravelFavoritePresenter: ObservableObject {
+class TravelFavoritePresenter<DataModel, U: FavoriteProtocol>: ObservableObject
+where U.Response == [DataModel] {
+
     private var cancellables: Set<AnyCancellable> = []
     private let travelRouter = TravelRouter()
-    private let travelFavoriteUseCase: TravelFavoriteProtocol
+    private let travelFavoriteUseCase: U
 
-    @Published var travel: [TravelModel] = []
+    @Published var travel: [DataModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(travelFavoriteUseCase: TravelFavoriteProtocol) {
+    init(travelFavoriteUseCase: U) {
         self.travelFavoriteUseCase = travelFavoriteUseCase
     }
 
     func getLocaleTravels() {
         loadingState = true
-        travelFavoriteUseCase.getTravelFavorite()
+        travelFavoriteUseCase.getDataFavorite()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -41,7 +44,7 @@ class TravelFavoritePresenter: ObservableObject {
     }
 
     func linkBuilder<Content: View>(
-        for category: Core.TravelModel,
+        for category: TravelModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(destination: travelRouter.goToTravelDetailView(for: category)) { content() }

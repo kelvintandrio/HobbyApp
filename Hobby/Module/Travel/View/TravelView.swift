@@ -8,9 +8,11 @@
 
 import SwiftUI
 import Common
+import Category
+import Core
 
 struct TravelView: View {
-    @ObservedObject var presenterTravel: TravelPresenter
+    @ObservedObject var presenterTravel: TravelPresenter<TravelModel, MainInteractor<[TravelModel], TravelRepository>>
 
     var body: some View {
         ZStack {

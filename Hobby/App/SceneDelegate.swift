@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                options connectionOptions: UIScene.ConnectionOptions) {
 
         let movieUsecase: MainInteractor<[MovieModel], MovieRepository> = Injection.init().provideMovie()
-        let travelUseCase: TravelInteractor<TravelRepository> = Injection.init().provideTravel()
+        let travelUseCase: MainInteractor<[TravelModel], TravelRepository> = Injection.init().provideTravel()
         let sportUseCase: MainInteractor<[SportModel], SportRepository> = Injection.init().provideSport()
         let gameUseCase: GameInteractor<GameRepository> = Injection.init().provideGame()
 
@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let gameFavoriteUseCase = Injection.init().provideGameFavorite()
         let movieFavoriteUseCase: MovieFavoriteInteractor = Injection.init().provideMovieFavorite()
-        let travelFavoriteUseCase = Injection.init().provideTravelFavorite()
+        let travelFavoriteUseCase: TravelFavoriteInteractor = Injection.init().provideTravelFavorite()
         let sportFavoriteUseCase: SportFavoriteInteractor = Injection.init().provideSportFavorite()
 
         let profilePresenter = ProfilePresenter(profileProtocol: profileUseCase)

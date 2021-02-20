@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
+import Category
 
 struct TravelFavoriteView: View {
-    @ObservedObject var presenterTravelFavorite: TravelFavoritePresenter
+    @ObservedObject var presenterTravelFavorite: TravelFavoritePresenter<TravelModel, TravelFavoriteInteractor>
 
     var body: some View {
         ZStack {

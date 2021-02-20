@@ -25,10 +25,10 @@ public final class Injection: NSObject {
     }
 
     /**Travel Injection - Start**/
-    func provideTravel<U: TravelProtocol>() -> U {
+    func provideTravel<U: MainProtocol>() -> U {
         let remote = TravelDataSource()
         let repository = TravelRepository(remote: remote)
-        return TravelInteractor(repository: repository) as! U
+        return MainInteractor(repository: repository) as! U
     }
 
     func provideTravelLocaleRepository() -> TravelLocaleRepositoryProtocol {
@@ -44,9 +44,9 @@ public final class Injection: NSObject {
                                       repositoryLocale: repositoryLocaleTravel, category: category)
     }
 
-    func provideTravelFavorite() -> TravelFavoriteProtocol {
+    func provideTravelFavorite<U: FavoriteProtocol>() -> U {
         let repositoryTravelLocale = provideTravelLocaleRepository()
-        return TravelFavoriteInteractor(repository: repositoryTravelLocale)
+        return TravelFavoriteInteractor(repository: repositoryTravelLocale) as! U
     }
     /**Travel Injection - End**/
 

@@ -9,23 +9,26 @@
 import SwiftUI
 import Combine
 import Core
+import Category
 
-class TravelPresenter: ObservableObject {
+class TravelPresenter<DataModel, U: MainProtocol>: ObservableObject
+where U.Response == [DataModel] {
+
     private var cancellables: Set<AnyCancellable> = []
     private let travelRouter = TravelRouter()
-    private let travelUseCase: TravelProtocol
+    private let travelUseCase: U
 
-    @Published var travels: [TravelModel] = []
+    @Published var travels: [DataModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(travelUseCase: TravelProtocol) {
+    init(travelUseCase: U) {
         self.travelUseCase = travelUseCase
     }
 
     func getTravels() {
         loadingState = true
-        travelUseCase.getTravel()
+        travelUseCase.getData()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {

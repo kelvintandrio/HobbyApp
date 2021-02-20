@@ -10,6 +10,7 @@ import Foundation
 import Combine
 import Common
 import RealmSwift
+import Category
 
 protocol TravelLocaleDataSourceProtocol: class {
     func getTravelLocale() -> AnyPublisher<[TravelEntity], Error>

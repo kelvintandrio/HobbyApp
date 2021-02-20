@@ -15,7 +15,7 @@ struct ProfileView: View {
     @ObservedObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter
     @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter<MovieModel, MovieFavoriteInteractor>
-    @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter
+    @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter<TravelModel, TravelFavoriteInteractor>
     @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter<SportModel, SportFavoriteInteractor>
 
     var body: some View {

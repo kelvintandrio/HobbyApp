@@ -12,6 +12,7 @@
 		10199EAC25DEBF250009E0E7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EAB25DEBF250009E0E7 /* DataSource.swift */; };
 		10199EC725E09C180009E0E7 /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EC625E09C180009E0E7 /* MainProtocol.swift */; };
 		10199EC925E09C2C0009E0E7 /* FavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EC825E09C2C0009E0E7 /* FavoriteProtocol.swift */; };
+		10199ECF25E0E6150009E0E7 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199ECE25E0E6150009E0E7 /* MainInteractor.swift */; };
 		1053951025DAF921009EC607 /* DataSport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053950F25DAF921009EC607 /* DataSport.swift */; };
 		1053951225DAF962009EC607 /* SportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053951125DAF962009EC607 /* SportModel.swift */; };
 		1053951F25DAFDF9009EC607 /* SportsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053951E25DAFDF9009EC607 /* SportsProtocol.swift */; };
@@ -60,6 +61,7 @@
 		10199EAB25DEBF250009E0E7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		10199EC625E09C180009E0E7 /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
 		10199EC825E09C2C0009E0E7 /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
+		10199ECE25E0E6150009E0E7 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		1053950F25DAF921009EC607 /* DataSport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSport.swift; sourceTree = "<group>"; };
 		1053951125DAF962009EC607 /* SportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportModel.swift; sourceTree = "<group>"; };
 		1053951E25DAFDF9009EC607 /* SportsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsProtocol.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10199ECD25E0E57E0009E0E7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				10199ECE25E0E6150009E0E7 /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		105394BA25DAB079009EC607 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +257,7 @@
 		10F73FAD25D9A0E800C4A77A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				10199ECD25E0E57E0009E0E7 /* Interactor */,
 				105394F225DAEE77009EC607 /* UseCase */,
 				1053952C25DB00F4009EC607 /* Travel */,
 				1053950E25DAF90F009EC607 /* Sport */,
@@ -430,6 +441,7 @@
 				10199EC925E09C2C0009E0E7 /* FavoriteProtocol.swift in Sources */,
 				1053951225DAF962009EC607 /* SportModel.swift in Sources */,
 				1053951025DAF921009EC607 /* DataSport.swift in Sources */,
+				10199ECF25E0E6150009E0E7 /* MainInteractor.swift in Sources */,
 				1053953925DB776E009EC607 /* TravelFavoriteProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,10 @@
 import SwiftUI
 import Common
 import Category
+import Core
 
 struct MovieView: View {
-    @ObservedObject var presenterMovie: MoviePresenter<MovieModel, MovieInteractor<MovieRepository>>
+    @ObservedObject var presenterMovie: MoviePresenter<MovieModel, MainInteractor<[MovieModel], MovieRepository>>
 
     var body: some View {
         ZStack {

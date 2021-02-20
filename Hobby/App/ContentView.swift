@@ -9,12 +9,13 @@
 import SwiftUI
 import Common
 import Category
+import Core
 
 struct ContentView: View {
 
     @EnvironmentObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var gamePresenter: GamePresenter
-    @EnvironmentObject var moviePresenter: MoviePresenter<MovieModel, MovieInteractor<MovieRepository>>
+    @EnvironmentObject var moviePresenter: MoviePresenter<MovieModel, MainInteractor<[MovieModel], MovieRepository>>
     @EnvironmentObject var travelPresenter: TravelPresenter
     @EnvironmentObject var sportPresenter: SportsPresenter
 

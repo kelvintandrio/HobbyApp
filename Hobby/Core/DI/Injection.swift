@@ -80,7 +80,7 @@ public final class Injection: NSObject {
     func provideMovie<U: MainProtocol>() -> U {
         let remote = MovieDataSource()
         let repository = MovieRepository(remote: remote)
-        return MovieInteractor(repository: repository) as! U
+        return MainInteractor(repository: repository) as! U
     }
 
     func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {

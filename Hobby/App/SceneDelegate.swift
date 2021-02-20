@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 import Category
+import Core
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,21 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
 
-        let movieUsecase: MovieInteractor<MovieRepository> = Injection.init().provideMovie()
-        let travelUseCase: TravelInteractor<TravelRepository> = Injection.init().provideTravel()
-        let sportUseCase: SportsInteractor<SportRepository> = Injection.init().provideSport()
-        let gameUseCase: GameInteractor<GameRepository> = Injection.init().provideGame()
+        let movieUsecase: MainInteractor<[MovieModel], MovieRepository> = Injection.init().provideMovie()
+        let travelUseCase: MainInteractor<[TravelModel], TravelRepository> = Injection.init().provideTravel()
+        let sportUseCase: MainInteractor<[SportModel], SportRepository> = Injection.init().provideSport()
+        let gameUseCase: MainInteractor<[GameModel], GameRepository> = Injection.init().provideGame()
 
         let profileUseCase = Injection.init().provideProfile()
-//        let gameUseCase = Injection.init().provideGame()
-//        let movieUsecase = Injection.init().provideMovie()
-//        let travelUseCase = Injection.init().provideTravel()
-//        let sportUseCase = Injection.init().provideSport()
 
-        let gameFavoriteUseCase = Injection.init().provideGameFavorite()
-        let movieFavoriteUseCase = Injection.init().provideMovieFavorite()
-        let travelFavoriteUseCase = Injection.init().provideTravelFavorite()
-        let sportFavoriteUseCase = Injection.init().provideSportFavorite()
+        let gameFavoriteUseCase: GameFavoriteInteractor = Injection.init().provideGameFavorite()
+        let movieFavoriteUseCase: MovieFavoriteInteractor = Injection.init().provideMovieFavorite()
+        let travelFavoriteUseCase: TravelFavoriteInteractor = Injection.init().provideTravelFavorite()
+        let sportFavoriteUseCase: SportFavoriteInteractor = Injection.init().provideSportFavorite()
 
         let profilePresenter = ProfilePresenter(profileProtocol: profileUseCase)
         let gamePresenter = GamePresenter(gameUseCase: gameUseCase)

@@ -8,14 +8,16 @@
 
 import SwiftUI
 import Common
+import Category
+import Core
 
 struct ContentView: View {
 
     @EnvironmentObject var profilePresenter: ProfilePresenter
-    @EnvironmentObject var gamePresenter: GamePresenter
-    @EnvironmentObject var moviePresenter: MoviePresenter
-    @EnvironmentObject var travelPresenter: TravelPresenter
-    @EnvironmentObject var sportPresenter: SportsPresenter
+    @EnvironmentObject var gamePresenter: GamePresenter<GameModel, MainInteractor<[GameModel], GameRepository>>
+    @EnvironmentObject var moviePresenter: MoviePresenter<MovieModel, MainInteractor<[MovieModel], MovieRepository>>
+    @EnvironmentObject var travelPresenter: TravelPresenter<TravelModel, MainInteractor<[TravelModel], TravelRepository>>
+    @EnvironmentObject var sportPresenter: SportsPresenter<SportModel, MainInteractor<[SportModel], SportRepository>>
 
     var body: some View {
         TabView {

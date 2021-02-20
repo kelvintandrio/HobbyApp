@@ -8,15 +8,18 @@
 
 import Combine
 import Core
+import Category
 
-class MovieFavoriteInteractor: MovieFavoriteProtocol {
+class MovieFavoriteInteractor: FavoriteProtocol {
+    typealias Response = [MovieModel]
+    
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol
 
     required init(repository: MovieLocaleRepositoryProtocol) {
       self.movieLocaleRepository = repository
     }
 
-    func getMovieFavorite() -> AnyPublisher<[MovieModel], Error> {
+    func getDataFavorite() -> AnyPublisher<[MovieModel], Error> {
         return movieLocaleRepository.getLocaleMovie()
     }
 }

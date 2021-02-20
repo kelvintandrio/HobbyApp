@@ -10,6 +10,7 @@ import Foundation
 import Combine
 import RealmSwift
 import Common
+import Category
 
 protocol MovieLocaleDataSourceProtocol: class {
     func getMovieLocale() -> AnyPublisher<[MovieEntity], Error>

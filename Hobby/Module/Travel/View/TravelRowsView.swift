@@ -8,11 +8,11 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
-import Core
+import Category
 
 struct TravelRowsView: View {
 
-    var dataTravels: Core.TravelModel
+    var dataTravels: TravelModel
 
     var body: some View {
         VStack {

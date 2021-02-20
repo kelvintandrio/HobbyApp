@@ -8,9 +8,11 @@
 
 import SwiftUI
 import Common
+import Category
+import Core
 
 struct SportView: View {
-    @ObservedObject var presenterSport: SportsPresenter
+    @ObservedObject var presenterSport: SportsPresenter<SportModel, MainInteractor<[SportModel], SportRepository>>
 
     var body: some View {
         ZStack {

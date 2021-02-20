@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Core
+import Category
 
 class TravelDetailPresenter: ObservableObject {
     private let detailUseCase: TravelDetailProtocol

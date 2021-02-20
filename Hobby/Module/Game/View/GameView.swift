@@ -8,10 +8,12 @@
 
 import SwiftUI
 import Common
+import Category
+import Core
 
 struct GameView: View {
 
-    @ObservedObject var presenterGame: GamePresenter
+    @ObservedObject var presenterGame: GamePresenter<GameModel, MainInteractor<[GameModel], GameRepository>>
 
     var body: some View {
         ZStack {

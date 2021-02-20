@@ -12,7 +12,7 @@ import Common
 import Category
 
 protocol GameDetailProtocol {
-    func getDetailGame() -> Core.GameModel
+    func getDetailGame() -> GameModel
     func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError>
     func addGameFavorite(game: GameEntity) -> AnyPublisher<Bool, Error>
     func checkFavoriteGame(game: GameEntity) -> Bool
@@ -21,19 +21,19 @@ protocol GameDetailProtocol {
 class GameDetailInteractor: GameDetailProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
     private let repository: HobbyRepositoryProtocol
-    private let category: Core.GameModel
+    private let category: GameModel
 
     required init(
         repository: HobbyRepositoryProtocol,
         repositoryLocale: GameLocaleRepositoryProtocol,
-        category: Core.GameModel
+        category: GameModel
     ) {
         self.repository = repository
         self.category = category
         self.gameLocaleRepository = repositoryLocale
     }
 
-    func getDetailGame() -> Core.GameModel {
+    func getDetailGame() -> GameModel {
         return category
     }
 

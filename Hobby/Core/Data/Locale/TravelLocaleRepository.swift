@@ -10,6 +10,7 @@ import Foundation
 import Combine
 import Common
 import Core
+import Category
 
 protocol TravelLocaleRepositoryProtocol {
     func getLocaleTravel() -> AnyPublisher<[TravelModel], Error>

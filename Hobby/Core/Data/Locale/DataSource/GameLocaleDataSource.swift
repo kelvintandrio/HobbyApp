@@ -10,6 +10,7 @@ import Foundation
 import Combine
 import RealmSwift
 import Common
+import Category
 
 protocol GameLocaleDataSourceProtocol: class {
     func getGameLocale() -> AnyPublisher<[GameEntity], Error>

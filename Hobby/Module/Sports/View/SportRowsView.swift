@@ -8,11 +8,11 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
-import Core
+import Category
 
 struct SportRowsView: View {
 
-    var dataSports: Core.SportModel
+    var dataSports: SportModel
 
     var body: some View {
         VStack {

@@ -10,6 +10,7 @@ import Foundation
 import Combine
 import Common
 import RealmSwift
+import Category
 
 protocol SportLocaleDataSourceProtocol: class {
     func getSportLocale() -> AnyPublisher<[SportEntity], Error>

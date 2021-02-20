@@ -8,14 +8,15 @@
 
 import SwiftUI
 import Common
+import Category
 
 struct ProfileView: View {
 
     @ObservedObject var profilePresenter: ProfilePresenter
-    @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter
-    @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter
-    @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter
-    @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter
+    @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter<GameModel, GameFavoriteInteractor>
+    @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter<MovieModel, MovieFavoriteInteractor>
+    @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter<TravelModel, TravelFavoriteInteractor>
+    @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter<SportModel, SportFavoriteInteractor>
 
     var body: some View {
         NavigationView {

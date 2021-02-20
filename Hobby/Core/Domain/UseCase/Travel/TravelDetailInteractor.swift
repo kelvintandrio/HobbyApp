@@ -8,6 +8,7 @@
 
 import Combine
 import Core
+import Category
 
 protocol TravelDetailProtocol {
     func getDetailTravel() -> TravelModel

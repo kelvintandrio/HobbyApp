@@ -9,11 +9,11 @@
 import SwiftUI
 import Common
 import SDWebImageSwiftUI
-import Core
+import Category
 
 struct MovieRowsView: View {
 
-    var dataMovies: Core.MovieModel
+    var dataMovies: MovieModel
 
     var body: some View {
         HStack {

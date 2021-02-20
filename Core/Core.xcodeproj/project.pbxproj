@@ -10,7 +10,8 @@
 		00B0B6BBEA27D55AA6F990FB /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7833F4E6272BA1BBBDA70633 /* Pods_Core.framework */; };
 		10199EAA25DEBF1B0009E0E7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EA925DEBF1B0009E0E7 /* Repository.swift */; };
 		10199EAC25DEBF250009E0E7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EAB25DEBF250009E0E7 /* DataSource.swift */; };
-		105394F525DAEEBB009EC607 /* MovieProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394F425DAEEBB009EC607 /* MovieProtocol.swift */; };
+		10199EC725E09C180009E0E7 /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EC625E09C180009E0E7 /* MainProtocol.swift */; };
+		10199EC925E09C2C0009E0E7 /* FavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EC825E09C2C0009E0E7 /* FavoriteProtocol.swift */; };
 		105394FB25DAF07A009EC607 /* MovieFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394FA25DAF07A009EC607 /* MovieFavoriteProtocol.swift */; };
 		1053951025DAF921009EC607 /* DataSport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053950F25DAF921009EC607 /* DataSport.swift */; };
 		1053951225DAF962009EC607 /* SportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053951125DAF962009EC607 /* SportModel.swift */; };
@@ -58,7 +59,8 @@
 /* Begin PBXFileReference section */
 		10199EA925DEBF1B0009E0E7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		10199EAB25DEBF250009E0E7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		105394F425DAEEBB009EC607 /* MovieProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProtocol.swift; sourceTree = "<group>"; };
+		10199EC625E09C180009E0E7 /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
+		10199EC825E09C2C0009E0E7 /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
 		105394FA25DAF07A009EC607 /* MovieFavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoriteProtocol.swift; sourceTree = "<group>"; };
 		1053950F25DAF921009EC607 /* DataSport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSport.swift; sourceTree = "<group>"; };
 		1053951125DAF962009EC607 /* SportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportModel.swift; sourceTree = "<group>"; };
@@ -121,6 +123,8 @@
 				1053953325DB7732009EC607 /* Travel */,
 				1053951D25DAFDEA009EC607 /* Sport */,
 				105394F325DAEE9B009EC607 /* Movie */,
+				10199EC625E09C180009E0E7 /* MainProtocol.swift */,
+				10199EC825E09C2C0009E0E7 /* FavoriteProtocol.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -128,7 +132,6 @@
 		105394F325DAEE9B009EC607 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				105394F425DAEEBB009EC607 /* MovieProtocol.swift */,
 				105394FA25DAF07A009EC607 /* MovieFavoriteProtocol.swift */,
 			);
 			path = Movie;
@@ -418,6 +421,7 @@
 				1053952325DAFE7F009EC607 /* SportsFavoriteProtocol.swift in Sources */,
 				1053951F25DAFDF9009EC607 /* SportsProtocol.swift in Sources */,
 				10F73FB125D9A19800C4A77A /* DataGame.swift in Sources */,
+				10199EC725E09C180009E0E7 /* MainProtocol.swift in Sources */,
 				1053953525DB774D009EC607 /* TravelProtocol.swift in Sources */,
 				106382FB25DD7BBD00CD42DB /* GameProtocol.swift in Sources */,
 				10199EAA25DEBF1B0009E0E7 /* Repository.swift in Sources */,
@@ -427,8 +431,8 @@
 				105394FB25DAF07A009EC607 /* MovieFavoriteProtocol.swift in Sources */,
 				10199EAC25DEBF250009E0E7 /* DataSource.swift in Sources */,
 				1053952E25DB010A009EC607 /* DataTravel.swift in Sources */,
+				10199EC925E09C2C0009E0E7 /* FavoriteProtocol.swift in Sources */,
 				1053951225DAF962009EC607 /* SportModel.swift in Sources */,
-				105394F525DAEEBB009EC607 /* MovieProtocol.swift in Sources */,
 				1053951025DAF921009EC607 /* DataSport.swift in Sources */,
 				1053953925DB776E009EC607 /* TravelFavoriteProtocol.swift in Sources */,
 			);

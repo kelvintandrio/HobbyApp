@@ -77,7 +77,7 @@ public final class Injection: NSObject {
     /**Game Injection - End**/
 
     /**Movie Injection - Start**/
-    func provideMovie<U: MovieProtocol>() -> U {
+    func provideMovie<U: MainProtocol>() -> U {
         let remote = MovieDataSource()
         let repository = MovieRepository(remote: remote)
         return MovieInteractor(repository: repository) as! U

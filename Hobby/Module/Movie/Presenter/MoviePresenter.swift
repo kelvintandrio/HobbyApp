@@ -11,7 +11,7 @@ import Combine
 import Core
 import Category
 
-class MoviePresenter<DataModel, U: MovieProtocol>: ObservableObject
+class MoviePresenter<DataModel, U: MainProtocol>: ObservableObject
 where U.Response == [DataModel] {
 
     private var cancellables: Set<AnyCancellable> = []
@@ -28,7 +28,7 @@ where U.Response == [DataModel] {
 
     func getMovies() {
         loadingState = true
-        movieUseCase.getMovie()
+        movieUseCase.getData()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {

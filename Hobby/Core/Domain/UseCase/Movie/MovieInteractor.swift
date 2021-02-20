@@ -11,7 +11,7 @@ import Core
 import Category
 import Common
 
-class MovieInteractor<R: Repository>: MovieProtocol {
+class MovieInteractor<R: Repository>: MainProtocol {
     typealias Response = [MovieModel]
     
     private let movieRepository: R
@@ -20,10 +20,7 @@ class MovieInteractor<R: Repository>: MovieProtocol {
       self.movieRepository = repository
     }
 
-    func getMovie() -> AnyPublisher<[MovieModel], Common.URLError> {
+    func getData() -> AnyPublisher<[MovieModel], Common.URLError> {
         return movieRepository.getData() as! AnyPublisher<[MovieModel], Common.URLError>
     }
-//    func getMovie() -> AnyPublisher<[MovieModel], Common.URLError> {
-//        return movieRepository.getData() as! AnyPublisher<[MovieModel], Common.URLError>
-//    }
 }

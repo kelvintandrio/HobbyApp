@@ -9,23 +9,26 @@
 import SwiftUI
 import Combine
 import Core
+import Category
 
-class SportsPresenter: ObservableObject {
+class SportsPresenter<DataModel, U: MainProtocol>: ObservableObject
+where U.Response == [DataModel] {
+
     private var cancellables: Set<AnyCancellable> = []
     private let sportRouter = SportRouter()
-    private let sportUseCase: SportsProtocol
+    private let sportUseCase: U
 
-    @Published var sports: [SportModel] = []
+    @Published var sports: [DataModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(sportUseCase: SportsProtocol) {
+    init(sportUseCase: U) {
         self.sportUseCase = sportUseCase
     }
 
     func getSports() {
         loadingState = true
-        sportUseCase.getSport()
+        sportUseCase.getData()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {

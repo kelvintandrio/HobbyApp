@@ -9,10 +9,10 @@
 import Foundation
 import Combine
 import Common
-import Core
+import Category
 
 protocol SportLocaleRepositoryProtocol {
-    func getLocaleSport() -> AnyPublisher<[Core.SportModel], Error>
+    func getLocaleSport() -> AnyPublisher<[SportModel], Error>
     func addLocaleSport(from categories: SportEntity) -> AnyPublisher<Bool, Error>
     func deleteLocaleSport(from categories: SportEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
     func checkLocaleSport(from categories: SportEntity) -> Bool
@@ -56,7 +56,7 @@ extension SportLocaleRepository: SportLocaleRepositoryProtocol {
 
     func getLocaleSport() -> AnyPublisher<[SportModel], Error> {
         return self.locale.getSportLocale()
-            .map { DataLocaleMapper02.mapSportToModel(input: $0) }
+            .map { DataLocaleMapper.mapSportToModel(input: $0) }
             .eraseToAnyPublisher()
     }
 }

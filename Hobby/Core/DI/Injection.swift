@@ -109,10 +109,10 @@ public final class Injection: NSObject {
         return SportLocaleRepository.sharedInstance(localeSport)
     }
 
-    func provideSport<U: SportsProtocol>() -> U {
+    func provideSport<U: MainProtocol>() -> U {
         let remote = SportDataSource()
         let repository = SportRepository(remote: remote)
-        return SportsInteractor(repository: repository) as! U
+        return MainInteractor(repository: repository) as! U
     }
 
     func provideSportDetail(category: SportModel) -> SportsDetailProtocol {
@@ -122,9 +122,9 @@ public final class Injection: NSObject {
                                       repositoryLocale: repositoryLocaleSport, category: category)
     }
 
-    func provideSportFavorite() -> SportFavoriteProtocol {
+    func provideSportFavorite<U: FavoriteProtocol>() -> U {
         let repositorySportLocale = provideSportLocaleRepository()
-        return SportFavoriteInteractor(repository: repositorySportLocale)
+        return SportFavoriteInteractor(repository: repositorySportLocale) as! U
     }
     /**Sport Injection - End**/
 }

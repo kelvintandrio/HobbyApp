@@ -10,23 +10,26 @@ import Foundation
 import SwiftUI
 import Combine
 import Core
+import Category
 
-class SportFavoritePresenter: ObservableObject {
+class SportFavoritePresenter<DataModel, U: FavoriteProtocol>: ObservableObject
+where U.Response == [DataModel] {
+
     private var cancellables: Set<AnyCancellable> = []
     private let sportRouter = SportRouter()
-    private let sportFavoriteUseCase: SportFavoriteProtocol
+    private let sportFavoriteUseCase: U
 
-    @Published var sport: [SportModel] = []
+    @Published var sport: [DataModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(sportFavoriteUseCase: SportFavoriteProtocol) {
+    init(sportFavoriteUseCase: U) {
         self.sportFavoriteUseCase = sportFavoriteUseCase
     }
 
     func getLocaleSports() {
         loadingState = true
-        sportFavoriteUseCase.getSportFavorite()
+        sportFavoriteUseCase.getDataFavorite()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {

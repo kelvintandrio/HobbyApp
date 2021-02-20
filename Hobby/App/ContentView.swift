@@ -17,7 +17,7 @@ struct ContentView: View {
     @EnvironmentObject var gamePresenter: GamePresenter
     @EnvironmentObject var moviePresenter: MoviePresenter<MovieModel, MainInteractor<[MovieModel], MovieRepository>>
     @EnvironmentObject var travelPresenter: TravelPresenter
-    @EnvironmentObject var sportPresenter: SportsPresenter
+    @EnvironmentObject var sportPresenter: SportsPresenter<SportModel, MainInteractor<[SportModel], SportRepository>>
 
     var body: some View {
         TabView {

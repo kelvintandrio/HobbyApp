@@ -8,15 +8,18 @@
 
 import Combine
 import Core
+import Category
 
-class SportFavoriteInteractor: SportFavoriteProtocol {
+class SportFavoriteInteractor: FavoriteProtocol {
+    typealias Response = [SportModel]
+
     private let sportLocaleRepository: SportLocaleRepositoryProtocol
 
     required init(repository: SportLocaleRepositoryProtocol) {
       self.sportLocaleRepository = repository
     }
 
-    func getSportFavorite() -> AnyPublisher<[SportModel], Error> {
+    func getDataFavorite() -> AnyPublisher<[SportModel], Error> {
         return sportLocaleRepository.getLocaleSport()
     }
 }

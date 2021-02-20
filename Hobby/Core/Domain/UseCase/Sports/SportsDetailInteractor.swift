@@ -7,8 +7,14 @@
 //
 
 import Combine
-import Core
+import Category
 
+protocol SportsDetailProtocol {
+    func getDetailSport() -> SportModel
+    func addSportFavorite(sport: SportEntity) -> AnyPublisher<Bool, Error>
+    func checkFavoriteSport(sport: SportEntity) -> Bool
+    func deleteSportFavorite(sport: SportEntity)
+}
 class SportDetailInteractor: SportsDetailProtocol {
     private let sportLocaleRepository: SportLocaleRepositoryProtocol
     private let repository: HobbyRepositoryProtocol

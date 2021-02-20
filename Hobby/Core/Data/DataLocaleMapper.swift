@@ -58,23 +58,4 @@ final class DataLocaleMapper02 {
         travelEntity.like = travelModel.like
         return travelEntity
     }
-
-    static func mapSportToModel(input sportResponses: [SportEntity]) -> [SportModel] {
-        return sportResponses.map { result in
-            return SportModel(
-                id: result.id,
-                name: result.name,
-                image: result.image,
-                description: result.descript
-            )
-        }
-    }
-    static func mapSportToEntity(input sportModel: SportModel) -> SportEntity {
-        let sportEntity = SportEntity()
-        sportEntity.id = sportModel.id
-        sportEntity.name = sportModel.name
-        sportEntity.image = sportModel.image
-        sportEntity.descript = sportModel.descript
-        return sportEntity
-    }
 }

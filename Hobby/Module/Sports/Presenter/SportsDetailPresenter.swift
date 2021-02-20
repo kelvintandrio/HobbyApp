@@ -9,13 +9,8 @@
 import Foundation
 import Core
 import Combine
+import Category
 
-protocol SportsDetailProtocol {
-    func getDetailSport() -> SportModel
-    func addSportFavorite(sport: SportEntity) -> AnyPublisher<Bool, Error>
-    func checkFavoriteSport(sport: SportEntity) -> Bool
-    func deleteSportFavorite(sport: SportEntity)
-}
 class SportsDetailPresenter: ObservableObject {
     private let detailUseCase: SportsDetailProtocol
 

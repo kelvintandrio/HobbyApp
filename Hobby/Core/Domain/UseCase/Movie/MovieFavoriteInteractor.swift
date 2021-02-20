@@ -10,7 +10,7 @@ import Combine
 import Core
 import Category
 
-class MovieFavoriteInteractor: MovieFavoriteProtocol {
+class MovieFavoriteInteractor: FavoriteProtocol {
     typealias Response = [MovieModel]
     
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol
@@ -19,7 +19,7 @@ class MovieFavoriteInteractor: MovieFavoriteProtocol {
       self.movieLocaleRepository = repository
     }
 
-    func getMovieFavorite() -> AnyPublisher<[MovieModel], Error> {
+    func getDataFavorite() -> AnyPublisher<[MovieModel], Error> {
         return movieLocaleRepository.getLocaleMovie()
     }
 }

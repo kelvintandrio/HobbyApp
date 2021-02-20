@@ -12,7 +12,7 @@ import Combine
 import Core
 import Category
 
-class MovieFavoritePresenter<DataModel, U: MovieFavoriteProtocol>: ObservableObject
+class MovieFavoritePresenter<DataModel, U: FavoriteProtocol>: ObservableObject
 where U.Response == [DataModel] {
 
     private var cancellables: Set<AnyCancellable> = []
@@ -30,7 +30,7 @@ where U.Response == [DataModel] {
 
     func getLocaleMovies() {
         loadingState = true
-        movieFavoriteUseCase.getMovieFavorite()
+        movieFavoriteUseCase.getDataFavorite()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {

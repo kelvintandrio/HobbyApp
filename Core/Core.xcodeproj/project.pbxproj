@@ -13,6 +13,8 @@
 		10199EC725E09C180009E0E7 /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EC625E09C180009E0E7 /* MainProtocol.swift */; };
 		10199EC925E09C2C0009E0E7 /* FavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EC825E09C2C0009E0E7 /* FavoriteProtocol.swift */; };
 		10199ECF25E0E6150009E0E7 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199ECE25E0E6150009E0E7 /* MainInteractor.swift */; };
+		10199EF325E1744B0009E0E7 /* LocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EF225E1744B0009E0E7 /* LocaleRepository.swift */; };
+		10199EF525E1745D0009E0E7 /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EF425E1745D0009E0E7 /* LocaleDataSource.swift */; };
 		10DACF6F25D18F4400DED4D0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF6525D18F4300DED4D0 /* Core.framework */; };
 		10DACF7425D18F4400DED4D0 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF7325D18F4400DED4D0 /* CoreTests.swift */; };
 		10DACF7625D18F4400DED4D0 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF6825D18F4300DED4D0 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +52,8 @@
 		10199EC625E09C180009E0E7 /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
 		10199EC825E09C2C0009E0E7 /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
 		10199ECE25E0E6150009E0E7 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		10199EF225E1744B0009E0E7 /* LocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleRepository.swift; sourceTree = "<group>"; };
+		10199EF425E1745D0009E0E7 /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		10DACF6525D18F4300DED4D0 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF6825D18F4300DED4D0 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		10DACF6925D18F4300DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +93,23 @@
 				10199ECE25E0E6150009E0E7 /* MainInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		10199EF025E174180009E0E7 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				10199EF125E174230009E0E7 /* Repository */,
+				10199EF425E1745D0009E0E7 /* LocaleDataSource.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		10199EF125E174230009E0E7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				10199EF225E1744B0009E0E7 /* LocaleRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		105394F225DAEE77009EC607 /* UseCase */ = {
@@ -143,6 +164,7 @@
 		10F73F9325D998FF00C4A77A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				10199EF025E174180009E0E7 /* Locale */,
 				10F73F9425D9994500C4A77A /* Remote */,
 			);
 			path = Data;
@@ -334,9 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10199EF525E1745D0009E0E7 /* LocaleDataSource.swift in Sources */,
 				10199EC725E09C180009E0E7 /* MainProtocol.swift in Sources */,
 				10199EAA25DEBF1B0009E0E7 /* Repository.swift in Sources */,
 				10199EAC25DEBF250009E0E7 /* DataSource.swift in Sources */,
+				10199EF325E1744B0009E0E7 /* LocaleRepository.swift in Sources */,
 				10199EC925E09C2C0009E0E7 /* FavoriteProtocol.swift in Sources */,
 				10199ECF25E0E6150009E0E7 /* MainInteractor.swift in Sources */,
 			);

@@ -22,11 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let movieUsecase: MainInteractor<[MovieModel], MovieRepository> = Injection.init().provideMovie()
         let travelUseCase: MainInteractor<[TravelModel], TravelRepository> = Injection.init().provideTravel()
         let sportUseCase: MainInteractor<[SportModel], SportRepository> = Injection.init().provideSport()
-        let gameUseCase: GameInteractor<GameRepository> = Injection.init().provideGame()
+        let gameUseCase: MainInteractor<[GameModel], GameRepository> = Injection.init().provideGame()
 
         let profileUseCase = Injection.init().provideProfile()
 
-        let gameFavoriteUseCase = Injection.init().provideGameFavorite()
+        let gameFavoriteUseCase: GameFavoriteInteractor = Injection.init().provideGameFavorite()
         let movieFavoriteUseCase: MovieFavoriteInteractor = Injection.init().provideMovieFavorite()
         let travelFavoriteUseCase: TravelFavoriteInteractor = Injection.init().provideTravelFavorite()
         let sportFavoriteUseCase: SportFavoriteInteractor = Injection.init().provideSportFavorite()

@@ -74,4 +74,25 @@ public final class DataLocaleMapper {
         travelEntity.like = travelModel.like
         return travelEntity
     }
+    public static func mapGameToModel(input gameResponses: [GameEntity]) -> [GameModel] {
+        return gameResponses.map { result in
+            return GameModel(
+                id: result.id,
+                name: result.name,
+                image: result.image,
+                released: result.released,
+                rating: result.rating,
+                description: result.description
+            )
+        }
+    }
+    public static func mapGameToEntity(input gameModel: GameModel) -> GameEntity {
+        let gameEntity = GameEntity()
+        gameEntity.id = gameModel.id
+        gameEntity.name = gameModel.name
+        gameEntity.image = gameModel.image
+        gameEntity.released = gameModel.released
+        gameEntity.rating = gameModel.rating
+        return gameEntity
+    }
 }

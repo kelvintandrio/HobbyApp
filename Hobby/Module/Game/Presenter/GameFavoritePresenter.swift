@@ -9,24 +9,27 @@
 import Foundation
 import SwiftUI
 import Combine
+import Category
 import Core
 
-class GameFavoritePresenter: ObservableObject {
+class GameFavoritePresenter<DataModel, U: FavoriteProtocol>: ObservableObject
+where U.Response == [DataModel] {
+
     private var cancellables: Set<AnyCancellable> = []
     private let gameRouter = GameRouter()
-    private let gameFavoriteUseCase: GameFavoriteProtocol
+    private let gameFavoriteUseCase: U
 
-    @Published var game: [Core.GameModel] = []
+    @Published var game: [DataModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(gameFavoriteUseCase: GameFavoriteProtocol) {
+    init(gameFavoriteUseCase: U) {
         self.gameFavoriteUseCase = gameFavoriteUseCase
     }
 
     func getLocaleGames() {
         loadingState = true
-        gameFavoriteUseCase.getGameFavorite()
+        gameFavoriteUseCase.getDataFavorite()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -41,7 +44,7 @@ class GameFavoritePresenter: ObservableObject {
     }
 
     func linkBuilder<Content: View>(
-        for category: Core.GameModel,
+        for category: GameModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(destination: gameRouter.goToGameDetailView(for: category)) { content() }

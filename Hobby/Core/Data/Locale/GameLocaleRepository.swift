@@ -13,7 +13,7 @@ import Common
 import Category
 
 protocol GameLocaleRepositoryProtocol {
-    func getLocaleGame() -> AnyPublisher<[Core.GameModel], Error>
+    func getLocaleGame() -> AnyPublisher<[GameModel], Error>
     func addLocaleGame(from categories: GameEntity) -> AnyPublisher<Bool, Error>
     func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
     func checkLocaleGame(from categories: GameEntity) -> Bool
@@ -55,9 +55,9 @@ extension GameLocaleRepository: GameLocaleRepositoryProtocol {
             .eraseToAnyPublisher()
     }
 
-    func getLocaleGame() -> AnyPublisher<[Core.GameModel], Error> {
+    func getLocaleGame() -> AnyPublisher<[GameModel], Error> {
         return self.locale.getGameLocale()
-            .map { DataLocaleMapper02.mapGameToModel(input: $0) }
+            .map { DataLocaleMapper.mapGameToModel(input: $0) }
             .eraseToAnyPublisher()
     }
 }

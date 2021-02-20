@@ -7,10 +7,10 @@
 //
 
 import SwiftUI
-import Core
+import Category
 
 class GameRouter {
-    func goToGameDetailView (for category: Core.GameModel) -> some View {
+    func goToGameDetailView (for category: GameModel) -> some View {
         let detailUseCase = Injection.init().provideGameDetail(category: category)
         let presenter = GameDetailPresenter(detailUseCase: detailUseCase)
         return GameDetailView(presenter: presenter)

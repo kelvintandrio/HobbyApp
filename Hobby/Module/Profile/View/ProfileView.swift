@@ -13,7 +13,7 @@ import Category
 struct ProfileView: View {
 
     @ObservedObject var profilePresenter: ProfilePresenter
-    @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter
+    @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter<GameModel, GameFavoriteInteractor>
     @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter<MovieModel, MovieFavoriteInteractor>
     @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter<TravelModel, TravelFavoriteInteractor>
     @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter<SportModel, SportFavoriteInteractor>

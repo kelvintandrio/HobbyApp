@@ -9,23 +9,26 @@
 import SwiftUI
 import Combine
 import Core
+import Category
 
-class GamePresenter: ObservableObject {
+class GamePresenter<DataModel, U: MainProtocol>: ObservableObject
+where U.Response == [DataModel] {
+
     private var cancellables: Set<AnyCancellable> = []
     private let gameRouter = GameRouter()
-    private let gameUseCase: GameProtocol
+    private let gameUseCase: U
 
-    @Published var games: [Core.GameModel] = []
+    @Published var games: [DataModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(gameUseCase: GameProtocol) {
+    init(gameUseCase: U) {
         self.gameUseCase = gameUseCase
     }
 
     func getGames() {
         loadingState = true
-        gameUseCase.getGame()
+        gameUseCase.getData()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -40,7 +43,7 @@ class GamePresenter: ObservableObject {
     }
 
     func linkBuilder<Content: View>(
-        for category: Core.GameModel,
+        for category: GameModel,
         @ViewBuilder content: () -> Content
     ) -> some View {
         NavigationLink(destination: gameRouter.goToGameDetailView(for: category)) { content() }

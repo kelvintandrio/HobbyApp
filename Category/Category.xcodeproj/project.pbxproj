@@ -17,6 +17,9 @@
 		10199EE125E15EB70009E0E7 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EE025E15EB70009E0E7 /* TravelModel.swift */; };
 		10199EE325E15EDB0009E0E7 /* DataTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EE225E15EDB0009E0E7 /* DataTravel.swift */; };
 		10199EE525E15F720009E0E7 /* TravelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EE425E15F720009E0E7 /* TravelEntity.swift */; };
+		10199EE825E165760009E0E7 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EE725E165760009E0E7 /* GameModel.swift */; };
+		10199EEA25E16C080009E0E7 /* DataGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EE925E16C080009E0E7 /* DataGame.swift */; };
+		10199EED25E16C1A0009E0E7 /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EEC25E16C1A0009E0E7 /* GameEntity.swift */; };
 		105394C325DABAC6009EC607 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 105394C225DABAC6009EC607 /* Realm */; };
 		105394C525DABAC6009EC607 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 105394C425DABAC6009EC607 /* RealmSwift */; };
 		105394EF25DAEC53009EC607 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394EE25DAEC53009EC607 /* MovieDataSource.swift */; };
@@ -75,6 +78,9 @@
 		10199EE025E15EB70009E0E7 /* TravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 		10199EE225E15EDB0009E0E7 /* DataTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTravel.swift; sourceTree = "<group>"; };
 		10199EE425E15F720009E0E7 /* TravelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelEntity.swift; sourceTree = "<group>"; };
+		10199EE725E165760009E0E7 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		10199EE925E16C080009E0E7 /* DataGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGame.swift; sourceTree = "<group>"; };
+		10199EEC25E16C1A0009E0E7 /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
 		105394EE25DAEC53009EC607 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
 		105394F025DAECFA009EC607 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		1053951525DAFB5C009EC607 /* SportsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsDataSource.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 		10199EBB25E07FF90009E0E7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				10199EE625E165630009E0E7 /* Game */,
 				10199EDF25E15E9A0009E0E7 /* Travel */,
 				10199ED825E156E00009E0E7 /* Sport */,
 				10199EBC25E080140009E0E7 /* Movie */,
@@ -160,6 +167,16 @@
 				10199EE425E15F720009E0E7 /* TravelEntity.swift */,
 			);
 			path = Travel;
+			sourceTree = "<group>";
+		};
+		10199EE625E165630009E0E7 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				10199EE725E165760009E0E7 /* GameModel.swift */,
+				10199EE925E16C080009E0E7 /* DataGame.swift */,
+				10199EEC25E16C1A0009E0E7 /* GameEntity.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		105394BC25DAB298009EC607 /* Mapper */ = {
@@ -414,10 +431,12 @@
 				10199EDE25E1579F0009E0E7 /* SportEntity.swift in Sources */,
 				105394F125DAECFA009EC607 /* MovieRepository.swift in Sources */,
 				10199EE325E15EDB0009E0E7 /* DataTravel.swift in Sources */,
+				10199EE825E165760009E0E7 /* GameModel.swift in Sources */,
 				10199EE125E15EB70009E0E7 /* TravelModel.swift in Sources */,
 				10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */,
 				10199EBE25E080460009E0E7 /* DataMovie.swift in Sources */,
 				10199EDA25E157110009E0E7 /* SportModel.swift in Sources */,
+				10199EED25E16C1A0009E0E7 /* GameEntity.swift in Sources */,
 				10199EC325E082F80009E0E7 /* DataLocaleMapper.swift in Sources */,
 				10199EDC25E1572C0009E0E7 /* DataSport.swift in Sources */,
 				1053953D25DB7EA0009EC607 /* TravelRepository.swift in Sources */,
@@ -427,6 +446,7 @@
 				1053951625DAFB5C009EC607 /* SportsDataSource.swift in Sources */,
 				1053953B25DB7E84009EC607 /* TravelDataSource.swift in Sources */,
 				1053951825DAFB74009EC607 /* SportsRepository.swift in Sources */,
+				10199EEA25E16C080009E0E7 /* DataGame.swift in Sources */,
 				10F73FBA25D9A51F00C4A77A /* DataMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

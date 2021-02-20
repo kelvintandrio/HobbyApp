@@ -11,6 +11,7 @@ import Common
 import Combine
 import Core
 import Alamofire
+import Category
 
 protocol HobbyRepositoryProtocol {
     func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError>

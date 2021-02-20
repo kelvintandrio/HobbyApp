@@ -14,7 +14,7 @@ import Core
 struct ContentView: View {
 
     @EnvironmentObject var profilePresenter: ProfilePresenter
-    @EnvironmentObject var gamePresenter: GamePresenter
+    @EnvironmentObject var gamePresenter: GamePresenter<GameModel, MainInteractor<[GameModel], GameRepository>>
     @EnvironmentObject var moviePresenter: MoviePresenter<MovieModel, MainInteractor<[MovieModel], MovieRepository>>
     @EnvironmentObject var travelPresenter: TravelPresenter<TravelModel, MainInteractor<[TravelModel], TravelRepository>>
     @EnvironmentObject var sportPresenter: SportsPresenter<SportModel, MainInteractor<[SportModel], SportRepository>>

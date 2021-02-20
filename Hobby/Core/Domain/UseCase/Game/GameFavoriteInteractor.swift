@@ -8,15 +8,18 @@
 
 import Combine
 import Core
+import Category
 
-class GameFavoriteInteractor: GameFavoriteProtocol {
+class GameFavoriteInteractor: FavoriteProtocol {
+    typealias Response = [GameModel]
+
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
 
     required init(repository: GameLocaleRepositoryProtocol) {
       self.gameLocaleRepository = repository
     }
 
-    func getGameFavorite() -> AnyPublisher<[Core.GameModel], Error> {
+    func getDataFavorite() -> AnyPublisher<[GameModel], Error> {
         return gameLocaleRepository.getLocaleGame()
     }
 }

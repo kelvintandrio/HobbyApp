@@ -8,12 +8,13 @@
 
 import SwiftUI
 import Common
+import Category
 
 struct ContentView: View {
 
     @EnvironmentObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var gamePresenter: GamePresenter
-    @EnvironmentObject var moviePresenter: MoviePresenter
+    @EnvironmentObject var moviePresenter: MoviePresenter<MovieModel, MovieInteractor<MovieRepository>>
     @EnvironmentObject var travelPresenter: TravelPresenter
     @EnvironmentObject var sportPresenter: SportsPresenter
 

@@ -40,11 +40,11 @@ struct GameDetailView: View {
             Button(action: {
                 if self.onLove == false {
                     self.onLove = true
-                    self.presenter.addFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
+                    self.presenter.addFavorite(game: DataLocaleMapper02.mapGameToEntity(input: self.presenter.category))
                 } else {
                     self.onLove = false
                     self.presenter
-                        .deleteFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
+                        .deleteFavorite(game: DataLocaleMapper02.mapGameToEntity(input: self.presenter.category))
                 }
             }, label: {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
@@ -57,6 +57,6 @@ struct GameDetailView: View {
     }
 
     func checkDataGameFavorite() {
-        onLove = self.presenter.checkFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
+        onLove = self.presenter.checkFavorite(game: DataLocaleMapper02.mapGameToEntity(input: self.presenter.category))
     }
 }

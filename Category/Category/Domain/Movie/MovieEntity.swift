@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 public class MovieEntity: Object {
-    @objc dynamic var id: Int = 0
+    @objc public dynamic var id: Int = 0
     @objc dynamic var name: String = ""
     @objc dynamic var image: String = ""
 

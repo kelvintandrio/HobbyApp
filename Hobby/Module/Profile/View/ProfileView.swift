@@ -8,12 +8,13 @@
 
 import SwiftUI
 import Common
+import Category
 
 struct ProfileView: View {
 
     @ObservedObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter
-    @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter
+    @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter<MovieModel, MovieFavoriteInteractor>
     @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter
     @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter
 

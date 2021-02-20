@@ -39,11 +39,11 @@ struct SportDetailView: View {
                 if self.onLove == false {
                     self.onLove = true
                     self.presenter.addFavorite(
-                        sport: DataLocaleMapper.mapSportToEntity(input: self.presenter.category))
+                        sport: DataLocaleMapper02.mapSportToEntity(input: self.presenter.category))
                 } else {
                     self.onLove = false
                     self.presenter
-                        .deleteFavorite(sport: DataLocaleMapper.mapSportToEntity(input: self.presenter.category))
+                        .deleteFavorite(sport: DataLocaleMapper02.mapSportToEntity(input: self.presenter.category))
                 }
             }, label: {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
@@ -56,6 +56,6 @@ struct SportDetailView: View {
 
     func checkDataTravelFavorite() {
         onLove = self.presenter.checkFavorite(
-            sport: DataLocaleMapper.mapSportToEntity(input: self.presenter.category))
+            sport: DataLocaleMapper02.mapSportToEntity(input: self.presenter.category))
     }
 }

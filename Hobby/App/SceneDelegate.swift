@@ -24,13 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let gameUseCase: GameInteractor<GameRepository> = Injection.init().provideGame()
 
         let profileUseCase = Injection.init().provideProfile()
-//        let gameUseCase = Injection.init().provideGame()
-//        let movieUsecase = Injection.init().provideMovie()
-//        let travelUseCase = Injection.init().provideTravel()
-//        let sportUseCase = Injection.init().provideSport()
 
         let gameFavoriteUseCase = Injection.init().provideGameFavorite()
-        let movieFavoriteUseCase = Injection.init().provideMovieFavorite()
+        let movieFavoriteUseCase: MovieFavoriteInteractor = Injection.init().provideMovieFavorite()
         let travelFavoriteUseCase = Injection.init().provideTravelFavorite()
         let sportFavoriteUseCase = Injection.init().provideSportFavorite()
 

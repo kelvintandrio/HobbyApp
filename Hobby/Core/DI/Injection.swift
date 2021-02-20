@@ -96,9 +96,9 @@ public final class Injection: NSObject {
         repositoryLocale: repositoryLocaleMovie, category: category)
     }
 
-    func provideMovieFavorite() -> MovieFavoriteProtocol {
+    func provideMovieFavorite<U: MovieFavoriteProtocol>() -> U {
         let repositoryMovieLocale = provideMovieLocaleRepository()
-        return MovieFavoriteInteractor(repository: repositoryMovieLocale)
+        return MovieFavoriteInteractor(repository: repositoryMovieLocale) as! U
     }
     /**Movie Injection - End**/
 

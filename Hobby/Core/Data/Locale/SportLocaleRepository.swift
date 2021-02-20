@@ -56,7 +56,7 @@ extension SportLocaleRepository: SportLocaleRepositoryProtocol {
 
     func getLocaleSport() -> AnyPublisher<[SportModel], Error> {
         return self.locale.getSportLocale()
-            .map { DataLocaleMapper.mapSportToModel(input: $0) }
+            .map { DataLocaleMapper02.mapSportToModel(input: $0) }
             .eraseToAnyPublisher()
     }
 }

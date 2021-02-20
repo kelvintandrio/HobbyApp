@@ -9,7 +9,7 @@
 import Foundation
 import Core
 
-final class DataLocaleMapper {
+final class DataLocaleMapper02 {
     static func mapGameToModel(input gameResponses: [GameEntity]) -> [Core.GameModel] {
         return gameResponses.map { result in
             return Core.GameModel(

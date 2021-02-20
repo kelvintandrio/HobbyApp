@@ -10,6 +10,7 @@ import Foundation
 import Combine
 import Core
 import Common
+import Category
 
 protocol GameLocaleRepositoryProtocol {
     func getLocaleGame() -> AnyPublisher<[Core.GameModel], Error>
@@ -56,7 +57,7 @@ extension GameLocaleRepository: GameLocaleRepositoryProtocol {
 
     func getLocaleGame() -> AnyPublisher<[Core.GameModel], Error> {
         return self.locale.getGameLocale()
-            .map { DataLocaleMapper.mapGameToModel(input: $0) }
+            .map { DataLocaleMapper02.mapGameToModel(input: $0) }
             .eraseToAnyPublisher()
     }
 }

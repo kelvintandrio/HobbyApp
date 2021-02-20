@@ -10,8 +10,6 @@
 		00B0B6BBEA27D55AA6F990FB /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7833F4E6272BA1BBBDA70633 /* Pods_Core.framework */; };
 		10199EAA25DEBF1B0009E0E7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EA925DEBF1B0009E0E7 /* Repository.swift */; };
 		10199EAC25DEBF250009E0E7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10199EAB25DEBF250009E0E7 /* DataSource.swift */; };
-		105394E925DAEB24009EC607 /* DataMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394E825DAEB24009EC607 /* DataMovie.swift */; };
-		105394EB25DAEB34009EC607 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394EA25DAEB34009EC607 /* MovieModel.swift */; };
 		105394F525DAEEBB009EC607 /* MovieProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394F425DAEEBB009EC607 /* MovieProtocol.swift */; };
 		105394FB25DAF07A009EC607 /* MovieFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105394FA25DAF07A009EC607 /* MovieFavoriteProtocol.swift */; };
 		1053951025DAF921009EC607 /* DataSport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053950F25DAF921009EC607 /* DataSport.swift */; };
@@ -60,8 +58,6 @@
 /* Begin PBXFileReference section */
 		10199EA925DEBF1B0009E0E7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		10199EAB25DEBF250009E0E7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		105394E825DAEB24009EC607 /* DataMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMovie.swift; sourceTree = "<group>"; };
-		105394EA25DAEB34009EC607 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		105394F425DAEEBB009EC607 /* MovieProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProtocol.swift; sourceTree = "<group>"; };
 		105394FA25DAF07A009EC607 /* MovieFavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoriteProtocol.swift; sourceTree = "<group>"; };
 		1053950F25DAF921009EC607 /* DataSport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSport.swift; sourceTree = "<group>"; };
@@ -116,15 +112,6 @@
 				10F73FB025D9A19800C4A77A /* DataGame.swift */,
 			);
 			path = Game;
-			sourceTree = "<group>";
-		};
-		105394E725DAEB16009EC607 /* Movie */ = {
-			isa = PBXGroup;
-			children = (
-				105394E825DAEB24009EC607 /* DataMovie.swift */,
-				105394EA25DAEB34009EC607 /* MovieModel.swift */,
-			);
-			path = Movie;
 			sourceTree = "<group>";
 		};
 		105394F225DAEE77009EC607 /* UseCase */ = {
@@ -263,7 +250,6 @@
 				105394F225DAEE77009EC607 /* UseCase */,
 				1053952C25DB00F4009EC607 /* Travel */,
 				1053950E25DAF90F009EC607 /* Sport */,
-				105394E725DAEB16009EC607 /* Movie */,
 				105394BA25DAB079009EC607 /* Game */,
 			);
 			path = Domain;
@@ -432,13 +418,11 @@
 				1053952325DAFE7F009EC607 /* SportsFavoriteProtocol.swift in Sources */,
 				1053951F25DAFDF9009EC607 /* SportsProtocol.swift in Sources */,
 				10F73FB125D9A19800C4A77A /* DataGame.swift in Sources */,
-				105394EB25DAEB34009EC607 /* MovieModel.swift in Sources */,
 				1053953525DB774D009EC607 /* TravelProtocol.swift in Sources */,
 				106382FB25DD7BBD00CD42DB /* GameProtocol.swift in Sources */,
 				10199EAA25DEBF1B0009E0E7 /* Repository.swift in Sources */,
 				1053953025DB0C22009EC607 /* TravelModel.swift in Sources */,
 				106382FD25DD7C4B00CD42DB /* GameFavoriteProtocol.swift in Sources */,
-				105394E925DAEB24009EC607 /* DataMovie.swift in Sources */,
 				10F73FAF25D9A11400C4A77A /* GameModel.swift in Sources */,
 				105394FB25DAF07A009EC607 /* MovieFavoriteProtocol.swift in Sources */,
 				10199EAC25DEBF250009E0E7 /* DataSource.swift in Sources */,

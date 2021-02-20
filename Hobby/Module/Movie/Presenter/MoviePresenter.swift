@@ -9,17 +9,20 @@
 import SwiftUI
 import Combine
 import Core
+import Category
 
-class MoviePresenter: ObservableObject {
+class MoviePresenter<DataModel, U: MovieProtocol>: ObservableObject
+where U.Response == [DataModel] {
+
     private var cancellables: Set<AnyCancellable> = []
     private let movieRouter = MovieRouter()
-    private let movieUseCase: MovieProtocol
+    private let movieUseCase: U
 
-    @Published var movies: [MovieModel] = []
+    @Published var movies: [DataModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(movieUseCase: MovieProtocol) {
+    init(movieUseCase: U) {
         self.movieUseCase = movieUseCase
     }
 

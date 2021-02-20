@@ -9,10 +9,10 @@
 import Foundation
 import Combine
 import Common
-import Core
+import Category
 
 protocol MovieLocaleRepositoryProtocol {
-    func getLocaleMovie() -> AnyPublisher<[Core.MovieModel], Error>
+    func getLocaleMovie() -> AnyPublisher<[MovieModel], Error>
     func addLocaleMovie(from categories: MovieEntity) -> AnyPublisher<Bool, Error>
     func deleteLocaleMovie(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
     func checkLocaleMovie(from categories: MovieEntity) -> Bool

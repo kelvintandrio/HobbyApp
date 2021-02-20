@@ -10,17 +10,21 @@ import Foundation
 import SwiftUI
 import Combine
 import Core
+import Category
 
-class MovieFavoritePresenter: ObservableObject {
+class MovieFavoritePresenter<DataModel, U: MovieFavoriteProtocol>: ObservableObject
+where U.Response == [DataModel] {
+
     private var cancellables: Set<AnyCancellable> = []
     private let movieRouter = MovieRouter()
-    private let movieFavoriteUseCase: MovieFavoriteProtocol
 
-    @Published var movie: [MovieModel] = []
+    private let movieFavoriteUseCase: U
+
+    @Published var movie: [DataModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(movieFavoriteUseCase: MovieFavoriteProtocol) {
+    init(movieFavoriteUseCase: U) {
         self.movieFavoriteUseCase = movieFavoriteUseCase
     }
 

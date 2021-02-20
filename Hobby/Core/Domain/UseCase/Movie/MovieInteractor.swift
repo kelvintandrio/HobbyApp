@@ -8,9 +8,12 @@
 
 import Combine
 import Core
+import Category
 import Common
 
 class MovieInteractor<R: Repository>: MovieProtocol {
+    typealias Response = [MovieModel]
+    
     private let movieRepository: R
 
     required init(repository: R) {
@@ -20,4 +23,7 @@ class MovieInteractor<R: Repository>: MovieProtocol {
     func getMovie() -> AnyPublisher<[MovieModel], Common.URLError> {
         return movieRepository.getData() as! AnyPublisher<[MovieModel], Common.URLError>
     }
+//    func getMovie() -> AnyPublisher<[MovieModel], Common.URLError> {
+//        return movieRepository.getData() as! AnyPublisher<[MovieModel], Common.URLError>
+//    }
 }

@@ -7,10 +7,10 @@
 //
 
 import Combine
-import Core
+import Category
 
 protocol MovieDetailProtocol {
-    func getDetailMovie() -> Core.MovieModel
+    func getDetailMovie() -> MovieModel
     func addMovieFavorite(movie: MovieEntity) -> AnyPublisher<Bool, Error>
     func checkFavoriteMovie(movie: MovieEntity) -> Bool
     func deleteMovieFavorite(movie: MovieEntity)
@@ -30,7 +30,7 @@ class MovieDetailInteractor: MovieDetailProtocol {
         self.movieLocaleRepository = repositoryLocale
     }
 
-    func getDetailMovie() -> Core.MovieModel {
+    func getDetailMovie() -> MovieModel {
         return category
     }
 

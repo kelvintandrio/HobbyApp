@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Core
+import Category
 
 class MovieDetailPresenter: ObservableObject {
     private let detailUseCase: MovieDetailProtocol

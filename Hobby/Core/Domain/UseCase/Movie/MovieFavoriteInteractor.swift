@@ -8,8 +8,11 @@
 
 import Combine
 import Core
+import Category
 
 class MovieFavoriteInteractor: MovieFavoriteProtocol {
+    typealias Response = [MovieModel]
+    
     private let movieLocaleRepository: MovieLocaleRepositoryProtocol
 
     required init(repository: MovieLocaleRepositoryProtocol) {

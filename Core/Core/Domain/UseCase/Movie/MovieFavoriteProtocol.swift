@@ -9,5 +9,6 @@
 import Combine
 
 public protocol MovieFavoriteProtocol {
-    func getMovieFavorite() -> AnyPublisher<[MovieModel], Error>
+    associatedtype Response
+    func getMovieFavorite() -> AnyPublisher<Response, Error>
 }

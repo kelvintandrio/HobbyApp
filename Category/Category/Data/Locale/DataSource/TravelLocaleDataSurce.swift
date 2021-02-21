@@ -1,8 +1,8 @@
 //
-//  TravelLocaleDataSource.swift
-//  Hobby
+//  TravelLocaleDataSurce.swift
+//  Category
 //
-//  Created by Kelvin HT on 2/17/21.
+//  Created by Kelvin HT on 2/21/21.
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
@@ -10,15 +10,9 @@ import Foundation
 import Combine
 import Common
 import RealmSwift
-import Category
+import Core
 
-protocol TravelLocaleDataSourceProtocol: class {
-    func getTravelLocale() -> AnyPublisher<[TravelEntity], Error>
-    func addTravelLocale(from categories: TravelEntity) -> AnyPublisher<Bool, Error>
-    func deleteTravelLocale(from categories: TravelEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
-    func checkTravelLocale(from categories: TravelEntity) -> Bool
-}
-final class TravelLocaleDataSource: NSObject {
+public final class TravelLocaleDataSource: NSObject {
     public let realmTravel: Realm?
     public init(realm: Realm?) {
         self.realmTravel = realm
@@ -28,8 +22,10 @@ final class TravelLocaleDataSource: NSObject {
     }
 }
 
-extension TravelLocaleDataSource: TravelLocaleDataSourceProtocol {
-    func getTravelLocale() -> AnyPublisher<[TravelEntity], Error> {
+extension TravelLocaleDataSource: LocaleDataSource {
+    public typealias DataEntity = TravelEntity
+
+    public func getDataLocale() -> AnyPublisher<[TravelEntity], Error> {
         return Future<[TravelEntity], Error> { completion in
             if let realmTravel = self.realmTravel {
                 let categories: Results<TravelEntity> = {
@@ -42,7 +38,7 @@ extension TravelLocaleDataSource: TravelLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    func addTravelLocale(from categories: TravelEntity) -> AnyPublisher<Bool, Error> {
+    public func addDataLocale(from categories: TravelEntity) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realmTravel {
                 do {
@@ -58,7 +54,7 @@ extension TravelLocaleDataSource: TravelLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    func deleteTravelLocale(
+    public func deleteDataLocale(
         from categories: TravelEntity,
         result: @escaping (Result<Bool, DatabaseError>) -> Void
     ) {
@@ -77,7 +73,7 @@ extension TravelLocaleDataSource: TravelLocaleDataSourceProtocol {
             result(.failure(.invalidInstance))
         }
     }
-    func checkTravelLocale(from categories: TravelEntity) -> Bool {
+    public func checkDataLocale(from categories: TravelEntity) -> Bool {
         if let realmTravel = realmTravel {
             let travel: TravelEntity? = {
                 realmTravel.object(ofType: TravelEntity.self, forPrimaryKey: categories.id)

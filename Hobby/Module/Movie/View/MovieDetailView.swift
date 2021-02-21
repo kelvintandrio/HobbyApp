@@ -9,10 +9,11 @@
 import SwiftUI
 import Common
 import Category
+import Core
 
 struct MovieDetailView: View {
 
-    @ObservedObject var presenter: MovieDetailPresenter
+    @ObservedObject var presenter: MovieDetailPresenter<MovieModel, MovieEntity, DetailInteractor<MovieEntity, MovieLocaleRepository>>
     @State var onLove = false
 
     var body: some View {

@@ -9,19 +9,22 @@
 import Foundation
 import Combine
 import Category
+import Core
 
-class GameDetailPresenter: ObservableObject {
+class GameDetailPresenter<DataModel, DataEntity, U: DetailProtocol>: ObservableObject
+where U.DataEntity == DataEntity {
+
     private var cancellables: Set<AnyCancellable> = []
-    private let detailUseCase: GameDetailProtocol
+    private let detailUseCase: U
 
-    @Published var category: GameModel
+    @Published var category: DataModel
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
     @Published var detailGame: String = ""
 
-    init(detailUseCase: GameDetailProtocol) {
+    init(detailUseCase: U, category: DataModel) {
         self.detailUseCase = detailUseCase
-        category = detailUseCase.getDetailGame()
+        self.category = category
     }
 
     func getGameDescription(id: String) {
@@ -40,16 +43,16 @@ class GameDetailPresenter: ObservableObject {
         }).store(in: &cancellables)
     }
 
-    func addFavorite(game: GameEntity) {
-        let statusAddFavorite = detailUseCase.addGameFavorite(game: game)
+    func addFavorite(game: DataEntity) {
+        let statusAddFavorite = detailUseCase.addDataFavorite(data: game)
         print("Status Add Favorite = \(statusAddFavorite.description)")
     }
 
-    func checkFavorite(game: GameEntity) -> Bool {
-        return detailUseCase.checkFavoriteGame(game: game)
+    func checkFavorite(game: DataEntity) -> Bool {
+        return detailUseCase.checkFavoriteData(data: game)
     }
 
-    func deleteFavorite(game: GameEntity) {
-        detailUseCase.deleteGameFavorite(game: game)
+    func deleteFavorite(game: DataEntity) {
+        detailUseCase.deleteDataFavorite(data: game)
     }
 }

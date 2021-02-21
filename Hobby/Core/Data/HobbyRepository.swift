@@ -13,10 +13,6 @@ import Core
 import Alamofire
 import Category
 
-protocol HobbyRepositoryProtocol {
-    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError>
-}
-
 final class HobbyRepository: NSObject {
     typealias HobbyInstance = (RemoteDataSource) -> HobbyRepository
 

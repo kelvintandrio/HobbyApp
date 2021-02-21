@@ -11,28 +11,30 @@ import Core
 import Combine
 import Category
 
-class SportsDetailPresenter: ObservableObject {
-    private let detailUseCase: SportsDetailProtocol
+class SportsDetailPresenter<DataModel, DataEntity, U: DetailProtocol>: ObservableObject
+where U.DataEntity == DataEntity {
 
-    @Published var category: SportModel
+    private let detailUseCase: U
+
+    @Published var category: DataModel
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(detailUseCase: SportsDetailProtocol) {
+    init(detailUseCase: U, category: DataModel) {
         self.detailUseCase = detailUseCase
-        category = detailUseCase.getDetailSport()
+        self.category = category
     }
 
-    func addFavorite(sport: SportEntity) {
-        let statusAddFavorite = detailUseCase.addSportFavorite(sport: sport)
+    func addFavorite(sport: DataEntity) {
+        let statusAddFavorite = detailUseCase.addDataFavorite(data: sport)
         print("Status Add Favorite = \(statusAddFavorite.description)")
     }
 
-    func checkFavorite(sport: SportEntity) -> Bool {
-        return detailUseCase.checkFavoriteSport(sport: sport)
+    func checkFavorite(sport: DataEntity) -> Bool {
+        return detailUseCase.checkFavoriteData(data: sport)
     }
 
-    func deleteFavorite(sport: SportEntity) {
-        detailUseCase.deleteSportFavorite(sport: sport)
+    func deleteFavorite(sport: DataEntity) {
+        detailUseCase.deleteDataFavorite(data: sport)
     }
 }

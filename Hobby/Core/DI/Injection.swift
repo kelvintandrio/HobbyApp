@@ -31,22 +31,20 @@ public final class Injection: NSObject {
         return MainInteractor(repository: repository) as! U
     }
 
-    func provideTravelLocaleRepository() -> TravelLocaleRepositoryProtocol {
-        let realm = try? Realm()
-        let localeTravel = TravelLocaleDataSource.sharedInstance(realm)
-        return TravelLocaleRepository.sharedInstance(localeTravel)
-    }
-
-    func provideTravelDetail(category: TravelModel) -> TravelDetailProtocol {
+    func provideTravelDetail<U: DetailProtocol>(category: TravelModel) -> U {
         let repositoryTravel = provideRepository()
-        let repositoryLocaleTravel = provideTravelLocaleRepository()
-        return TravelDetailInteractor(repository: repositoryTravel,
-                                      repositoryLocale: repositoryLocaleTravel, category: category)
+        let realm = try? Realm()
+        let locale = TravelLocaleDataSource(realm: realm)
+        let repositoryLocaleTravel = TravelLocaleRepository(locale: locale)
+        return DetailInteractor(repository: repositoryTravel,
+                                      repositoryLocale: repositoryLocaleTravel) as! U
     }
 
     func provideTravelFavorite<U: FavoriteProtocol>() -> U {
-        let repositoryTravelLocale = provideTravelLocaleRepository()
-        return TravelFavoriteInteractor(repository: repositoryTravelLocale) as! U
+        let realm = try? Realm()
+        let locale = TravelLocaleDataSource(realm: realm)
+        let repositoryTravelLocale = TravelLocaleRepository(locale: locale)
+        return FavoriteInteractor(repository: repositoryTravelLocale) as! U
     }
     /**Travel Injection - End**/
 
@@ -57,22 +55,20 @@ public final class Injection: NSObject {
         return MainInteractor(repository: repository) as! U
     }
 
-    func provideGameLocaleRepository() -> GameLocaleRepositoryProtocol {
-        let realm = try? Realm()
-        let localeGame = GameLocaleDataSource.sharedInstance(realm)
-        return GameLocaleRepository.sharedInstance(localeGame)
-    }
-
-    func provideGameDetail(category: GameModel) -> GameDetailProtocol {
+    func provideGameDetail<U: DetailProtocol>(category: GameModel) -> U {
         let repositoryGame = provideRepository()
-        let repositoryLocaleGame = provideGameLocaleRepository()
-        return GameDetailInteractor(repository: repositoryGame,
-                                    repositoryLocale: repositoryLocaleGame, category: category)
+        let realm = try? Realm()
+        let locale = GameLocaleDataSource(realm: realm)
+        let repositoryLocaleGame = GameLocaleRepository(locale: locale)
+        return DetailInteractor(repository: repositoryGame,
+                                    repositoryLocale: repositoryLocaleGame) as! U
     }
 
     func provideGameFavorite<U: FavoriteProtocol>() -> U {
-        let repositoryGameLocale = provideGameLocaleRepository()
-        return GameFavoriteInteractor(repository: repositoryGameLocale) as! U
+        let realm = try? Realm()
+        let locale = GameLocaleDataSource(realm: realm)
+        let repositoryGameLocale = GameLocaleRepository(locale: locale)
+        return FavoriteInteractor(repository: repositoryGameLocale) as! U
     }
     /**Game Injection - End**/
 
@@ -83,48 +79,44 @@ public final class Injection: NSObject {
         return MainInteractor(repository: repository) as! U
     }
 
-    func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {
-        let realm = try? Realm()
-        let localeMovie = MovieLocaleDataSource.sharedInstance(realm)
-        return MovieLocaleRepository.sharedInstance(localeMovie)
-    }
-
-    func provideMovieDetail(category: MovieModel) -> MovieDetailProtocol {
+    func provideMovieDetail<U: DetailProtocol>(category: MovieModel) -> U {
         let repositoryMovie = provideRepository()
-        let repositoryLocaleMovie = provideMovieLocaleRepository()
-        return MovieDetailInteractor(repository: repositoryMovie,
-        repositoryLocale: repositoryLocaleMovie, category: category)
+        let realm = try? Realm()
+        let locale = MovieLocaleDataSource(realm: realm)
+        let repositoryLocaleMovie = MovieLocaleRepository(locale: locale)
+        return DetailInteractor(repository: repositoryMovie,
+        repositoryLocale: repositoryLocaleMovie) as! U
     }
 
     func provideMovieFavorite<U: FavoriteProtocol>() -> U {
-        let repositoryMovieLocale = provideMovieLocaleRepository()
-        return MovieFavoriteInteractor(repository: repositoryMovieLocale) as! U
+        let realm = try? Realm()
+        let locale = MovieLocaleDataSource(realm: realm)
+        let repository = MovieLocaleRepository(locale: locale)
+        return FavoriteInteractor(repository: repository) as! U
     }
     /**Movie Injection - End**/
 
     /**Sport Injection - Start**/
-    func provideSportLocaleRepository() -> SportLocaleRepositoryProtocol {
-        let realm = try? Realm()
-        let localeSport = SportLocaleDataSource.sharedInstance(realm)
-        return SportLocaleRepository.sharedInstance(localeSport)
-    }
-
     func provideSport<U: MainProtocol>() -> U {
         let remote = SportDataSource()
         let repository = SportRepository(remote: remote)
         return MainInteractor(repository: repository) as! U
     }
 
-    func provideSportDetail(category: SportModel) -> SportsDetailProtocol {
+    func provideSportDetail<U: DetailProtocol>(category: SportModel) -> U {
         let repositorySport = provideRepository()
-        let repositoryLocaleSport = provideSportLocaleRepository()
-        return SportDetailInteractor(repository: repositorySport,
-                                      repositoryLocale: repositoryLocaleSport, category: category)
+        let realm = try? Realm()
+        let locale = SportLocaleDataSource(realm: realm)
+        let repositoryLocaleSport = SportLocaleRepository(locale: locale)
+        return DetailInteractor(repository: repositorySport,
+                                      repositoryLocale: repositoryLocaleSport) as! U
     }
 
     func provideSportFavorite<U: FavoriteProtocol>() -> U {
-        let repositorySportLocale = provideSportLocaleRepository()
-        return SportFavoriteInteractor(repository: repositorySportLocale) as! U
+        let realm = try? Realm()
+        let locale = SportLocaleDataSource(realm: realm)
+        let repositorySportLocale = SportLocaleRepository(locale: locale)
+        return FavoriteInteractor(repository: repositorySportLocale) as! U
     }
     /**Sport Injection - End**/
 }

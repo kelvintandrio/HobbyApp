@@ -9,9 +9,10 @@
 import SwiftUI
 import Common
 import Category
+import Core
 
 struct GameDetailView: View {
-    @ObservedObject var presenter: GameDetailPresenter
+    @ObservedObject var presenter: GameDetailPresenter<GameModel, GameEntity, DetailInteractor<GameEntity, GameLocaleRepository>>
 
     @State var onLove = false
 

@@ -8,29 +8,32 @@
 
 import Foundation
 import Category
+import Core
 
-class TravelDetailPresenter: ObservableObject {
-    private let detailUseCase: TravelDetailProtocol
+class TravelDetailPresenter<DataModel, DataEntity, U: DetailProtocol>: ObservableObject
+where U.DataEntity == DataEntity {
 
-    @Published var category: TravelModel
+    private let detailUseCase: U
+
+    @Published var category: DataModel
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 
-    init(detailUseCase: TravelDetailProtocol) {
+    init(detailUseCase: U, category: DataModel) {
         self.detailUseCase = detailUseCase
-        category = detailUseCase.getDetailTravel()
+        self.category = category
     }
 
-    func addFavorite(travel: TravelEntity) {
-        let statusAddFavorite = detailUseCase.addTravelFavorite(travel: travel)
+    func addFavorite(travel: DataEntity) {
+        let statusAddFavorite = detailUseCase.addDataFavorite(data: travel)
         print("Status Add Favorite = \(statusAddFavorite.description)")
     }
 
-    func checkFavorite(travel: TravelEntity) -> Bool {
-        return detailUseCase.checkFavoriteTravel(travel: travel)
+    func checkFavorite(travel: DataEntity) -> Bool {
+        return detailUseCase.checkFavoriteData(data: travel)
     }
 
-    func deleteFavorite(travel: TravelEntity) {
-        detailUseCase.deleteTravelFavorite(travel: travel)
+    func deleteFavorite(travel: DataEntity) {
+        detailUseCase.deleteDataFavorite(data: travel)
     }
 }

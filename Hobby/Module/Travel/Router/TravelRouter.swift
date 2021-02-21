@@ -8,11 +8,12 @@
 
 import SwiftUI
 import Category
+import Core
 
 class TravelRouter {
     func goToTravelDetailView (for category: TravelModel) -> some View {
-        let detailUseCase = Injection.init().provideTravelDetail(category: category)
-        let presenter = TravelDetailPresenter(detailUseCase: detailUseCase)
+        let detailUseCase: DetailInteractor<TravelEntity, TravelLocaleRepository> = Injection.init().provideTravelDetail(category: category)
+        let presenter = TravelDetailPresenter(detailUseCase: detailUseCase, category: category)
         return TravelDetailView(presenter: presenter)
     }
 }

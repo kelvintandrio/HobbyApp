@@ -9,9 +9,10 @@
 import SwiftUI
 import Common
 import Category
+import Core
 
 struct TravelDetailView: View {
-    @ObservedObject var presenter: TravelDetailPresenter
+    @ObservedObject var presenter: TravelDetailPresenter<TravelModel, TravelEntity, DetailInteractor<TravelEntity, TravelLocaleRepository>>
 
     @State var onLove = false
 

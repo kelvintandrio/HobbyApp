@@ -31,22 +31,20 @@ public final class Injection: NSObject {
         return MainInteractor(repository: repository) as! U
     }
 
-    func provideTravelLocaleRepository() -> TravelLocaleRepositoryProtocol {
-        let realm = try? Realm()
-        let localeTravel = TravelLocaleDataSource.sharedInstance(realm)
-        return TravelLocaleRepository.sharedInstance(localeTravel)
-    }
-
-    func provideTravelDetail(category: TravelModel) -> TravelDetailProtocol {
+    func provideTravelDetail<U: DetailProtocol>(category: TravelModel) -> U {
         let repositoryTravel = provideRepository()
-        let repositoryLocaleTravel = provideTravelLocaleRepository()
-        return TravelDetailInteractor(repository: repositoryTravel,
-                                      repositoryLocale: repositoryLocaleTravel, category: category)
+        let realm = try? Realm()
+        let locale = TravelLocaleDataSource(realm: realm)
+        let repositoryLocaleTravel = TravelLocaleRepository(locale: locale)
+        return DetailInteractor(repository: repositoryTravel,
+                                      repositoryLocale: repositoryLocaleTravel) as! U
     }
 
     func provideTravelFavorite<U: FavoriteProtocol>() -> U {
-        let repositoryTravelLocale = provideTravelLocaleRepository()
-        return TravelFavoriteInteractor(repository: repositoryTravelLocale) as! U
+        let realm = try? Realm()
+        let locale = TravelLocaleDataSource(realm: realm)
+        let repositoryTravelLocale = TravelLocaleRepository(locale: locale)
+        return FavoriteInteractor(repository: repositoryTravelLocale) as! U
     }
     /**Travel Injection - End**/
 

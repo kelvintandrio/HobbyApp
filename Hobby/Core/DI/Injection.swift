@@ -55,22 +55,20 @@ public final class Injection: NSObject {
         return MainInteractor(repository: repository) as! U
     }
 
-    func provideGameLocaleRepository() -> GameLocaleRepositoryProtocol {
-        let realm = try? Realm()
-        let localeGame = GameLocaleDataSource.sharedInstance(realm)
-        return GameLocaleRepository.sharedInstance(localeGame)
-    }
-
-    func provideGameDetail(category: GameModel) -> GameDetailProtocol {
+    func provideGameDetail<U: DetailProtocol>(category: GameModel) -> U {
         let repositoryGame = provideRepository()
-        let repositoryLocaleGame = provideGameLocaleRepository()
-        return GameDetailInteractor(repository: repositoryGame,
-                                    repositoryLocale: repositoryLocaleGame, category: category)
+        let realm = try? Realm()
+        let locale = GameLocaleDataSource(realm: realm)
+        let repositoryLocaleGame = GameLocaleRepository(locale: locale)
+        return DetailInteractor(repository: repositoryGame,
+                                    repositoryLocale: repositoryLocaleGame) as! U
     }
 
     func provideGameFavorite<U: FavoriteProtocol>() -> U {
-        let repositoryGameLocale = provideGameLocaleRepository()
-        return GameFavoriteInteractor(repository: repositoryGameLocale) as! U
+        let realm = try? Realm()
+        let locale = GameLocaleDataSource(realm: realm)
+        let repositoryGameLocale = GameLocaleRepository(locale: locale)
+        return FavoriteInteractor(repository: repositoryGameLocale) as! U
     }
     /**Game Injection - End**/
 

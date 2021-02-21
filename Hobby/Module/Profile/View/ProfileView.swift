@@ -14,7 +14,7 @@ import Core
 struct ProfileView: View {
 
     @ObservedObject var profilePresenter: ProfilePresenter
-    @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter<GameModel, GameFavoriteInteractor>
+    @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter<GameModel, FavoriteInteractor<[GameModel], GameLocaleRepository>>
     @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter<MovieModel, FavoriteInteractor<[MovieModel], MovieLocaleRepository>>
     @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter<TravelModel, FavoriteInteractor<[TravelModel], TravelLocaleRepository>>
     @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter<SportModel, FavoriteInteractor<[SportModel], SportLocaleRepository>>

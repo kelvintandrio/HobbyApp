@@ -7,10 +7,12 @@
 //
 
 import Combine
+import Common
 
 public protocol DetailProtocol {
     associatedtype DataEntity
 
+    func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError>
     func addDataFavorite(data: DataEntity) -> AnyPublisher<Bool, Error>
     func checkFavoriteData(data: DataEntity) -> Bool
     func deleteDataFavorite(data: DataEntity)

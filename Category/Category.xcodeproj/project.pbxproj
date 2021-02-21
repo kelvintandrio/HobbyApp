@@ -38,6 +38,8 @@
 		10E9936525E2A25F009FEC25 /* SportLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E9936425E2A25F009FEC25 /* SportLocaleRepository.swift */; };
 		10E9936725E2AB6C009FEC25 /* TravelLocaleDataSurce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E9936625E2AB6C009FEC25 /* TravelLocaleDataSurce.swift */; };
 		10E9936925E2AB79009FEC25 /* TravelLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E9936825E2AB79009FEC25 /* TravelLocaleRepository.swift */; };
+		10E9936B25E2B136009FEC25 /* GameLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E9936A25E2B136009FEC25 /* GameLocaleDataSource.swift */; };
+		10E9936D25E2B18F009FEC25 /* GameLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E9936C25E2B18F009FEC25 /* GameLocaleRepository.swift */; };
 		10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */; };
 		10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FA125D99D3600C4A77A /* GameRepository.swift */; };
 		10F73FA725D99EF100C4A77A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FA625D99EF100C4A77A /* Core.framework */; };
@@ -107,6 +109,8 @@
 		10E9936425E2A25F009FEC25 /* SportLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLocaleRepository.swift; sourceTree = "<group>"; };
 		10E9936625E2AB6C009FEC25 /* TravelLocaleDataSurce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLocaleDataSurce.swift; sourceTree = "<group>"; };
 		10E9936825E2AB79009FEC25 /* TravelLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLocaleRepository.swift; sourceTree = "<group>"; };
+		10E9936A25E2B136009FEC25 /* GameLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleDataSource.swift; sourceTree = "<group>"; };
+		10E9936C25E2B18F009FEC25 /* GameLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleRepository.swift; sourceTree = "<group>"; };
 		10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
 		10F73FA125D99D3600C4A77A /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		10F73FA625D99EF100C4A77A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +204,7 @@
 				10E9936825E2AB79009FEC25 /* TravelLocaleRepository.swift */,
 				10199EFA25E1770C0009E0E7 /* MovieLocaleRepository.swift */,
 				10E9936425E2A25F009FEC25 /* SportLocaleRepository.swift */,
+				10E9936C25E2B18F009FEC25 /* GameLocaleRepository.swift */,
 				10199EFC25E1783C0009E0E7 /* ConvertToArray.swift */,
 			);
 			path = Locale;
@@ -211,6 +216,7 @@
 				10199EF825E1764F0009E0E7 /* MovieLocaleDataSource.swift */,
 				10E9936225E2A24F009FEC25 /* SportLocaleDataSource.swift */,
 				10E9936625E2AB6C009FEC25 /* TravelLocaleDataSurce.swift */,
+				10E9936A25E2B136009FEC25 /* GameLocaleDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -463,8 +469,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E9936B25E2B136009FEC25 /* GameLocaleDataSource.swift in Sources */,
 				10199EE525E15F720009E0E7 /* TravelEntity.swift in Sources */,
 				10199EC025E080D10009E0E7 /* MovieModel.swift in Sources */,
+				10E9936D25E2B18F009FEC25 /* GameLocaleRepository.swift in Sources */,
 				10199EDE25E1579F0009E0E7 /* SportEntity.swift in Sources */,
 				10199EFD25E1783C0009E0E7 /* ConvertToArray.swift in Sources */,
 				105394F125DAECFA009EC607 /* MovieRepository.swift in Sources */,

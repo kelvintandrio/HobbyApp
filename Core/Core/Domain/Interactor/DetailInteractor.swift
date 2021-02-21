@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import Common
 
 public class DetailInteractor<DataEntity, U: LocaleRepository>: DetailProtocol
 where U.DataEntity == DataEntity {
@@ -36,4 +37,10 @@ where U.DataEntity == DataEntity {
     public func checkFavoriteData(data: DataEntity) -> Bool {
         return repositoryLocale.checkLocaleData(from: data)
     }
+    
+    /**Specially for decripiton Game**/
+    public func getGameDescription(id: String) -> AnyPublisher<String, Common.URLError> {
+        return repository.getGameDescription(id: id)
+    }
+
 }

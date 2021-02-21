@@ -9,9 +9,10 @@
 import SwiftUI
 import Common
 import Category
+import Core
 
 struct SportDetailView: View {
-    @ObservedObject var presenter: SportsDetailPresenter
+    @ObservedObject var presenter: SportsDetailPresenter<SportModel, SportEntity, DetailInteractor<SportEntity, SportLocaleRepository>>
     @State var onLove = false
 
     var body: some View {

@@ -8,11 +8,12 @@
 
 import SwiftUI
 import Category
+import Core
 
 class SportRouter {
     func goToSportDetailView(for category: SportModel) -> some View {
-        let detailUseCase = Injection.init().provideSportDetail(category: category)
-        let presenter = SportsDetailPresenter(detailUseCase: detailUseCase)
+        let detailUseCase: DetailInteractor<SportEntity, SportLocaleRepository> = Injection.init().provideSportDetail(category: category)
+        let presenter = SportsDetailPresenter(detailUseCase: detailUseCase, category: category)
         return SportDetailView(presenter: presenter)
     }
 }

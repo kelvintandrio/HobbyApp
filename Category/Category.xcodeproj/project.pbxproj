@@ -34,6 +34,8 @@
 		10DACF9325D1909000DED4D0 /* Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DACF8925D1909000DED4D0 /* Category.framework */; };
 		10DACF9825D1909000DED4D0 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DACF9725D1909000DED4D0 /* CategoryTests.swift */; };
 		10DACF9A25D1909000DED4D0 /* Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DACF8C25D1909000DED4D0 /* Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10E9936325E2A24F009FEC25 /* SportLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E9936225E2A24F009FEC25 /* SportLocaleDataSource.swift */; };
+		10E9936525E2A25F009FEC25 /* SportLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E9936425E2A25F009FEC25 /* SportLocaleRepository.swift */; };
 		10F73FA025D99CAC00C4A77A /* GameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */; };
 		10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F73FA125D99D3600C4A77A /* GameRepository.swift */; };
 		10F73FA725D99EF100C4A77A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F73FA625D99EF100C4A77A /* Core.framework */; };
@@ -99,6 +101,8 @@
 		10DACF9225D1909000DED4D0 /* CategoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CategoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DACF9725D1909000DED4D0 /* CategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
 		10DACF9925D1909000DED4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10E9936225E2A24F009FEC25 /* SportLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLocaleDataSource.swift; sourceTree = "<group>"; };
+		10E9936425E2A25F009FEC25 /* SportLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLocaleRepository.swift; sourceTree = "<group>"; };
 		10F73F9F25D99CAC00C4A77A /* GameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataSource.swift; sourceTree = "<group>"; };
 		10F73FA125D99D3600C4A77A /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		10F73FA625D99EF100C4A77A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +194,7 @@
 			children = (
 				10199EF725E176320009E0E7 /* DataSource */,
 				10199EFA25E1770C0009E0E7 /* MovieLocaleRepository.swift */,
+				10E9936425E2A25F009FEC25 /* SportLocaleRepository.swift */,
 				10199EFC25E1783C0009E0E7 /* ConvertToArray.swift */,
 			);
 			path = Locale;
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				10199EF825E1764F0009E0E7 /* MovieLocaleDataSource.swift */,
+				10E9936225E2A24F009FEC25 /* SportLocaleDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -460,10 +466,12 @@
 				10199EE825E165760009E0E7 /* GameModel.swift in Sources */,
 				10199EE125E15EB70009E0E7 /* TravelModel.swift in Sources */,
 				10199EF925E1764F0009E0E7 /* MovieLocaleDataSource.swift in Sources */,
+				10E9936325E2A24F009FEC25 /* SportLocaleDataSource.swift in Sources */,
 				10F73FA225D99D3600C4A77A /* GameRepository.swift in Sources */,
 				10199EBE25E080460009E0E7 /* DataMovie.swift in Sources */,
 				10199EDA25E157110009E0E7 /* SportModel.swift in Sources */,
 				10199EED25E16C1A0009E0E7 /* GameEntity.swift in Sources */,
+				10E9936525E2A25F009FEC25 /* SportLocaleRepository.swift in Sources */,
 				10199EC325E082F80009E0E7 /* DataLocaleMapper.swift in Sources */,
 				10199EDC25E1572C0009E0E7 /* DataSport.swift in Sources */,
 				1053953D25DB7EA0009EC607 /* TravelRepository.swift in Sources */,

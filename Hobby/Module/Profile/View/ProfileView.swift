@@ -17,7 +17,7 @@ struct ProfileView: View {
     @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter<GameModel, GameFavoriteInteractor>
     @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter<MovieModel, FavoriteInteractor<[MovieModel], MovieLocaleRepository>>
     @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter<TravelModel, TravelFavoriteInteractor>
-    @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter<SportModel, SportFavoriteInteractor>
+    @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter<SportModel, FavoriteInteractor<[SportModel], SportLocaleRepository>>
 
     var body: some View {
         NavigationView {

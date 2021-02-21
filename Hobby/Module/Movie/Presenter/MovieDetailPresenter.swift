@@ -25,15 +25,15 @@ where U.DataEntity == DataEntity {
     }
 
     func addFavorite(movie: DataEntity) {
-        let statusAddFavorite = detailUseCase.addDataFavorite(movie: movie)
+        let statusAddFavorite = detailUseCase.addDataFavorite(data: movie)
         print("Status Add Favorite = \(statusAddFavorite.description)")
     }
 
     func checkFavorite(movie: DataEntity) -> Bool {
-        return detailUseCase.checkFavoriteData(movie: movie)
+        return detailUseCase.checkFavoriteData(data: movie)
     }
 
     func deleteFavorite(movie: DataEntity) {
-        detailUseCase.deleteDataFavorite(movie: movie)
+        detailUseCase.deleteDataFavorite(data: movie)
     }
 }

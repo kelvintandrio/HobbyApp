@@ -23,17 +23,17 @@ where U.DataEntity == DataEntity {
         self.repositoryLocale = repositoryLocale
     }
 
-    public func addDataFavorite(movie: DataEntity) -> AnyPublisher<Bool, Error> {
-        return repositoryLocale.addLocaleData(from: movie)
+    public func addDataFavorite(data: DataEntity) -> AnyPublisher<Bool, Error> {
+        return repositoryLocale.addLocaleData(from: data)
     }
 
-    public func deleteDataFavorite(movie: DataEntity) {
-        repositoryLocale.deleteLocaleData(from: movie) { _ in
+    public func deleteDataFavorite(data: DataEntity) {
+        repositoryLocale.deleteLocaleData(from: data) { _ in
             print("Delete Movie Favorite")
         }
     }
 
-    public func checkFavoriteData(movie: DataEntity) -> Bool {
-        return repositoryLocale.checkLocaleData(from: movie)
+    public func checkFavoriteData(data: DataEntity) -> Bool {
+        return repositoryLocale.checkLocaleData(from: data)
     }
 }

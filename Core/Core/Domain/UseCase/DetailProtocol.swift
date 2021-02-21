@@ -11,7 +11,7 @@ import Combine
 public protocol DetailProtocol {
     associatedtype DataEntity
 
-    func addDataFavorite(movie: DataEntity) -> AnyPublisher<Bool, Error>
-    func checkFavoriteData(movie: DataEntity) -> Bool
-    func deleteDataFavorite(movie: DataEntity)
+    func addDataFavorite(data: DataEntity) -> AnyPublisher<Bool, Error>
+    func checkFavoriteData(data: DataEntity) -> Bool
+    func deleteDataFavorite(data: DataEntity)
 }

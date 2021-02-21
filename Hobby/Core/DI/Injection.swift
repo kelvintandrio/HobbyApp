@@ -83,22 +83,20 @@ public final class Injection: NSObject {
         return MainInteractor(repository: repository) as! U
     }
 
-    func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {
-        let realm = try? Realm()
-        let localeMovie = MovieLocaleDataSource.sharedInstance(realm)
-        return MovieLocaleRepository.sharedInstance(localeMovie)
-    }
-
-    func provideMovieDetail(category: MovieModel) -> MovieDetailProtocol {
+    func provideMovieDetail<U: DetailProtocol>(category: MovieModel) -> U {
         let repositoryMovie = provideRepository()
-        let repositoryLocaleMovie = provideMovieLocaleRepository()
-        return MovieDetailInteractor(repository: repositoryMovie,
-        repositoryLocale: repositoryLocaleMovie, category: category)
+        let realm = try? Realm()
+        let locale = MovieLocaleDataSource(realm: realm)
+        let repositoryLocaleMovie = MovieLocaleRepository(locale: locale)
+        return DetailInteractor(repository: repositoryMovie,
+        repositoryLocale: repositoryLocaleMovie) as! U
     }
 
     func provideMovieFavorite<U: FavoriteProtocol>() -> U {
-        let repositoryMovieLocale = provideMovieLocaleRepository()
-        return MovieFavoriteInteractor(repository: repositoryMovieLocale) as! U
+        let realm = try? Realm()
+        let locale = MovieLocaleDataSource(realm: realm)
+        let repository = MovieLocaleRepository(locale: locale)
+        return FavoriteInteractor(repository: repository) as! U
     }
     /**Movie Injection - End**/
 

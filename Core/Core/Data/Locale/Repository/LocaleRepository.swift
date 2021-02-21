@@ -14,7 +14,7 @@ public protocol LocaleRepository {
     associatedtype DataModel
     associatedtype DataEntity
 
-    func getLocaleData() -> AnyPublisher<[DataModel], Error>
+    func getLocaleData() -> AnyPublisher<DataModel, Error>
     func addLocaleData(from categories: DataEntity) -> AnyPublisher<Bool, Error>
     func deleteLocaleData(from categories: DataEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
     func checkLocaleData(from categories: DataEntity) -> Bool

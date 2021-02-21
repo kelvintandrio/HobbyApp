@@ -12,7 +12,7 @@ import RealmSwift
 import Common
 import Core
 
-final class MovieLocaleDataSource: NSObject {
+public final class MovieLocaleDataSource: NSObject {
     public let realmMovie: Realm?
     public init(realm: Realm?) {
         self.realmMovie = realm
@@ -23,7 +23,7 @@ final class MovieLocaleDataSource: NSObject {
 }
 
 extension MovieLocaleDataSource: LocaleDataSource {
-    typealias DataEntity = MovieEntity
+    public typealias DataEntity = MovieEntity
     
     public func getDataLocale() -> AnyPublisher<[MovieEntity], Error> {
         return Future<[MovieEntity], Error> { completion in

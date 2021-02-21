@@ -11,7 +11,7 @@ import Combine
 import Common
 import Core
 
-final class MovieLocaleRepository: NSObject {
+public final class MovieLocaleRepository: NSObject {
     public typealias MovieLocaleInstance = (MovieLocaleDataSource) -> MovieLocaleRepository
 
     let locale: MovieLocaleDataSource
@@ -26,13 +26,13 @@ final class MovieLocaleRepository: NSObject {
 }
 
 extension MovieLocaleRepository: LocaleRepository {
-    typealias DataModel = MovieModel
-    typealias DataEntity = MovieEntity
-    
-    func checkLocaleData(from categories: MovieEntity) -> Bool {
+    public typealias DataModel = [MovieModel]
+    public typealias DataEntity = MovieEntity
+
+    public func checkLocaleData(from categories: MovieEntity) -> Bool {
         return locale.checkDataLocale(from: categories)
     }
-    func deleteLocaleData(
+    public func deleteLocaleData(
         from categories: MovieEntity,
         result: @escaping (Result<Bool, DatabaseError>) -> Void
     ) {
@@ -47,13 +47,13 @@ extension MovieLocaleRepository: LocaleRepository {
             }
         }
     }
-    func addLocaleData(from categories: MovieEntity) -> AnyPublisher<Bool, Error> {
+    public func addLocaleData(from categories: MovieEntity) -> AnyPublisher<Bool, Error> {
         return self.locale.addDataLocale(from: categories)
             .map { $0 }
             .eraseToAnyPublisher()
     }
 
-     func getLocaleData() -> AnyPublisher<[MovieModel], Error> {
+    public func getLocaleData() -> AnyPublisher<[MovieModel], Error> {
         return self.locale.getDataLocale()
             .map { DataLocaleMapper.mapMovieToModel(input: $0) }
             .eraseToAnyPublisher()

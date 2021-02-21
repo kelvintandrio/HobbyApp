@@ -8,6 +8,7 @@
 
 import Combine
 import Category
+import Core
 
 protocol SportsDetailProtocol {
     func getDetailSport() -> SportModel
